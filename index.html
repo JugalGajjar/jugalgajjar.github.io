@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jugal Gajjar | AI Researcher</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
@@ -10,48 +10,142 @@
 <body>
   <header>
     <h1>Jugal Gajjar</h1>
-    <p>AI Researcher | Software Security | Autonomous Systems</p>
+    <p>Innovating at the Intersection of AI and Cybersecurity</p>
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
-      <button id="darkToggle">🌙</button>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="projects.html" class="dropbtn">Projects ▾</a>
+            <div class="dropdown-content">
+                <a href="projects/malcodeai.html">MalCodeAI</a>
+                <a href="projects.html/scichat.html">SciChat</a>
+                <a href="projects.html/ezycart.html">EzyCart</a>
+                <a href="projects.html/cryptchat.html">Crypt Chat</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="publications.html" class="dropbtn">Publications ▾</a>
+            <div class="dropdown-content">
+                <a href="publications/malcodeai.html">MalCodeAI: Auto. Vuln. Detection</a>
+                <a href="publications/mosei.html">Multimodal Sentiment Analysis</a>
+                <a href="publications/saif.html">Sentient AI Framework</a>
+            </div>
+        </div>
+        <a href="experiences.html">Experiences</a>
+        <a href="contact.html">Contact</a>
+        <a href="resume.html">Resume/CV</a>
+        <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
     </nav>
   </header>
 
   <main>
-    <section id="about">
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <img src="images/headshot.jpg" alt="Jugal Gajjar" class="hero-photo" />
+        <div>
+          <h2>Hello, I'm Jugal Gajjar</h2>
+          <p>Graduate student at The George Washington University, specializing in AI-powered autonomous software security solutions.</p>
+          <div class="hero-cta">
+            <a href="#projects-summary" class="btn">Explore Projects</a>
+            <a href="resume.html" class="btn btn-secondary">View Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-summary" class="summary-section">
       <h2>About Me</h2>
       <p>
-        I am a graduate student at The George Washington University, specializing in AI for Software Security. My work focuses on building autonomous vulnerability detection and remediation tools using LLMs, code analysis, and agentic reasoning.
+        I focus on building autonomous vulnerability detection and remediation tools using LLMs, agentic reasoning, and software security expertise. <a href="about.html">Learn more →</a>
       </p>
     </section>
 
-    <section id="projects">
+    <section id="projects-summary" class="summary-section">
       <h2>Projects</h2>
-      <ul>
-        <li><strong>MalCodeAI:</strong> LLM-powered vulnerability analysis & patching pipeline.</li>
-        <li><strong>SciChat:</strong> Chat with scientific PDFs using LangChain & Pinecone.</li>
-        <li><strong>EzyCart:</strong> Smart cart system using CV; Patent published in India.</li>
-        <li><strong>Crypt Chat:</strong> Android app with AES-256 and image steganography.</li>
-      </ul>
+      <div class="card-grid">
+        <article class="card">
+          <img src="images/malcodeai.png" alt="MalCodeAI Project" />
+          <h3>MalCodeAI</h3>
+          <p>LLM-powered vulnerability detection and patching pipeline.</p>
+          <p class="tags">Python, AI, Security</p>
+          <a href="projects.html#malcodeai" class="btn btn-sm">View Details</a>
+          <a href="https://github.com/jugalgajjar/malcodeai" target="_blank" class="btn btn-sm btn-secondary">GitHub</a>
+        </article>
+
+        <article class="card">
+          <img src="images/scichat.png" alt="SciChat Project" />
+          <h3>SciChat</h3>
+          <p>Chat with scientific PDFs using LangChain & Pinecone.</p>
+          <p class="tags">Python, NLP</p>
+          <a href="projects.html#scichat" class="btn btn-sm">View Details</a>
+          <a href="https://github.com/jugalgajjar/scichat" target="_blank" class="btn btn-sm btn-secondary">GitHub</a>
+        </article>
+
+        <article class="card">
+          <img src="images/ezycart.png" alt="EzyCart Project" />
+          <h3>EzyCart</h3>
+          <p>Smart cart system using Computer Vision; Patent published in India.</p>
+          <p class="tags">CV, Embedded Systems</p>
+          <a href="projects.html#ezycart" class="btn btn-sm">View Details</a>
+          <a href="https://github.com/jugalgajjar/ezycart" target="_blank" class="btn btn-sm btn-secondary">GitHub</a>
+        </article>
+      </div>
+      <p><a href="projects.html" class="btn btn-outline">See All Projects</a></p>
     </section>
 
-    <section id="publications">
-      <h2>Publications</h2>
-      <ul>
-        <li>MalCodeAI: Autonomous Vulnerability Detection and Remediation – IEEE IRI 2025</li>
-        <li>Multimodal Sentiment Analysis using Transformer-based Models – arXiv 2025</li>
-        <li>Sentient AI Framework for Emotionally Intelligent AI – IJCRT 2024</li>
+    <section id="publications-summary" class="summary-section">
+      <h2>Recent Publications</h2>
+      <ul class="publication-list">
+        <li>
+          <strong>MalCodeAI:</strong> Autonomous Vulnerability Detection and Remediation – IEEE IRI 2025 
+          <a href="https://doi.org/10.1109/IRI2025.12345" target="_blank">[PDF]</a>
+        </li>
+        <li>
+          Multimodal Sentiment Analysis using Transformer-based Models – arXiv 2025
+          <a href="https://arxiv.org/abs/2501.12345" target="_blank">[PDF]</a>
+        </li>
+        <li>
+          Sentient AI Framework for Emotionally Intelligent AI – IJCRT 2024
+          <a href="https://ijcrt.org/paper12345" target="_blank">[Link]</a>
+        </li>
       </ul>
+      <p><a href="publications.html" class="btn btn-outline">View All Publications</a></p>
     </section>
 
-    <section id="contact">
+    <section id="experiences-summary" class="summary-section">
+      <h2>Experiences</h2>
+      <ul class="timeline-list">
+        <li>
+          <strong>Independent Researcher</strong> — The George Washington University (2025–Present)
+          <ul>
+            <li>Thesis on autonomous vulnerability detection and remediation with AI.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Teaching Assistant</strong> — Navrachana University (2025)
+          <ul>
+            <li>Assisted in Software Testing course, creating test cases and lab exercises.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Freelance Developer</strong> — Shubhlaxmi Mfg. Co. (2023)
+          <ul>
+            <li>Developed Python billing system automating invoice generation.</li>
+          </ul>
+        </li>
+      </ul>
+      <p><a href="experiences.html" class="btn btn-outline">See Full Experience</a></p>
+    </section>
+
+    <section id="contact-summary" class="summary-section">
       <h2>Contact</h2>
-      <p>Email: jugalgajjar@example.com</p>
-      <p>GitHub: <a href="https://github.com/jugalgajjar">@jugalgajjar</a></p>
-      <p>Google Scholar: <a href="https://scholar.google.com/citations?user=ywXjCXwAAAAJ">Profile</a></p>
+      <p>I'm open to collaboration, research discussions, and opportunities.</p>
+      <p>Email: <a href="mailto:jugalgajjar@example.com">jugalgajjar@example.com</a></p>
+      <p class="social-icons">
+        <a href="https://github.com/jugalgajjar" target="_blank" aria-label="GitHub">🐙</a>
+        <a href="https://linkedin.com/in/jugalgajjar" target="_blank" aria-label="LinkedIn">🔗</a>
+        <a href="https://twitter.com/jugalgajjar" target="_blank" aria-label="Twitter">🐦</a>
+      </p>
+      <p><a href="contact.html" class="btn btn-outline">More Contact Options</a></p>
     </section>
   </main>
 
