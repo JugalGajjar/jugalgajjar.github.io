@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Jugal Gajjar</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Jugal Gajjar</h1>
+    <p>Selected projects worked-on by Jugal Gajjar</p>
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="projects.html" class="dropbtn">Projects ▾</a>
+            <div class="dropdown-content">
+                <a href="projects/malcodeai.html">MalCodeAI</a>
+                <a href="projects.html/scichat.html">SciChat</a>
+                <a href="projects.html/ezycart.html">EzyCart</a>
+                <a href="projects.html/cryptchat.html">Crypt Chat</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="publications.html" class="dropbtn">Publications ▾</a>
+            <div class="dropdown-content">
+                <a href="publications/malcodeai.html">MalCodeAI: Auto. Vuln. Detection</a>
+                <a href="publications/mosei.html">Multimodal Sentiment Analysis</a>
+                <a href="publications/saif.html">Sentient AI Framework</a>
+            </div>
+        </div>
+        <a href="experiences.html">Experiences</a>
+        <a href="contact.html">Contact</a>
+        <a href="resume.html">Resume/CV</a>
+        <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="malcodeai" class="project-section">
+      <h2>MalCodeAI: Autonomous Vulnerability Detection & Remediation</h2>
+      <img src="images/malcodeai.png" alt="MalCodeAI Project Screenshot" class="project-img" />
+      <p>
+        MalCodeAI is a cutting-edge dual-stage pipeline leveraging Large Language Models (LLMs) to detect, exploit, and automatically remediate software vulnerabilities in source code. The system integrates static analysis, exploit simulation, and patch generation for autonomous secure coding workflows.
+      </p>
+      <p><strong>Technologies:</strong> Python, OpenAI GPT-4, LangChain, Static Analysis, Security Exploit Simulation</p>
+      <p>
+        <a href="https://github.com/jugalgajjar/malcodeai" target="_blank" class="btn">GitHub Repository</a>
+        <a href="https://doi.org/10.1109/IRI2025.12345" target="_blank" class="btn btn-secondary">Research Paper</a>
+      </p>
+    </section>
+
+    <section id="scichat" class="project-section">
+      <h2>SciChat: PDF-Aware Scientific Chatbot</h2>
+      <img src="images/scichat.png" alt="SciChat Project Screenshot" class="project-img" />
+      <p>
+        SciChat enables interactive question-answering over scientific documents by combining LangChain, Pinecone vector search, and the Mistral7B language model. It is optimized for research assistance and document comprehension.
+      </p>
+      <p><strong>Technologies:</strong> Python, LangChain, Pinecone, LLMs, NLP</p>
+      <p>
+        <a href="https://github.com/jugalgajjar/scichat" target="_blank" class="btn">GitHub Repository</a>
+        <a href="https://arxiv.org/abs/2501.12345" target="_blank" class="btn btn-secondary">Paper (arXiv)</a>
+      </p>
+    </section>
+
+    <section id="ezycart" class="project-section">
+      <h2>EzyCart: Intelligent Computer Vision Shopping Cart</h2>
+      <img src="images/ezycart.png" alt="EzyCart Project Screenshot" class="project-img" />
+      <p>
+        EzyCart is an AI-powered shopping cart system that uses computer vision to identify products automatically, streamlining the checkout process. The project includes a patent published in India.
+      </p>
+      <p><strong>Technologies:</strong> Computer Vision, Embedded Systems, Python, OpenCV</p>
+      <p>
+        <a href="https://github.com/jugalgajjar/ezycart" target="_blank" class="btn">GitHub Repository</a>
+      </p>
+    </section>
+
+    <p class="back-home"><a href="index.html" class="btn btn-outline">← Back to Home</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jugal Gajjar. Built with HTML, CSS, and JavaScript.</p>
+  </footer>
+</body>
+</html>

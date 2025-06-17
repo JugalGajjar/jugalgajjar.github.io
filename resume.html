@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume | Jugal Gajjar</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Resume/CV</h1>
+    <p>A snapshot of my education, skills, and professional journey</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="projects.html" class="dropbtn">Projects ▾</a>
+        <div class="dropdown-content">
+          <a href="projects/malcodeai.html">MalCodeAI</a>
+          <a href="projects/scichat.html">SciChat</a>
+          <a href="projects/ezycart.html">EzyCart</a>
+          <a href="projects/cryptchat.html">Crypt Chat</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="publications.html" class="dropbtn">Publications ▾</a>
+        <div class="dropdown-content">
+          <a href="publications/malcodeai.html">MalCodeAI</a>
+          <a href="publications/mosei.html">Multimodal Sentiment Analysis</a>
+          <a href="publications/saif.html">Sentient AI Framework</a>
+        </div>
+      </div>
+      <a href="experiences.html">Experiences</a>
+      <a href="contact.html">Contact</a>
+      <a href="resume.html">Resume/CV</a>
+      <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <main class="resume-container">
+    <section class="summary-section">
+      <h2>Quick Overview</h2>
+      <ul>
+        <li><strong>Education:</strong> MS in CS @ GWU (3.95 GPA), B.Tech in CSE @ NUV (9.39 CGPA)</li>
+        <li><strong>Focus Areas:</strong> AI Agents, Software Security, LLMs, Code Reasoning</li>
+        <li><strong>Skills:</strong> Python, Java, C++, TensorFlow, PyTorch, LangChain, Git, Flask</li>
+        <li><strong>Publications:</strong> IEEE, arXiv, IJCRT</li>
+        <li><strong>Awards:</strong> Dean’s Award, Hackathon Runner-Up, NVIDIA AI Specialist</li>
+      </ul>
+    </section>
+
+    <section class="resume-section">
+      <div class="resume-toolbar">
+        <h2>Resume Preview</h2>
+        <a href="assets/CV.pdf" download class="btn btn-outline">Download PDF</a>
+      </div>
+      <iframe src="assets/CV.pdf#toolbar=0" width="100%" height="800px" class="resume-frame">
+        <p>Your browser doesn’t support PDF embedding. <a href="assets/CV.pdf">Download it here</a>.</p>
+      </iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
+  </footer>
+</body>
+</html>
