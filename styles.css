@@ -334,29 +334,31 @@ footer {
 .card .btn-sm {
   margin: 0 0.6rem 1rem 0.6rem;
   padding: 0.35rem 0.9rem;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   border-radius: 16px;
 }
 
 .publication-list {
-  max-width: 700px;
+  max-width: 800px;
   margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .publication-list li {
   margin-bottom: 1rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .timeline-list {
-  max-width: 700px;
+  max-width: 800px;
   margin-left: 1rem;
+  margin-right: 1rem;
   list-style: none;
   padding-left: 0;
 }
 
 .timeline-list > li {
-  margin-bottom: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .timeline-list strong {
@@ -365,7 +367,7 @@ footer {
 }
 
 .social-icons a {
-  font-size: 1.8rem;
+  font-size: 1rem;
   margin-right: 1rem;
   color: var(--accent-color);
   text-decoration: none;
