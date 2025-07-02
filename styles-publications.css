@@ -1,0 +1,224 @@
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #222;
+  --accent-color: #0077cc;
+  --accent-hover: #005fa3;
+  --card-bg: #fff;
+  --link-color: var(--accent-color);
+  --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --transition-speed: 0.3s;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --card-bg: #1f1f1f;
+  --link-color: #66aaff;
+  --accent-hover: #5599dd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+header {
+  background: var(--accent-color);
+  color: #fff;
+  padding: 1rem 0 1rem;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-top: 0.4rem;
+  opacity: 0.9;
+}
+
+nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.25s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255 255 255 / 0.25);
+}
+
+nav button {
+  background-color: rgba(255 255 255 / 0.25);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  transition: background-color 0.25s ease;
+}
+
+nav button:hover {
+  background-color: #fff;
+  color: var(--accent-color);
+}
+
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 2.5rem auto 4rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+  color: var(--accent-color);
+  margin-bottom: 1.2rem;
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+}
+
+.publication {
+  background: var(--card-bg);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.7s ease both;
+}
+
+.publication h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: var(--accent-color);
+}
+
+.publication p {
+  font-size: 1rem;
+  margin: 0.5rem 0 0.8rem;
+  line-height: 1.5;
+}
+
+.btn {
+  background-color: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  margin-top: 0.6rem;
+  border-radius: 24px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: var(--accent-hover);
+}
+
+footer {
+  background: #eee;
+  color: #555;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #ccc;
+}
+
+[data-theme="dark"] footer {
+  background: #1a1a1a;
+  color: #aaa;
+  border-top-color: #333;
+}
+
+/* Dropdown Navigation */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--card-bg);
+  min-width: 160px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dropdown-content a {
+  color: var(--text-color);
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+[data-theme="dark"] .dropdown-content a:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+@media (max-width: 640px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  nav {
+    gap: 1rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  .publication h3 {
+    font-size: 1.2rem;
+  }
+}
