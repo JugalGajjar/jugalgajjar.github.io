@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Jugal Gajjar</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles-projects.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -17,6 +17,7 @@
             <a href="projects.html" class="dropbtn">Projects ▾</a>
             <div class="dropdown-content">
                 <a href="projects/malcodeai.html">MalCodeAI</a>
+                <a href="projects/mosei.html">Sentiment Det.</a>
                 <a href="projects.html/scichat.html">SciChat</a>
                 <a href="projects.html/ezycart.html">EzyCart</a>
                 <a href="projects.html/cryptchat.html">Crypt Chat</a>
@@ -39,15 +40,28 @@
 
   <main>
     <section id="malcodeai" class="project-section">
-      <h2>MalCodeAI: Autonomous Vulnerability Detection & Remediation</h2>
+      <h2>MalCodeAI: AI-Powered Malicious Code Detection</h2>
       <img src="images/malcodeai.png" alt="MalCodeAI Project Screenshot" class="project-img" />
       <p>
-        MalCodeAI is a cutting-edge dual-stage pipeline leveraging Large Language Models (LLMs) to detect, exploit, and automatically remediate software vulnerabilities in source code. The system integrates static analysis, exploit simulation, and patch generation for autonomous secure coding workflows.
+        MalCodeAI is a cutting-edge dual-stage pipeline leveraging Large Language Models (LLMs) to detect, exploit, and automatically remediate software vulnerabilities in source code. The system integrates static analysis, exploit simulation, and fix suggestions for autonomous secure coding workflows.
       </p>
-      <p><strong>Technologies:</strong> Python, OpenAI GPT-4, LangChain, Static Analysis, Security Exploit Simulation</p>
+      <p><strong>Technologies:</strong> Python, LLMs, HuggingFace, Apple MLX, Static Code Analysis, Security Exploit Simulation</p>
       <p>
-        <a href="https://github.com/jugalgajjar/malcodeai" target="_blank" class="btn">GitHub Repository</a>
-        <a href="https://doi.org/10.1109/IRI2025.12345" target="_blank" class="btn btn-secondary">Research Paper</a>
+        <a href="projects/malcodeai.html" target="_blank" class="btn">Project Page</a>
+        <a href="https://github.com/JugalGajjar/MalCodeAI-AI-Powered-Malicious-Code-Detection" target="_blank" class="btn btn-secondary">GitHub Repository</a>
+      </p>
+    </section>
+
+    <section id="mosei" class="project-section">
+      <h2>Multimodal Sentiment Analysis with CMU-MOSEI Dataset</h2>
+      <img src="images/mosei.png" alt="Multimodal Sentiment Analysis Screenshot" class="project-img" />
+      <p>
+        This project presents a Transformer-based approach for sentiment analysis on the CMU-MOSEI dataset, combining textual, visual, and acoustic cues to achieve deeper emotional understanding. By early fusing multimodal information, the system enhances sentiment prediction performance for complex human communication.
+      </p>
+      <p><strong>Technologies:</strong> Python, PyTorch, HuggingFace, Multimodal Deep Learning, Sentiment Analysis</p>
+      <p>
+        <a href="projects/mosei.html" target="_blank" class="btn">Project Page</a>
+        <a href="https://github.com/JugalGajjar/Multimodal-Sentiment-Analysis-with-MOSEI-Dataset" target="_blank" class="btn btn-secondary">GitHub Repository</a>
       </p>
     </section>
 
@@ -55,24 +69,36 @@
       <h2>SciChat: PDF-Aware Scientific Chatbot</h2>
       <img src="images/scichat.png" alt="SciChat Project Screenshot" class="project-img" />
       <p>
-        SciChat enables interactive question-answering over scientific documents by combining LangChain, Pinecone vector search, and the Mistral7B language model. It is optimized for research assistance and document comprehension.
+        SciChat enables interactive question-answering over scientific documents by combining LangChain, Pinecone vector search, and the Mistral7B language model. It provides context-aware responses and is optimized for research assistance, knowledge retrieval, and document comprehension.
       </p>
       <p><strong>Technologies:</strong> Python, LangChain, Pinecone, LLMs, NLP</p>
       <p>
-        <a href="https://github.com/jugalgajjar/scichat" target="_blank" class="btn">GitHub Repository</a>
-        <a href="https://arxiv.org/abs/2501.12345" target="_blank" class="btn btn-secondary">Paper (arXiv)</a>
+        <a href="projects/scichat.html" target="_blank" class="btn">Project Page</a>
+        <a href="https://github.com/JugalGajjar/SciChat-LLM-with-PDF-Support" target="_blank" class="btn btn-secondary">GitHub Repository</a>
       </p>
     </section>
 
     <section id="ezycart" class="project-section">
-      <h2>EzyCart: Intelligent Computer Vision Shopping Cart</h2>
+      <h2>EzyCart: Computer Vision Powered Portable E-Cart System</h2>
       <img src="images/ezycart.png" alt="EzyCart Project Screenshot" class="project-img" />
       <p>
-        EzyCart is an AI-powered shopping cart system that uses computer vision to identify products automatically, streamlining the checkout process. The project includes a patent published in India.
+        EzyCart is an AI-powered smart shopping cart system that uses computer vision to automatically identify products, enabling seamless, on-the-go billing & checkout. The project includes a patent published in India and showcases real-time embedded AI, object detection, and edge computing for retail automation.
       </p>
-      <p><strong>Technologies:</strong> Computer Vision, Embedded Systems, Python, OpenCV</p>
+      <p><strong>Technologies:</strong> Computer Vision, Edge Computing, Embedded Systems, Python, OpenCV, PyTorch, RoboFlow</p>
       <p>
-        <a href="https://github.com/jugalgajjar/ezycart" target="_blank" class="btn">GitHub Repository</a>
+        <a href="projects/ezycart.html" target="_blank" class="btn">Project Page</a>
+      </p>
+    </section>
+
+    <section id="cryptchat" class="project-section">
+      <h2>Crypt Chat: Encrypted Messaging with Steganography</h2>
+      <img src="images/cryptchat.png" alt="Crypt Chat Project Screenshot" class="project-img" />
+      <p>
+        Crypt Chat is a secure Android messaging application that integrates AES-256 encryption with steganography for covert communication. It enables confidential text exchanges with hidden data transmission embedded within media files, offering enhanced privacy for both personal and sensitive professional use.
+      </p>
+      <p><strong>Technologies:</strong> Android, Java, AES-256, Steganography, Google Firebase</p>
+      <p>
+        <a href="projects/cryptchat.html" target="_blank" class="btn">Project Page</a>
       </p>
     </section>
 
@@ -80,7 +106,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Jugal Gajjar. Built with HTML, CSS, and JavaScript.</p>
+    <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
   </footer>
 </body>
 </html>
