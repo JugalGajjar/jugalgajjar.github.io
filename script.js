@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("darkToggle");
   const currentTheme = localStorage.getItem("theme");
 
-  // Apply saved theme if exists
   if (currentTheme === "dark") {
     document.documentElement.setAttribute("data-theme", "dark");
     toggleBtn.textContent = "☀️";
@@ -21,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Smooth scrolling for anchor links
   document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
