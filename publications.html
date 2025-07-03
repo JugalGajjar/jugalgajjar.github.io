@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,33 +8,35 @@
   <link rel="stylesheet" href="styles-publications.css" />
   <script src="script.js" defer></script>
 </head>
+
 <body>
   <header>
     <h1>Publications</h1>
     <p>Selected research and scholarly contributions by Jugal Gajjar</p>
     <nav>
-        <a href="index.html">Home</a>
-        <div class="dropdown">
-            <a href="projects.html" class="dropbtn">Projects ▾</a>
-            <div class="dropdown-content">
-                <a href="projects/malcodeai.html">MalCodeAI</a>
-                <a href="projects.html/scichat.html">SciChat</a>
-                <a href="projects.html/ezycart.html">EzyCart</a>
-                <a href="projects.html/cryptchat.html">Crypt Chat</a>
-            </div>
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="projects.html" class="dropbtn">Projects ▾</a>
+        <div class="dropdown-content">
+          <a href="projects/malcodeai.html">MalCodeAI</a>
+          <a href="projects.html/scichat.html">SciChat</a>
+          <a href="projects.html/ezycart.html">EzyCart</a>
+          <a href="projects.html/cryptchat.html">Crypt Chat</a>
         </div>
-        <div class="dropdown">
-            <a href="publications.html" class="dropbtn">Publications ▾</a>
-            <div class="dropdown-content">
-                <a href="publications/malcodeai.html">MalCodeAI: Auto. Vuln. Detection</a>
-                <a href="publications/mosei.html">Multimodal Sentiment Analysis</a>
-                <a href="publications/saif.html">Sentient AI Framework</a>
-            </div>
+      </div>
+      <div class="dropdown">
+        <a href="publications.html" class="dropbtn">Publications ▾</a>
+        <div class="dropdown-content">
+          <a href="publications/malcodeai.html">MalCodeAI: Auto. Vuln. Detection</a>
+          <a href="publications/mosei.html">Multimodal Sentiment Analysis</a>
+          <a href="publications/saif.html">Sentient AI Framework</a>
         </div>
-        <a href="experiences.html">Experiences</a>
-        <a href="contact.html">Contact</a>
-        <a href="resume.html">Resume/CV</a>
-        <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+      <a href="experiences.html">Experiences</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="resume.html">Resume/CV</a>
+      <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
     </nav>
   </header>
 
@@ -43,8 +46,24 @@
       <div class="publication">
         <h3>MalCodeAI: Autonomous Vulnerability Detection and Remediation via Language Agnostic Code Reasoning</h3>
         <p><strong>Authors:</strong> Jugal Gajjar, Kamalasankari Subramaniakuppusamy, Noha El Kachach</p>
-        <p><strong>Venue:</strong> IEEE 26th International Conference on Information Reuse and Integration (IRI 2025)</p>
-        <p align="justify"><strong>Abstract:</strong> The growing complexity of cyber threats and the limitations of traditional vulnerability detection tools necessitate novel approaches for securing software systems. We introduce MalCodeAI, a language-agnostic, multi-stage AI pipeline for autonomous code security analysis and remediation. MalCodeAI combines code decomposition and semantic reasoning using fine-tuned Qwen2.5-Coder-3B-Instruct models, optimized through Low-Rank Adaptation (LoRA) within the MLX framework, and delivers scalable, accurate results across 14 programming languages. In Phase 1, the model achieved a validation loss as low as 0.397 for functional decomposition and summarization of code segments after 200 iterations, 6 trainable layers, and a learning rate of 2 x 10<sup>-5</sup>. In Phase 2, for vulnerability detection and remediation, it achieved a best validation loss of 0.199 using the same number of iterations and trainable layers but with an increased learning rate of 4 x 10<sup>-5</sup>, effectively identifying security flaws and suggesting actionable fixes. MalCodeAI supports red-hat-style exploit tracing, CVSS-based risk scoring, and zero-shot generalization to detect complex, zero-day vulnerabilities. In a qualitative evaluation involving 15 developers, the system received high scores in usefulness (mean 8.06/10), interpretability (mean 7.40/10), and readability of outputs (mean 7.53/10), confirming its practical value in real-world development workflows. This work marks a significant advancement toward intelligent, explainable, and developer-centric software security solutions.</p>
+        <p><strong>Venue:</strong> IEEE 26th International Conference on Information Reuse and Integration (IRI 2025)
+        </p>
+        <p align="justify"><strong>Abstract:</strong> The growing complexity of cyber threats and the limitations of
+          traditional vulnerability detection tools necessitate novel approaches for securing software systems. We
+          introduce MalCodeAI, a language-agnostic, multi-stage AI pipeline for autonomous code security analysis and
+          remediation. MalCodeAI combines code decomposition and semantic reasoning using fine-tuned
+          Qwen2.5-Coder-3B-Instruct models, optimized through Low-Rank Adaptation (LoRA) within the MLX framework, and
+          delivers scalable, accurate results across 14 programming languages. In Phase 1, the model achieved a
+          validation loss as low as 0.397 for functional decomposition and summarization of code segments after 200
+          iterations, 6 trainable layers, and a learning rate of 2 x 10<sup>-5</sup>. In Phase 2, for vulnerability
+          detection and remediation, it achieved a best validation loss of 0.199 using the same number of iterations and
+          trainable layers but with an increased learning rate of 4 x 10<sup>-5</sup>, effectively identifying security
+          flaws and suggesting actionable fixes. MalCodeAI supports red-hat-style exploit tracing, CVSS-based risk
+          scoring, and zero-shot generalization to detect complex, zero-day vulnerabilities. In a qualitative evaluation
+          involving 15 developers, the system received high scores in usefulness (mean 8.06/10), interpretability (mean
+          7.40/10), and readability of outputs (mean 7.53/10), confirming its practical value in real-world development
+          workflows. This work marks a significant advancement toward intelligent, explainable, and developer-centric
+          software security solutions.</p>
         <a href="#" class="btn">View Paper</a>
       </div>
     </section>
@@ -55,7 +74,16 @@
         <h3>Multimodal Sentiment Analysis on CMU-MOSEI Dataset using Transformer-based Models</h3>
         <p><strong>Authors:</strong> Jugal Gajjar, Kaustik Ranaware</p>
         <p><strong>Platform:</strong> arXiv (cs.CL), 2025</p>
-        <p align="justify"><strong>Abstract:</strong> This project performs multimodal sentiment analysis using the CMU-MOSEI dataset, using transformer-based models with early fusion to integrate text, audio, and visual modalities. We employ BERT-based encoders for each modality, extracting embeddings that are concatenated before classification. The model achieves strong performance, with 97.87% 7-class accuracy and a 0.9682 F1-score on the test set, demonstrating the effectiveness of early fusion in capturing cross-modal interactions. The training utilized Adam optimization (lr=1e-4), dropout (0.3), and early stopping to ensure generalization and robustness. Results highlight the superiority of transformer architectures in modeling multimodal sentiment, with a low MAE (0.1060) indicating precise sentiment intensity prediction. Future work may compare fusion strategies or enhance interpretability. This approach utilizes multimodal learning by effectively combining linguistic, acoustic, and visual cues for sentiment analysis.</p>
+        <p align="justify"><strong>Abstract:</strong> This project performs multimodal sentiment analysis using the
+          CMU-MOSEI dataset, using transformer-based models with early fusion to integrate text, audio, and visual
+          modalities. We employ BERT-based encoders for each modality, extracting embeddings that are concatenated
+          before classification. The model achieves strong performance, with 97.87% 7-class accuracy and a 0.9682
+          F1-score on the test set, demonstrating the effectiveness of early fusion in capturing cross-modal
+          interactions. The training utilized Adam optimization (lr=1e-4), dropout (0.3), and early stopping to ensure
+          generalization and robustness. Results highlight the superiority of transformer architectures in modeling
+          multimodal sentiment, with a low MAE (0.1060) indicating precise sentiment intensity prediction. Future work
+          may compare fusion strategies or enhance interpretability. This approach utilizes multimodal learning by
+          effectively combining linguistic, acoustic, and visual cues for sentiment analysis.</p>
         <a href="#" class="btn">View on arXiv</a>
       </div>
     </section>
@@ -66,8 +94,21 @@
         <h3>Building Trust: The Sentient AI Framework for Emotionally Intelligent AI</h3>
         <p><strong>Authors:</strong> Jugal Gajjar, Sanjana Nathani</p>
         <p><strong>Journal:</strong> International Journal of Creative Research Thoughts (IJCRT), 2024</p>
-        <p align="justify"><strong>Abstract:</strong> Artificial Intelligence (AI) is the driving force behind most of the applications we use in our daily lives, and this necessitates advancements in human-AI interaction to go beyond basic functionalities. Through this article, we want to propose a novel methodology, the Sentient AI Framework (SAIF), that prioritizes the integration of emotional intelligence in AI systems, which makes them work in the better interest of humans by interpreting and responding while keeping human emotions into consideration. By integrating SAIF with intelligent systems like chatbots, virtual assistants, and robots, user interactions can be made more natural and engaging. This article discusses how SAIF can be developed and deployed to cultivate a sense of connection based on emotions such as trust and empathy, paving the way for the future where AI can be easily integrated into society and policy-making processes. Moreover, it discusses the key ethical aspects such as privacy, bias, explainability, and transparency to be considered. By developing such emotionally intelligent systems in collaboration with scholars, ethicists, and policymakers, we can ensure the ethical development and utilization of SAIF, thereby enhancing well-being and cultivating a better society.</p>
-        <a href="https://www.researchgate.net/publication/385624714_Building_Trust_The_Sentient_AI_Framework_for_Emotionally_Intelligent_AI" class="btn">Read Full Text</a>
+        <p align="justify"><strong>Abstract:</strong> Artificial Intelligence (AI) is the driving force behind most of
+          the applications we use in our daily lives, and this necessitates advancements in human-AI interaction to go
+          beyond basic functionalities. Through this article, we want to propose a novel methodology, the Sentient AI
+          Framework (SAIF), that prioritizes the integration of emotional intelligence in AI systems, which makes them
+          work in the better interest of humans by interpreting and responding while keeping human emotions into
+          consideration. By integrating SAIF with intelligent systems like chatbots, virtual assistants, and robots,
+          user interactions can be made more natural and engaging. This article discusses how SAIF can be developed and
+          deployed to cultivate a sense of connection based on emotions such as trust and empathy, paving the way for
+          the future where AI can be easily integrated into society and policy-making processes. Moreover, it discusses
+          the key ethical aspects such as privacy, bias, explainability, and transparency to be considered. By
+          developing such emotionally intelligent systems in collaboration with scholars, ethicists, and policymakers,
+          we can ensure the ethical development and utilization of SAIF, thereby enhancing well-being and cultivating a
+          better society.</p>
+        <a href="https://www.researchgate.net/publication/385624714_Building_Trust_The_Sentient_AI_Framework_for_Emotionally_Intelligent_AI"
+          class="btn">Read Full Text</a>
       </div>
     </section>
   </main>
@@ -76,4 +117,5 @@
     <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
   </footer>
 </body>
+
 </html>
