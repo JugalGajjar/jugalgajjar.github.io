@@ -374,7 +374,6 @@ footer {
   color: #005fa3;
 }
 
-/* Responsive */
 @media (max-width: 640px) {
   .hero-section {
     flex-direction: column;
@@ -414,7 +413,6 @@ footer {
   text-align: center;
 }
 
-/* Dropdown Navigation */
 .dropdown {
   position: relative;
   display: inline-block;
