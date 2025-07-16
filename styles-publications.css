@@ -208,6 +208,11 @@ footer {
   background-color: rgba(255,255,255,0.1);
 }
 
+.back-home {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 @media (max-width: 640px) {
   header h1 {
     font-size: 2rem;
