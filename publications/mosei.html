@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multimodal Sentiment Analysis | Jugal Gajjar</title>
+  <link rel="stylesheet" href="../styles-publications.css" />
+  <script src="../script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Multimodal Sentiment Analysis</h1>
+    <p>CMU-MOSEI Dataset with Transformer-Based Fusion of Text, Audio, and Visual Features</p>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../projects.html" class="dropbtn">Projects</a>
+      <a href="../publications.html" class="dropbtn">Publications</a>
+      <a href="../experiences.html">Experiences</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../resume.html">Resume/CV</a>
+      <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="publication">
+      <h2>Abstract</h2>
+      <p align="justify">
+        This project performs multimodal sentiment analysis using the CMU-MOSEI dataset, using transformer-based models
+        with early fusion to integrate text, audio, and visual modalities. We employ BERT-based encoders for each
+        modality, extracting embeddings that are concatenated before classification. The model achieves strong
+        performance, with 97.87% 7-class accuracy and a 0.9682 F1-score on the test set, demonstrating the effectiveness
+        of early fusion in capturing cross-modal interactions. The training utilized Adam optimization (lr=1e-4),
+        dropout (0.3), and early stopping to ensure generalization and robustness. Results highlight the superiority of
+        transformer architectures in modeling multimodal sentiment, with a low MAE (0.1060) indicating precise sentiment
+        intensity prediction. Future work may compare fusion strategies or enhance interpretability. This approach
+        utilizes multimodal learning by effectively combining linguistic, acoustic, and visual cues for sentiment
+        analysis.
+      </p>
+    </section>
+
+    <section class="publication">
+      <h2>Dataset & Features</h2>
+      <p align="justify">
+        The CMU-MOSEI (Multimodal Opinion Sentiment and Emotion Intensity) dataset contains over 23,000 annotated
+        sentence-level video segments from more than 1,000 distinct speakers across 250 topics. It provides aligned data
+        for three modalities—text, visual, and acoustic—enabling fine-grained multimodal sentiment analysis. Each sample
+        is labeled on a 7-point sentiment scale ranging from -3 (strong negative) to +3 (strong positive).
+      </p>
+
+      <p align="justify">
+        <strong style="color: #0077cc;">Text Modality:</strong> The spoken content is manually transcribed and
+        punctuated. GloVe embeddings are
+        used to represent words, and forced alignment is performed using the Penn Phonetics Lab Forced Aligner (P2FA) to
+        synchronize audio and text at the word level.
+      </p>
+
+      <p align="justify">
+        <strong style="color: #0077cc;">Visual Modality:</strong> Facial features are extracted from video frames using
+        MTCNN for face
+        detection, followed by OpenFace for computing 68 facial landmarks, eye gaze, and head pose. Emotions are
+        recognized using Emotient FACET, which maps facial expressions to six primary emotions (happiness, anger, fear,
+        disgust, sadness, surprise). Additional face embeddings are computed using DeepFace, FaceNet, and SphereFace
+        models.
+      </p>
+
+      <p align="justify">
+        <strong style="color: #0077cc;">Acoustic Modality:</strong> Audio features are extracted using COVAREP,
+        including Mel-frequency cepstral
+        coefficients (MFCCs), pitch, glottal source parameters, peak slope, and voicing-related measures. These features
+        are relevant to capturing prosody, tone, and speaker affect.
+      </p>
+
+      <p align="justify">
+        All modalities are temporally aligned, and the dataset is preprocessed and ready-to-use via the CMU Multimodal
+        SDK. This rich, multimodal setup makes CMU-MOSEI one of the most comprehensive resources for sentiment analysis
+        across language, vision, and speech.
+      </p>
+    </section>
+
+    <section class="publication">
+      <h2>Methodology</h2>
+      <p align="justify">
+        Our architecture leverages modality-specific BERT-based encoders and an early fusion mechanism for sentiment
+        classification across three modalities: text, audio, and visual.
+      </p>
+
+      <p align="justify">
+        <strong style="color: #0077cc;">Text Modality:</strong> Each sentence transcription is tokenized using the BERT
+        tokenizer and passed
+        through the pre-trained "bert-base-uncased" model. The hidden state of the special [CLS] token from the final
+        layer is extracted to represent the entire sentence as a semantic embedding.
+      </p>
+
+      <p align="justify">
+        <strong style="color: #0077cc;">Audio Modality:</strong> Sequential acoustic features—extracted using COVAREP
+        (including MFCCs, glottal
+        features, pitch, etc.)—are treated as frame-level pseudo-tokens. These are passed through a BERT-style encoder
+        designed for continuous sequences. Mean pooling over all time steps generates a fixed-length audio embedding.
+      </p>
+
+      <p align="justify">
+        <strong style="color: #0077cc;">Visual Modality:</strong> Preprocessed facial and emotion features (landmarks,
+        gaze, expression
+        embeddings) are similarly processed through a BERT encoder. The sequence is mean-pooled to yield a high-level
+        visual representation.
+      </p>
+
+      <p align="justify">
+        <strong style="color: #0077cc;">Early Fusion:</strong> The three modality-specific embeddings—H_text, H_audio,
+        and H_visual—are
+        concatenated to form a single joint representation: H_fused = [ H_text ; H_audio ; H_visual ].
+        This fused vector captures inter-modal interactions (e.g., sarcasm or emotional dissonance between tone and
+        text) and allows the classifier to jointly reason across modalities.
+      </p>
+
+      <p align="justify">
+        <strong style="color: #0077cc;">Classification Head:</strong> The fused embedding is passed through:<br>
+        • Fully connected dense layers with ReLU activation for non-linear transformation<br>
+        • Layer normalization to stabilize training<br>
+        • Dropout (p = 0.3) to prevent overfitting<br>
+        • Final dense layer with softmax activation for 7-class sentiment output
+      </p>
+
+      <p align="justify">
+        <strong style="color: #0077cc;">Training:</strong> We used cross-entropy loss optimized with the Adam optimizer
+        (learning rate = 1e-4).
+        The model was trained with early stopping (patience = 10) to monitor validation loss and avoid overfitting. Each
+        encoder used 8 transformer layers and 16 attention heads. The best-performing checkpoint occurred at epoch 16,
+        with excellent generalization on unseen data.
+      </p>
+    </section>
+
+    <section class="publication">
+      <h2>Results</h2>
+      <p align="justify">
+        <strong style="color: #0077cc;">Training:</strong> At epoch 16, the model achieved 96.79% 7-class accuracy and a
+        0.9522 F1-score on the training set with an MAE of
+        0.1115. The training and validation losses were 0.0223 and 0.0182, respectively.
+      </p>
+
+      <p align="justify">
+        <strong style="color: #0077cc;">Validation:</strong> The model achieved 97.35% 7-class accuracy, 0.9604
+        F1-score, and an MAE of 0.1080. Binary accuracy and F1 scores
+        were 96.59% and 0.9827 respectively, indicating excellent generalization.
+      </p>
+
+      <p align="justify">
+        <strong style="color: #0077cc;">Test:</strong> On the unseen test set, the model delivered 97.87% 7-class
+        accuracy, 0.9682 F1-score, binary accuracy of 95.44%,
+        and binary F1 of 0.9767. The MAE of 0.1060 shows strong sentiment intensity prediction. The model is robust and
+        generalizes well across all three modalities.
+      </p>
+    </section>
+
+    <section class="publication">
+      <h2>Project & Paper Links</h2>
+      <a href="../projects/mosei.html" class="btn">Project Page</a>
+      <a href="https://arxiv.org/abs/2505.06110" class="btn">View Paper</a>
+    </section>
+
+    <div class="back-home">
+      <a href="../publications.html" class="btn btn-outline">← Back to Publications</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

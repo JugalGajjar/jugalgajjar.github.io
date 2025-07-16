@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MalCodeAI Publication | Jugal Gajjar</title>
+  <link rel="stylesheet" href="../styles-publications.css" />
+  <script src="../script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>MalCodeAI</h1>
+    <p>Autonomous Vulnerability Detection and Remediation via Language Agnostic Code Reasoning</p>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../projects.html" class="dropbtn">Projects</a>
+      <a href="../publications.html" class="dropbtn">Publications</a>
+      <a href="../experiences.html">Experiences</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../resume.html">Resume/CV</a>
+      <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="publication">
+      <h2>Abstract</h2>
+      <p align="justify">The growing complexity of cyber threats and the limitations of
+        traditional vulnerability detection tools necessitate novel approaches for securing software systems. We
+        introduce MalCodeAI, a language-agnostic, multi-stage AI pipeline for autonomous code security analysis and
+        remediation. MalCodeAI combines code decomposition and semantic reasoning using fine-tuned
+        Qwen2.5-Coder-3B-Instruct models, optimized through Low-Rank Adaptation (LoRA) within the MLX framework, and
+        delivers scalable, accurate results across 14 programming languages. In Phase 1, the model achieved a
+        validation loss as low as 0.397 for functional decomposition and summarization of code segments after 200
+        iterations, 6 trainable layers, and a learning rate of 2 x 10<sup>-5</sup>. In Phase 2, for vulnerability
+        detection and remediation, it achieved a best validation loss of 0.199 using the same number of iterations and
+        trainable layers but with an increased learning rate of 4 x 10<sup>-5</sup>, effectively identifying security
+        flaws and suggesting actionable fixes. MalCodeAI supports red-hat-style exploit tracing, CVSS-based risk
+        scoring, and zero-shot generalization to detect complex, zero-day vulnerabilities. In a qualitative evaluation
+        involving 15 developers, the system received high scores in usefulness (mean 8.06/10), interpretability (mean
+        7.40/10), and readability of outputs (mean 7.53/10), confirming its practical value in real-world development
+        workflows. This work marks a significant advancement toward intelligent, explainable, and developer-centric
+        software security solutions.</p>
+    </section>
+
+    <section class="publication">
+      <h2>Related Work</h2>
+      <p align="justify">
+        Traditional software anomaly and vulnerability detection methods have been limited in their generalizability and
+        ability to detect zero-day exploits, AI-driven malware, and Advanced Persistent Threats (APTs). To address this,
+        static analysis techniques have emerged, such as SonarQube and Checkmarx, which perform rule-based scanning over
+        Abstract Syntax Trees (ASTs) to detect issues like buffer overflows and SQL injection. Graph-based approaches
+        like Code Property Graphs (CPGs) and Control Flow Graphs (CFGs) have been used to structurally model program
+        behaviors, improving detection accuracy. Dynamic analysis techniques examine applications at runtime, enabling
+        the discovery of vulnerabilities such as memory leaks and race conditions. To overcome these limitations,
+        researchers have explored machine learning (ML) and deep learning (DL) for vulnerability detection.
+        Transformer-based models have revolutionized NLP and code understanding, but they often rely heavily on
+        high-quality datasets and lack effective mechanisms to generalize to unseen, zero-day threats. MalCodeAI
+        addresses these gaps by merging program analysis, natural language understanding, and reasoning capabilities,
+        addressing the gaps in scalability, generalizability, and practical usability.
+      </p>
+    </section>
+
+    <section class="publication">
+      <h2>Methodology</h2>
+      <p align="justify">
+        MalCodeAI is a novel framework for automated detection and remediation of malicious code segments, utilizing
+        large language models (LLMs) and a multi-stage pipeline. The framework is designed to be highly adaptable,
+        supporting 14 programming languages and capable of zero-shot generalization to previously unseen codebases. The
+        initial step involves decomposing the input code into independent functional components, ensuring each piece of
+        code can be assessed for potential vulnerabilities. Each decomposed code component is assigned an initial Common
+        Vulnerability Scoring System (CVSS) score to prioritize components for further analysis.
+      </p>
+      <p align="justify">
+        Following the preliminary risk assessment, the identified high-risk code components undergo a second round of
+        analysis, applying advanced reasoning techniques to evaluate whether the components contain exploitable
+        vulnerabilities. MalCodeAI is fine-tuned on a custom dataset comprising labeled malicious and benign code
+        snippets, focused on detecting ten critical vulnerability types.
+      </p>
+      <p align="justify">
+        A key feature of MalCodeAI is its emphasis on explainability, generating a red-hat style exploit trace for each
+        vulnerability detected. This enhances transparency and fosters trust among developers, making the model's
+        decisions more interpretable and actionable.
+      </p>
+      <p align="justify">
+        The framework is equipped with a zero-shot generalization capability, allowing it to analyze code written in
+        new, unseen languages or frameworks. The two-phase architecture of MalCodeAI encapsulates the sequential
+        processing steps from input code file to final output report, ensuring modular, explainable security insights.
+      </p>
+    </section>
+
+    <section class="publication">
+      <h2>Results</h2>
+      <p align="justify">
+        <strong style="color: #0077cc;">Quantitative Results:</strong> In Phase 1, the model segmented source code into
+        independent components with meaningful summaries. Fine-tuning
+        experiments showed that increasing the number of iterations and trainable layers generally improved performance.
+        The final configuration consisted of 200 training iterations, six trainable layers, a learning rate of 2 x
+        10<sup>-5</sup>, and a maximum token length of 3072. In Phase 2, the model focused on detailed vulnerability
+        detection
+        and remediation. The initial validation loss for the base model was 1.639, which was significantly reduced
+        through
+        fine-tuning. The optimal configuration was 100 training iterations, six trainable layers, and a learning rate of
+        4 x
+        10<sup>-5</sup>.
+      </p>
+      <p align="justify">
+        <strong style="color: #0077cc;">Qualitative Results:</strong> To complement the quantitative findings, we
+        collected structured feedback from 15 developers (a mixture of
+        practitioners and CS students). They evaluated the system on three dimensions: usefulness, readability, and
+        interpretability. Mean scores were 8.06/10 for usefulness, 7.40/10 for interpretability, and 7.53/10 for
+        readability. These results indicate that the system is not only effective in detecting vulnerabilities but also
+        provides outputs that are understandable and actionable for developers.
+      </p>
+
+      <p align="justify">
+        <strong style="color: #0077cc;">Remediation Quality:</strong> To evaluate the quality of MalCodeAI's remediation
+        suggestions, the model was tested on 20 manually crafted code
+        files spanning four mini-projects in Python, C, Java, and JavaScript. In the insecure project, 11
+        vulnerabilities were injected, of which 8 were correctly detected. Among these, 5 remediations were specific and
+        actionable, while 3 were generic. For the mixed-security projects, 5 of 6 vulnerabilities were identified, with
+        4 specific and 1 generic fix. Notably, the system also flagged an overlooked vulnerability, later confirmed upon
+        manual inspection. Finally, in the secure project, one false positive was flagged due to lack of runtime
+        context, highlighting the limitations of static LLM-based evaluation.
+      </p>
+    </section>
+
+    <section class="publication">
+      <h2>Project & Paper Links</h2>
+      <a href="../projects/malcodeai.html" class="btn">Project Page</a>
+      <a href="https://arxiv.org/abs/2507.10898" class="btn">View Paper</a>
+    </section>
+
+    <div class="back-home">
+      <a href="../publications.html" class="btn btn-outline">← Back to Publications</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
