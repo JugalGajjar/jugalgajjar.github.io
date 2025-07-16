@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EzyCart | Jugal Gajjar</title>
+  <link rel="stylesheet" href="../styles-projects.css" />
+  <script src="../script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>EzyCart</h1>
+    <p>Computer vision-enabled autonomous smart shopping cart</p>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../projects.html" class="dropbtn">Projects</a>
+      <a href="../publications.html" class="dropbtn">Publications</a>
+      <a href="../experiences.html">Experiences</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../resume.html">Resume/CV</a>
+      <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-section">
+      <img src="../images/ezycart.png" alt="EzyCart Screenshot" class="project-img" />
+
+      <h2>Overview</h2>
+      <p align="justify">
+        EzyCart is an AI-powered smart shopping cart system that integrates computer vision and sensor-based technology
+        to autonomously identify items placed into the cart. It eliminates manual barcode scanning and checkout by using
+        object detection, weight verification, and fallback scanning mechanisms to ensure robust and reliable billing.
+        Designed to streamline retail shopping, it delivers an intuitive, contactless experience.
+      </p>
+
+      <h2>Pipeline</h2>
+      <ol>
+        <li>Real-time object detection via YOLOv5 from a live camera feed</li>
+        <li>Weight measurement using load cells to validate item placement and quantity</li>
+        <li>Barcode scanner fallback to improve robustness for hard-to-detect items</li>
+        <li>Product database lookup and dynamic billing updates</li>
+        <li>Touch-based UI for user interaction and final billing</li>
+        <li>Exportable billing receipts and inventory logs</li>
+      </ol>
+
+      <h2>Hardware & Integration</h2>
+      <p align="justify">
+        The prototype is built using an NVIDIA Jetson Nano module with a Pi Camera for vision, load cells for real-time
+        weight sensing, and a barcode scanner module for redundancy. The cart uses a compact embedded frame with a
+        display unit and interactive interface. Weight validation is cross-referenced with vision predictions to prevent
+        mismatches and frauds.
+      </p>
+
+      <h2>Highlights</h2>
+      <ul>
+        <li>97%+ object recognition accuracy and real-time billing feedback</li>
+        <li>Designed to support 30+ grocery items in prototype</li>
+        <li>Integrated weight sensors for fraud prevention and redundancy</li>
+        <li>Barcode scanner for fallback when CV confidence is low</li>
+        <li>Patent published in India for the system architecture</li>
+      </ul>
+
+      <h2>Tech. Stack</h2>
+      <p>
+        Python, PyTorch, YOLOv5, OpenCV, Jetson Nano, Load Cells, HX711, Barcode Scanner, SQLite, Raspberry Pi Camera,
+        HTML/CSS/JS
+      </p>
+    </section>
+
+    <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

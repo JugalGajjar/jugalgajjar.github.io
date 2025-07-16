@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CMU-MOSEI Sentiment | Jugal Gajjar</title>
+  <link rel="stylesheet" href="../styles-projects.css" />
+  <script src="../script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Multimodal Sentiment Analysis</h1>
+    <p>Transformer-based sentiment prediction on CMU-MOSEI with early fusion of text, audio, and visual features</p>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../projects.html" class="dropbtn">Projects</a>
+      <a href="../publications.html" class="dropbtn">Publications</a>
+      <a href="../experiences.html">Experiences</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../resume.html">Resume/CV</a>
+      <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-section">
+      <img src="../images/mosei.png" alt="CMU-MOSEI Sentiment Screenshot" class="project-img" />
+
+      <h2>Overview</h2>
+      <p align="justify">
+        This project tackles multimodal sentiment analysis using the CMU-MOSEI dataset, integrating text, audio, and
+        visual inputs. Each modality is encoded using a pre-trained BERT model, and their embeddings are fused early to
+        jointly model sentiment. This early fusion technique enables better cross-modal interaction understanding.
+      </p>
+      <p align="justify">
+        The model achieves a 97.87% 7-class accuracy and 0.9682 F1-score on the test set. The low MAE of 0.1060 further
+        confirms its precision. Training involved dropout, Adam optimization (lr=1e-4), and early stopping. Evaluation
+        metrics span 7-class and binary sentiment predictions.
+      </p>
+
+      <h2>Pipeline</h2>
+      <ol>
+        <li>Process text, audio, and visual inputs using BERT encoders</li>
+        <li>Concatenate modality-specific embeddings using early fusion</li>
+        <li>Pass through a classification head with ReLU, LayerNorm, Dropout</li>
+        <li>Predict 7-class sentiment using softmax</li>
+        <li>Train using cross-entropy loss and monitor validation metrics</li>
+      </ol>
+
+      <h2>Model & Training</h2>
+      <p align="justify">
+        Each modality is encoded separately using a BERT-based encoder. Audio and visual sequences are processed and
+        mean pooled. The model uses early fusion with cross-attention across modalities and a dense classifier. It was
+        trained for 50 epochs with early stopping at epoch 25. Key configurations include:<br>
+        • Optimizer: Adam (lr = 1e-4)<br>
+        • Dropout: 0.3<br>
+        • Batch size: 32<br>
+        • 8 transformer layers, 16 heads<br>
+        • Patience = 10, seed = 42
+      </p>
+
+      <h2>Experiment Results</h2>
+      <ul>
+        <li>Test 7-class Accuracy: 97.87%</li>
+        <li>Test F1 Score: 0.9682</li>
+        <li>Test MAE: 0.1060</li>
+        <li>Binary Accuracy: 95.44%</li>
+        <li>Binary F1 Score: 0.9767</li>
+      </ul>
+
+      <h2>Tech. Stack</h2>
+      <p>Python, PyTorch, Transformers, BERT, CMU-MOSEI SDK, COVAREP, OpenFace, Multimodal Fusion</p>
+
+      <h2>Links</h2>
+      <p>
+        <a href="https://github.com/JugalGajjar/Multimodal-Sentiment-Analysis-with-MOSEI-Dataset" target="_blank"
+          class="btn">GitHub Repository</a>
+        <a href="../publications/mosei.html" target="_blank" class="btn btn-secondary">Publication Page</a>
+      </p>
+    </section>
+
+    <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

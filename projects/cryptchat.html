@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CryptChat | Jugal Gajjar</title>
+  <link rel="stylesheet" href="../styles-projects.css" />
+  <script src="../script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>CryptChat</h1>
+    <p>Secure Android chat app with AES encryption and steganographic file transfer</p>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../projects.html" class="dropbtn">Projects</a>
+      <a href="../publications.html" class="dropbtn">Publications</a>
+      <a href="../experiences.html">Experiences</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../resume.html">Resume/CV</a>
+      <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-section">
+      <img src="../images/cryptchat.png" alt="CryptChat Screenshot" class="project-img" />
+
+      <h2>Overview</h2>
+      <p align="justify">
+        CryptChat is a privacy-first Android chat application built with robust security features, including AES-256
+        symmetric encryption for real-time messaging and steganography-based file transfer. Designed with both usability
+        and security in mind, the app enables end-to-end encrypted communication with embedded image file sharing that
+        conceals payloads from unauthorized interception.
+      </p>
+
+      <h2>Core Features</h2>
+      <ol>
+        <li>Real-time encrypted chat using AES-256 (CBC mode)</li>
+        <li>Key exchange and session-based message encryption</li>
+        <li>Steganographic file transfer: hides messages within image pixels</li>
+        <li>Contact verification and secure identity initialization</li>
+        <li>SQLite-based local chat history with encrypted storage</li>
+      </ol>
+
+      <h2>How It Works</h2>
+      <p align="justify">
+        Upon chat initiation, a unique session key is generated and shared securely. All messages are encrypted before
+        transmission. When sending sensitive files, CryptChat embeds the payload within the least significant bits of
+        PNG images using LSB steganography. The receiving device extracts and decrypts the hidden content, ensuring
+        secure and covert delivery.
+      </p>
+
+      <h2>Security Design</h2>
+      <ul>
+        <li>Advanced Encryption Standard (AES-256-CBC) with PKCS5 padding</li>
+        <li>LSB Steganography for image-encoded message delivery</li>
+        <li>Salted key derivation using PBKDF2 for enhanced resistance</li>
+        <li>Input sanitization to prevent injection and tampering</li>
+      </ul>
+
+      <h2>Tech. Stack</h2>
+      <p>
+        Java, Android Studio, AES Encryption, Steganography, SQLite, XML UI Design, PNG LSB Encoding
+      </p>
+    </section>
+
+    <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

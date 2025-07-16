@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SciChat | Jugal Gajjar</title>
+  <link rel="stylesheet" href="../styles-projects.css" />
+  <script src="../script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>SciChat</h1>
+    <p>LLM-powered academic assistant with PDF support and semantic retrieval</p>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../projects.html" class="dropbtn">Projects</a>
+      <a href="../publications.html" class="dropbtn">Publications</a>
+      <a href="../experiences.html">Experiences</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../resume.html">Resume/CV</a>
+      <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-section">
+      <img src="../images/scichat.png" alt="SciChat Screenshot" class="project-img" />
+
+      <h2>Overview</h2>
+      <p align="justify">
+        SciChat is a lightweight yet powerful LLM-driven academic assistant built with Mistral7b and LangChain. It
+        enables users to chat with the model naturally and upload PDFs to retrieve context-aware responses from embedded
+        documents. Designed with researchers and students in mind, SciChat enhances access to scientific insights
+        through an intuitive interface and intelligent query understanding.
+      </p>
+
+      <h2>Pipeline</h2>
+      <ol>
+        <li>Upload PDF files through the web interface</li>
+        <li>Parse and split documents using LangChain's PDF loader</li>
+        <li>Embed text using sentence-transformer MiniLM</li>
+        <li>Store and index using Pinecone vector DB</li>
+        <li>Query either the LLM directly (no file) or use RAG pipeline (with files)</li>
+      </ol>
+
+      <h2>Model & Design</h2>
+      <p align="justify">
+        The system uses the open-source Mistral7B:instruct model through Ollama for inference. When no files are
+        uploaded, direct LLM prompting is used. When PDFs are uploaded, it leverages a Retrieval-Augmented Generation
+        (RAG) flow powered by LangChain, Pinecone, and HuggingFace embeddings to enable precise context-based answers.
+        The app runs on Flask with minimal hardware requirements and is optimized for quick bootstrapping.
+      </p>
+
+      <h2>Features</h2>
+      <ul>
+        <li>Natural language chat with or without documents</li>
+        <li>PDF support for uploading, indexing, and retrieval</li>
+        <li>Efficient vector search via Pinecone</li>
+        <li>Lightweight deployment using Flask backend</li>
+        <li>Reusable embedding cache with update detection</li>
+      </ul>
+
+      <h2>Tech. Stack</h2>
+      <p>
+        Python, Flask, Ollama, Mistral7b, LangChain, Pinecone, sentence-transformers, HTML/CSS/JS
+      </p>
+
+      <h2>Links</h2>
+      <p>
+        <a href="https://github.com/JugalGajjar/SciChat-LLM-with-PDF-Support" target="_blank" class="btn">GitHub
+          Repository</a>
+      </p>
+    </section>
+
+    <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
