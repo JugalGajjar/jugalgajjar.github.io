@@ -1,0 +1,290 @@
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #222;
+  --accent-color: #0077cc;
+  --accent-hover: #005fa3;
+  --card-bg: #fff;
+  --link-color: var(--accent-color);
+  --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --transition-speed: 0.3s;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --card-bg: #1f1f1f;
+  --link-color: #66aaff;
+  --accent-hover: #5599dd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+header {
+  background: var(--accent-color);
+  color: #fff;
+  padding: 1rem 0 1rem;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.25s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: rgba(255 255 255 / 0.25);
+  outline: none;
+}
+
+nav button {
+  background-color: rgba(255 255 255 / 0.25);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  user-select: none;
+}
+
+nav button:hover,
+nav button:focus {
+  background-color: #fff;
+  color: var(--accent-color);
+}
+
+/* Dropdown Nav */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--card-bg);
+  min-width: 180px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--text-color);
+  padding: 0.75rem 1rem;
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Main Content */
+main {
+  margin: 2.5rem auto 4rem;
+  width: 90%;
+  max-width: 950px;
+  flex: 1;
+}
+
+/* Summary Mini-Cards (2x2) */
+.summary-section {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 3rem;
+}
+
+main > section.summary-section h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card-grid .card {
+  background: var(--bg-color);
+  padding: 1.4rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-grid .card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-grid .card h3 {
+  margin: 0 0 0.6rem;
+  color: var(--accent-color);
+}
+
+.card-grid .card p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Dual Section Cards (Professional & Personal) */
+main > section.card {
+  background: var(--card-bg);
+  padding: 2rem 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  margin-bottom: 2.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+main > section.card:hover {
+  box-shadow: 0 6px 22px rgba(0,0,0,0.10);
+}
+
+main > section.card h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+main > section.card p {
+  font-size: 1.05rem;
+  margin-bottom: 1.1rem;
+  line-height: 1.6;
+}
+
+footer {
+  background: #eee;
+  color: #555;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #ccc;
+}
+
+[data-theme="dark"] footer {
+  background: #1a1a1a;
+  color: #aaa;
+  border-top-color: #333;
+}
+
+.back-home {
+  text-align: center;
+  margin: 3rem 0 2rem;
+}
+
+.back-home a {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color var(--transition-speed) ease;
+  box-shadow: 0 3px 8px rgba(0, 119, 204, 0.4);
+}
+
+.back-home a:hover,
+.back-home a:focus {
+  background-color: var(--accent-hover);
+  box-shadow: 0 4px 12px rgba(0, 95, 163, 0.6);
+  outline: none;
+}
+
+/* Responsive Layout */
+@media (max-width: 640px) {
+  header h1 {
+    font-size: 2.1rem;
+  }
+
+  nav {
+    gap: 1rem;
+  }
+
+  main > section.card {
+    padding: 1.5rem 1.8rem;
+  }
+
+  main > section.card h2 {
+    font-size: 1.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
