@@ -34,12 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
 
-  // Toggle menu on hamburger click
   hamburger.addEventListener('click', () => {
     menu.classList.toggle('active');
   });
 
-  // Close menu when clicking outside
   document.addEventListener('click', (event) => {
     const isClickInsideMenu = menu.contains(event.target);
     const isClickOnHamburger = hamburger.contains(event.target);
