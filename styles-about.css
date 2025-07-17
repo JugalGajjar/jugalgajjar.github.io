@@ -41,9 +41,9 @@ body {
 header {
   background: var(--accent-color);
   color: #fff;
-  padding: 1rem 0 1rem;
+  padding: 1rem 1rem 1rem 1rem;
   text-align: center;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -54,6 +54,7 @@ header h1 {
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 0.03em;
+  padding: auto;
 }
 
 header p {
@@ -61,6 +62,7 @@ header p {
   margin-top: 0.5rem;
   opacity: 0.9;
   font-style: italic;
+  padding: auto;
 }
 
 nav {
@@ -122,7 +124,7 @@ nav button:focus {
   position: absolute;
   background-color: var(--card-bg);
   min-width: 180px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   z-index: 1;
 }
@@ -147,8 +149,7 @@ nav button:focus {
 main {
   margin: 2.5rem auto 4rem;
   width: 90%;
-  max-width: 950px;
-  flex: 1;
+  max-width: 900px;
 }
 
 /* Summary Mini-Cards (2x2) */
@@ -160,7 +161,7 @@ main {
   margin-bottom: 3rem;
 }
 
-main > section.summary-section h2 {
+main>section.summary-section h2 {
   margin-top: 0;
   font-size: 1.8rem;
   color: var(--accent-color);
@@ -198,20 +199,20 @@ main > section.summary-section h2 {
 }
 
 /* Dual Section Cards (Professional & Personal) */
-main > section.card {
+main>section.card {
   background: var(--card-bg);
   padding: 2rem 2.5rem;
   border-radius: 14px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   margin-bottom: 2.5rem;
   transition: box-shadow 0.3s ease;
 }
 
-main > section.card:hover {
-  box-shadow: 0 6px 22px rgba(0,0,0,0.10);
+main>section.card:hover {
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.10);
 }
 
-main > section.card h2 {
+main>section.card h2 {
   margin-top: 0;
   font-size: 1.8rem;
   color: var(--accent-color);
@@ -220,7 +221,7 @@ main > section.card h2 {
   margin-bottom: 1rem;
 }
 
-main > section.card p {
+main>section.card p {
   font-size: 1.05rem;
   margin-bottom: 1.1rem;
   line-height: 1.6;
@@ -276,15 +277,77 @@ footer {
     gap: 1rem;
   }
 
-  main > section.card {
+  main>section.card {
     padding: 1.5rem 1.8rem;
   }
 
-  main > section.card h2 {
+  main>section.card h2 {
     font-size: 1.5rem;
   }
 
   .card-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 1001;
+}
+
+#menu {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  #menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    width: 50%;
+    background-color: rgba(20, 20, 20, 0.85);
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+
+    transform: translateY(calc(100% + 0.5rem));
+  }
+
+  #menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+  }
+
+  #menu button#darkToggle {
+    align-self: center;
+    margin-top: 1rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.3rem;
+  }
+
+  #menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
   }
 }
