@@ -33,7 +33,7 @@ body {
 header {
     background: var(--accent-color);
     color: #fff;
-    padding: 1rem 0 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     text-align: center;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
     position: sticky;
@@ -46,6 +46,7 @@ header h1 {
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 0.03em;
+  padding: auto;
 }
 
 header p {
@@ -54,6 +55,7 @@ header p {
     margin-top: 0.3rem;
     opacity: 0.9;
     font-style: italic;
+  padding: auto;
 }
 
 nav {
@@ -281,4 +283,66 @@ footer {
     .resume-toolbar h2 {
         font-size: 1.3rem;
     }
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 1001;
+}
+
+#menu {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  #menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    width: 50%;
+    background-color: rgba(20, 20, 20, 0.85);
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+
+    transform: translateY(calc(100% + 0.5rem));
+  }
+
+  #menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+  }
+
+  #menu button#darkToggle {
+    align-self: center;
+    margin-top: 1rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.3rem;
+  }
+
+  #menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
