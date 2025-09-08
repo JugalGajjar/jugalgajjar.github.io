@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multi-Agent Financial Assistant | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-projects.css" />
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Multi-Agent Financial Assistant</h1>
+        <p>Web-based AI assistant with Groq's LLaMA3 and Phi framework for finance</p>
+
+        <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <nav id="menu">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html" class="dropbtn">Projects</a>
+            <a href="../publications.html" class="dropbtn">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-section">
+            <img src="../images/financeagent.png" alt="Multi-Agent Financial Assistant Screenshot"
+                class="project-img" />
+
+            <h2>Overview</h2>
+            <p align="justify">
+                The Multi-Agent Financial Assistant is a web-based AI system built with the Phi multi-agent framework
+                and Groq's ultra-fast LLaMA3. It handles real-time financial queries and intelligent web search by
+                delegating tasks between specialized agents (Finance Agent and Web Search Agent). Integrated with
+                yfinance for stock data and Google Search for live information, it delivers results in a
+                Markdown-rendered chat UI with light/dark mode support.
+            </p>
+
+            <h2>Pipeline</h2>
+            <p>
+                1. User submits financial or search query via chat UI<br>
+                2. Task delegation between Finance Agent (yfinance) and Web Search Agent (Google)<br>
+                3. LLaMA3 model via Groq processes query for reasoning & synthesis<br>
+                4. Responses formatted in Markdown (tables, code, citations)<br>
+                5. Chat UI renders response with persistent light/dark mode toggle
+            </p>
+
+            <h2>Architecture & Design</h2>
+            <p align="justify">
+                The backend runs on Flask, orchestrating multi-agent communication via Phi. Finance queries use
+                yfinance for real-time stock market data, while general knowledge queries trigger a Google Search
+                agent. Responses are processed through Groq's LLaMA3-8B for low-latency inference and delivered
+                to the frontend as Markdown-rendered messages. The system features a responsive UI with theme
+                persistence and
+                chat history support.
+            </p>
+
+            <h2>Features</h2>
+            <p>
+                • Multi-agent task delegation (Finance + Web Search)<br>
+                • Groq-powered LLaMA3 integration<br>
+                • Real-time stock data and fundamentals via yfinance<br>
+                • Web search with citations<br>
+                • Markdown chat UI with tables and code blocks<br>
+                • Light/dark mode toggle with persistence<br>
+                • Flask-based responsive web app
+            </p>
+
+            <h2>Tech. Stack</h2>
+            <p>
+                Python, Flask, Phi Multi-Agent Framework, Groq, yfinance, Google Search API, JavaScript,
+                HTML/CSS, Marked.js
+            </p>
+
+            <h2>Links</h2>
+            <p>
+                <a href="https://github.com/JugalGajjar/Multi-Agent-Financial-Assistant" target="_blank"
+                    class="btn">GitHub Repository</a>
+            </p>
+        </section>
+
+        <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Jugal Gajjar. All rights rese
