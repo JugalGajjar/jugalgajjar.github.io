@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VulnGraph | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-projects.css" />
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>VulnGraph</h1>
+        <p>Graph-Augmented LLMs for Explainable Software Vulnerability Detection</p>
+
+        <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <nav id="menu">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html" class="dropbtn">Projects</a>
+            <a href="../publications.html" class="dropbtn">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-section">
+            <img src="../images/vulngraph.png" alt="VulnGraph Architecture Screenshot" class="project-img" />
+
+            <h2>Overview</h2>
+            <p align="justify">
+                VulnGraph is a research project integrating graph neural networks (GNNs) with Large Language
+                Models
+                to improve vulnerability detection in Java code. The system extracts Abstract Syntax Trees (ASTs) and
+                Control Flow
+                Graphs (CFGs) using PROGEX, learns structural embeddings with GNNs, and fuses them with LLM-based
+                semantic
+                reasoning. This hybrid approach enables deeper code understanding and more accurate detection of subtle
+                security flaws in large codebases.
+            </p>
+
+            <h2>Pipeline</h2>
+            <p>
+                1. Extracts ASTs and CFGs from Java source code<br>
+                2. Learns graph embeddings via Graph Neural Networks<br>
+                3. Generates semantic embeddings with an LLM<br>
+                4. Combines both through proposed gated fusion for classification<br>
+                5. Produces vulnerability label, fusion scores, saliency subgraphs, and natural language explanation
+            </p>
+
+            <h2>Experiment Results</h2>
+            <p>
+                • Dataset: 35.6k cleaned Java files curated from open-source repos and datasets<br>
+                • Proposed Fusion Mechanism: Two-way gating method for dynamic weightage of structure and semantics<br>
+                • Accuracy: 93.57% (GNN-only baseline: 85.21%, LLM-only baseline: 75.76%)<br>
+                • Interpretability: Provides weighted fusion scores, saliency subgraphs, and text explanations<br>
+            </p>
+
+            <h2>Tech. Stack</h2>
+            <p>Python, Java, PROGEX, Graph Neural Networks (GNNs), PyTorch Geometric, LLMs, HF Transformers</p>
+
+            <h2>Links</h2>
+            <p>
+                <a href="https://github.com/JugalGajjar/VulnGraph" target="_blank" class="btn">GitHub Repository</a>
+                <!-- <a href="../publications/vulngraph.html" class="btn btn-secondary">Publication Page</a> -->
+            </p>
+        </section>
+
+        <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
