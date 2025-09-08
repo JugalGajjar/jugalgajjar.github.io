@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OrderBook++ | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-projects.css" />
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>OrderBook++</h1>
+        <p>High-performance C++ order matching engine with Python bindings</p>
+
+        <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <nav id="menu">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html" class="dropbtn">Projects</a>
+            <a href="../publications.html" class="dropbtn">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-section">
+            <img src="../images/orderbook++.png" alt="OrderBook++ Fancy Image" class="project-img" />
+
+            <h2>Overview</h2>
+            <p align="justify">
+                OrderBook++ is a custom-built C++ order matching engine designed for speed, scalability, and seamless
+                Python
+                integration. It supports market, limit, and cancel orders with efficient trade execution and history
+                tracking.
+                The project also exposes Python bindings via pybind11 for interactive experimentation, analytics, and
+                visualization.
+                The engine serves as a foundation for simulating electronic markets and developing algorithmic trading
+                strategies.
+            </p>
+
+            <h2>Pipeline</h2>
+            <p>
+                1. Initialize order book with custom data structures<br>
+                2. Process market and limit orders<br>
+                3. Match orders using price-time priority<br>
+                4. Record trades and update order book state<br>
+                5. Expose functionality to Python via pybind11 for analysis and visualization
+            </p>
+
+            <h2>Design & Implementation</h2>
+            <p align="justify">
+                The system is implemented in C++ with optimization for low-latency order matching using custom
+                data structures.
+                It includes unit tests with Google Test, performance benchmarks, and pybind11 Python bindings for
+                integration with data science workflows. Python scripts provide visualization and strategy
+                backtesting on top of the engine.
+            </p>
+
+            <h2>Features</h2>
+            <p>
+                • Market, limit, and cancel order support<br>
+                • Price-time priority order matching<br>
+                • Trade history tracking<br>
+                • Python bindings via pybind11<br>
+                • Benchmark tests and visualization utilities
+            </p>
+
+            <h2>Tech. Stack</h2>
+            <p>
+                C++17, pybind11, CMake, Google Test, Python (visualization & demos), Performance Benchmarking
+            </p>
+
+            <h2>Links</h2>
+            <p>
+                <a href="https://github.com/JugalGajjar/OrderBookPlusPlus" target="_blank" class="btn">GitHub
+                    Repository</a>
+            </p>
+        </section>
+
+        <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
