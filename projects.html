@@ -29,6 +29,83 @@
   </header>
 
   <main>
+    <section id="vulngraph" class="project-section">
+      <h2>VulnGraph: Bridging Semantics & Structure for Software Vulnerability Detection</h2>
+      <img src="images/vulngraph.png" alt="VulnGraph Project Architecture Screenshot" class="project-img" />
+      <p align="justify">
+        VulnGraph is a research project integrating graph neural networks (GNNs) with Large Language
+        Models
+        to improve vulnerability detection in Java code. The system extracts Abstract Syntax Trees (ASTs) and Control
+        Flow
+        Graphs (CFGs) using PROGEX, learns structural embeddings with GNNs, and fuses them with LLM-based semantic
+        reasoning. This hybrid approach enables deeper code understanding and more accurate detection of subtle
+        security flaws in large codebases.
+      </p>
+      <p><strong>Technologies:</strong> Python, Java, PROGEX, Graph Neural Networks (GNNs), PyTorch Geometric, LLMs, HF
+        Transformers</p>
+      <p>
+        <a href="projects/vulngraph.html" class="btn">Project Page</a>
+        <a href="https://github.com/JugalGajjar/VulnGraph" target="_blank" class="btn btn-secondary">GitHub
+          Repository</a>
+      </p>
+    </section>
+
+    <section id="financeagent" class="project-section">
+      <h2>Multi-Agent Financial Assistant</h2>
+      <img src="images/financeagent.png" alt="MalCodeAI Project Screenshot" class="project-img" />
+      <p align="justify">
+        A web-based multi-agent assistant built with the Phi multi-agent framework and Groq-powered LLaMA3, designed for
+        real-time financial queries and intelligent web search. The system delegates tasks between specialized agents
+        (Finance & Web Search), integrates live stock data via yfinance, supports web search with citations,
+        and renders responses in a Markdown chat UI with light/dark theme support.
+      </p>
+      <p><strong>Technologies:</strong> Python, Flask, Phi Data Agents, Groq, yfinance, Google
+        Search API, JavaScript, HTML/CSS</p>
+      <p>
+        <a href="projects/financeagent.html" class="btn">Project Page</a>
+        <a href="https://github.com/JugalGajjar/Multi-Agent-Financial-Assistant" target="_blank"
+          class="btn btn-secondary">GitHub Repository</a>
+      </p>
+    </section>
+
+    <section id="securefixagent" class="project-section">
+      <h2>SecureFixAgent: A Hybrid LLM Agent for Automated Python Static Vulnerability Repair</h2>
+      <img src="images/securefix.png" alt="SecureFixAgent Architecture Screenshot" class="project-img" />
+      <p align="justify">
+        SecureFixAgent is a hybrid agent system that augments static analysis tools (like Bandit) with
+        Large Language Models to detect and repair vulnerabilities in Python source code. The pipeline benchmarks
+        multiple open-source LLMs, parses their outputs for actionable fixes, and automatically injects safe patches
+        into the original files. By combining deterministic static analysis with adaptive LLM reasoning, the agent
+        enhances both accuracy and automation in software vulnerability remediation.
+      </p>
+      <p><strong>Technologies:</strong> Python, LLMs, HuggingFace, Apple MLX, NVIDIA CUDA, Bandit Static Code Analysis,
+        Security</p>
+      <p>
+        <a href="projects/securefixagent.html" class="btn">Project Page</a>
+        <a href="https://github.com/JugalGajjar/SecureFixAgent" target="_blank" class="btn btn-secondary">GitHub
+          Repository</a>
+      </p>
+    </section>
+
+    <section id="orderbook++" class="project-section">
+      <h2>OrderBook++: High-Performance C++ Order Matching Engine with Python Bindings</h2>
+      <img src="images/orderbook++.png" alt="OrderBook++ Order Book Visualization" class="project-img" />
+      <p align="justify">
+        OrderBook++ is a modular, low-latency order matching engine implemented in modern C++ for simulating and
+        analyzing
+        financial trading systems. It supports limit, market, and cancel orders, maintains bid/ask order books, executes
+        trades with precise matching logic, and tracks a complete trade history. The project exposes Python bindings via
+        pybind11 for interactive experimentation, analytics, and real-time visualization.
+      </p>
+      <p><strong>Technologies:</strong> C++17, pybind11, CMake, Google Test, Python (visualization & demos),
+        Performance Benchmarking</p>
+      <p>
+        <a href="projects/orderbook++.html" class="btn">Project Page</a>
+        <a href="https://github.com/JugalGajjar/OrderBookPlusPlus" target="_blank" class="btn btn-secondary">GitHub
+          Repository</a>
+      </p>
+    </section>
+
     <section id="malcodeai" class="project-section">
       <h2>MalCodeAI: AI-Powered Malicious Code Detection</h2>
       <img src="images/malcodeai.png" alt="MalCodeAI Project Screenshot" class="project-img" />
