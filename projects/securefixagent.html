@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SecureFixAgent | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-projects.css" />
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>SecureFixAgent</h1>
+        <p>A Hybrid LLM Agent for Automated Python Static Vulnerability Repair</p>
+
+        <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <nav id="menu">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html" class="dropbtn">Projects</a>
+            <a href="../publications.html" class="dropbtn">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-section">
+            <img src="../images/securefix.png" alt="SecureFixAgent Architecture Screenshot" class="project-img" />
+
+            <h2>Overview</h2>
+            <p align="justify">
+                SecureFixAgent is a hybrid agent system that augments static analysis tools (like Bandit) with
+                Large Language Models to detect and repair vulnerabilities in Python source code. The pipeline
+                benchmarks
+                multiple open-source LLMs, parses their outputs for actionable fixes, and automatically injects safe
+                patches
+                into the original files. By combining deterministic static analysis with adaptive LLM reasoning, the
+                agent
+                enhances both accuracy and automation in software vulnerability remediation.
+            </p>
+
+            <h2>Pipeline</h2>
+            <p>
+                1. Runs Bandit for static vulnerability detection<br>
+                2. Passes Bandit reports and vulnerable code segments into an LLM<br>
+                3. Generates secure patches with explanations<br>
+                4. Injects fixes back into source files<br>
+                5. Re-runs Bandit to verify successful remediation
+            </p>
+
+            <h2>Experiment Results</h2>
+            <p>
+                • Dataset: 2350+ Python vulnerability code samples analyzed<br>
+                • Zero-shot pre-trained LLM patching fix accuracy: 74.32%<br>
+                • SecureFixAgent end-to-end fix accuracy: 87.83%<br>
+                • Reduced false positives vs Bandit alone by ~11%<br>
+                • SecureFixAgent Likert scale user satisfaction: 4.5/5
+            </p>
+
+            <h2>Tech. Stack</h2>
+            <p>Python, Bandit, HuggingFace Transformers, LLMs, PyTorch, Agent Orchestration, Static Code Analysis</p>
+
+            <h2>Links</h2>
+            <p>
+                <a href="https://github.com/JugalGajjar/SecureFixAgent" target="_blank" class="btn">GitHub
+                    Repository</a>
+                <!-- <a href="../publications/securefixagent.html" class="btn btn-secondary">Publication Page</a> -->
+            </p>
+        </section>
+
+        <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
