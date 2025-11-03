@@ -32,6 +32,47 @@
     <section>
       <h2>Conference Papers</h2>
       <div class="publication">
+        <h3>Bridging Semantics & Structure for Software Vulnerability Detection using Hybrid Network Models</h3>
+        <p><strong>Authors:</strong> Jugal Gajjar, Kaustik Ranaware, Kamalasankari Subramaniakuppusamy</p>
+        <p><strong>Venue:</strong> 14th International Conference on Complex Networks and Their Applications (COMPLEX
+          NETWORKS 2025)</p>
+        <p align="justify"><strong>Abstract:</strong> Software vulnerabilities remain a persistent risk, yet static and
+          dynamic analyses often overlook structural dependencies that shape insecure behaviors. Viewing programs as
+          heterogeneous graphs, we capture control- and data-flow relations as complex interaction networks. Our hybrid
+          framework combines these graph representations with light-weight (&lt;4B) local LLMs, uniting topological
+          features with semantic reasoning while avoiding the cost and privacy concerns of large cloud models. Evaluated
+          on Java vulnerability detection (binary classification), our method achieves 93.57% accuracy-an 8.36% gain
+          over Graph Attention Network-based embeddings and 17.81% over pretrained LLM baselines such as Qwen2.5 Coder
+          3B. Beyond accuracy, the approach extracts salient subgraphs and generates natural language explanations,
+          improving interpretability for developers. These results pave the way for scalable, explainable, and locally
+          deployable tools that can shift vulnerability analysis from purely syntactic checks to deeper structural and
+          semantic insights, facilitating broader adoption in real-world secure software development.</p>
+        <a href="publications/vulngraph.html" class="btn">Publication Page</a>
+      </div>
+
+      <div class="publication">
+        <h3>SecureFixAgent: A Hybrid LLM Agent for Automated Python Static Vulnerability Repair</h3>
+        <p><strong>Authors:</strong> Jugal Gajjar, Kamalasankari Subramaniakuppusamy, Relsy Puthal, Kaustik Ranaware</p>
+        <p><strong>Venue:</strong> 2025 International Conference on Machine Learning and Applications (ICMLA)</p>
+        <p align="justify"><strong>Abstract:</strong> Modern software development pipelines face growing challenges in
+          securing large codebases with extensive dependencies. Static analysis tools like Bandit are effective at
+          vulnerability detection but suffer from high false positives and lack repair capabilities. Large Language
+          Models (LLMs), in contrast, can suggest fixes but often hallucinate changes and lack self-validation. We
+          present SecureFixAgent, a hybrid repair framework integrating Bandit with lightweight local LLMs (&lt;8B
+          parameters) in an iterative detect-repair-validate loop. To improve precision, we apply parameter-efficient
+          LoRA-based fine-tuning on a diverse, curated dataset spanning multiple Python project domains, mitigating
+          dataset bias and reducing unnecessary edits. SecureFixAgent uses Bandit for detection, the LLM for candidate
+          fixes with explanations, and Bandit re-validation for verification, all executed locally to preserve privacy
+          and reduce cloud reliance. Experiments show SecureFixAgent reduces false positives by 10.8% over static
+          analysis, improves fix accuracy by 13.51%, and lowers false positives by 5.46% compared to pre-trained LLMs,
+          typically converging within three iterations. Beyond metrics, developer studies rate explanation quality
+          4.5/5, highlighting its value for human trust and adoption. By combining verifiable security improvements with
+          transparent rationale in a resource-efficient local framework, SecureFixAgent advances trustworthy, automated
+          vulnerability remediation for modern pipelines.</p>
+        <a href="publications/securefixagent.html" class="btn">Publication Page</a>
+      </div>
+
+      <div class="publication">
         <h3>MalCodeAI: Autonomous Vulnerability Detection and Remediation via Language Agnostic Code Reasoning</h3>
         <p><strong>Authors:</strong> Jugal Gajjar, Kamalasankari Subramaniakuppusamy, Noha El Kachach</p>
         <p><strong>Venue:</strong> IEEE 26th International Conference on Information Reuse and Integration (IRI 2025)
@@ -58,6 +99,29 @@
 
     <section>
       <h2>Preprints</h2>
+      <div class="publication">
+        <h3>MLCPD: A Unified Multi-Language Code Parsing Dataset with Universal AST Schema</h3>
+        <p><strong>Authors:</strong> Jugal Gajjar, Kamalasankari Subramaniakuppusamy</p>
+        <p><strong>Platform:</strong> arXiv (cs.SE), 2025</p>
+        <p align="justify"><strong>Abstract:</strong> We introduce the MultiLang Code Parser Dataset (MLCPD), a
+          large-scale, language-agnostic dataset unifying syntactic and structural representations of code across ten
+          major programming languages. MLCPD contains over seven million parsed source files normalized under our
+          proposed <em>universal Abstract Syntax Tree (AST)</em> schema, enabling consistent cross-language reasoning,
+          structural learning, and multilingual software analysis. Unlike existing corpora that focus purely on
+          token-level code or isolated parsers, MLCPD provides both hierarchical tree representations and rich metadata
+          for every file, ensuring lossless syntactic coverage and structural uniformity. Each entry includes a
+          normalized schema, language-level metadata, and abstracted node semantics stored in Parquet format for
+          scalable retrieval. Empirical analyses reveal strong cross-language structural regularities—demonstrating that
+          syntactic graphs from languages as diverse as Python, Java, and Go can be aligned under a shared schema. We
+          release the dataset publicly on <a
+            href="https://huggingface.co/datasets/jugalgajjar/MultiLang-Code-Parser-Dataset">Hugging Face</a> and the
+          accompanying codebase on <a href="https://github.com/JugalGajjar/MultiLang-Code-Parser-Dataset">GitHub</a>,
+          which includes complete pipelines for dataset reproduction, grammar compilation, and a visualization tool for
+          exploring the unified AST across languages. Together, these resources establish MLCPD as an open, reproducible
+          foundation for future research in cross-language representation learning and program analysis.</p>
+        <a href="publications/mlcpd.html" class="btn">Publication Page</a>
+      </div>
+
       <div class="publication">
         <h3>Multimodal Sentiment Analysis on CMU-MOSEI Dataset using Transformer-based Models</h3>
         <p><strong>Authors:</strong> Jugal Gajjar, Kaustik Ranaware</p>
