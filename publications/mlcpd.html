@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MLCPD Publication | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-publications.css" />
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>MLCPD</h1>
+        <p>A Unified Multi-Language Code Parsing Dataset with Universal AST Schema</p>
+
+        <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <nav id="menu">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html" class="dropbtn">Projects</a>
+            <a href="../publications.html" class="dropbtn">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="publication">
+            <h2>Abstract</h2>
+            <p align="justify">
+                We introduce the MultiLang Code Parser Dataset (MLCPD), a large-scale, language-agnostic dataset
+                unifying syntactic and structural representations of code across ten major programming languages. MLCPD
+                contains over seven million parsed source files normalized under our proposed universal Abstract Syntax
+                Tree (AST) schema, enabling consistent cross-language reasoning, structural learning, and multilingual
+                software analysis. Unlike existing corpora that focus purely on token-level code or isolated parsers,
+                MLCPD provides both hierarchical tree representations and rich metadata for every file, ensuring
+                lossless syntactic coverage and structural uniformity. Each entry includes a normalized schema,
+                language-level metadata, and abstracted node semantics stored in Parquet format for scalable retrieval.
+                Empirical analyses reveal strong cross-language structural regularities-demonstrating that syntactic
+                graphs from languages as diverse as Python, Java, and Go can be aligned under a shared schema. We
+                release the dataset publicly on Hugging Face and the accompanying codebase on GitHub, which includes
+                complete pipelines for dataset reproduction, grammar compilation, and a visualization tool for exploring
+                the unified AST across languages. Together, these resources establish MLCPD as an open, reproducible
+                foundation for future research in cross-language representation learning and program analysis.
+            </p>
+        </section>
+
+        <section class="publication">
+            <h2>Related Work</h2>
+            <p align="justify">
+                Prior corpora (The Stack, StarCoder, CodeSearchNet) emphasize token-level data and lack unified
+                structural supervision. IRs and parsers offer partial structure but inconsistent semantics across
+                languages. MLCPD addresses this gap with a lossless, uniform, and scalable universal AST schema covering
+                ten languages.
+            </p>
+        </section>
+
+        <section class="publication">
+            <h2>Methodology</h2>
+            <p align="justify">
+                MLCPD employs a modular data pipeline built on Tree-sitter grammars to parse and unify code
+                across ten major programming languages. The framework performs automated language detection, AST
+                extraction, and normalization into a four-layer universal schema that captures syntactic, semantic, and
+                structural information. Each parsed file includes metadata, a flat node array, and categorized
+                constructs—such as declarations, statements, and expressions—allowing consistent interpretation across
+                diverse languages.
+            </p>
+            <p align="justify">
+                To ensure efficiency and scalability, all processed data undergo schema validation before being
+                serialized into the Apache Parquet format. This design supports distributed processing, fast I/O, and
+                large-scale query execution for training and analysis. The pipeline also integrates custom validators
+                for error handling, achieving a 99.9999% successful conversion rate across 7 million+ code files.
+            </p>
+        </section>
+
+        <section class="publication">
+            <h2>Results & Analysis</h2>
+            <p align="justify">
+                The final MLCPD dataset encompasses 7,021,722 parsed source files across ten languages, occupying
+                approximately 114 GB in Parquet format. Statistical analysis reveals consistent structural patterns and
+                balanced representation across language families, demonstrating the robustness of the universal AST
+                schema. MLCPD enables cross-language reasoning, code similarity search, and structure-aware pretraining
+                for LLMs and graph-based models. Its uniform schema and high parsing fidelity make it a foundational
+                benchmark for multilingual code understanding and scalable program analysis research.
+            </p>
+        </section>
+
+        <section class="publication">
+            <h2>Project & Paper Links</h2>
+            <a href="../projects/mlcpd.html" class="btn">Project Page</a>
+            <a href="https://arxiv.org/abs/2510.16357" class="btn">View Paper</a>
+        </section>
+
+        <div class="back-home">
+            <a href="../publications.html" class="btn btn-outline">← Back to Publications</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
