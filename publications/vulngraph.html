@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VulnGraph Publication | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-publications.css" />
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>VulnGraph</h1>
+        <p>Bridging Semantics & Structure for Explainable Vulnerability Detection</p>
+
+        <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <nav id="menu">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html" class="dropbtn">Projects</a>
+            <a href="../publications.html" class="dropbtn">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="publication">
+            <h2>Abstract</h2>
+            <p align="justify">
+                Software vulnerabilities remain a persistent risk, yet static and dynamic analyses often overlook
+                structural dependencies that shape insecure behaviors. Viewing programs as heterogeneous graphs, we
+                capture control- and data-flow relations as complex interaction networks. Our hybrid framework combines
+                these graph representations with light-weight (&lt;4B) local LLMs, uniting topological features with
+                semantic reasoning while avoiding the cost and privacy concerns of large cloud models. Evaluated on Java
+                vulnerability detection (binary classification), our method achieves 93.57% accuracy-an 8.36% gain over
+                Graph Attention Network-based embeddings and 17.81% over pretrained LLM baselines such as Qwen2.5 Coder
+                3B. Beyond accuracy, the approach extracts salient subgraphs and generates natural language
+                explanations, improving interpretability for developers. These results pave the way for scalable,
+                explainable, and locally deployable tools that can shift vulnerability analysis from purely syntactic
+                checks to deeper structural and semantic insights, facilitating broader adoption in real-world secure
+                software development.
+            </p>
+        </section>
+
+        <section class="publication">
+            <h2>Related Work</h2>
+            <p align="justify">
+                Traditional static/dynamic analyses miss global structural dependencies; sequence models/LLMs capture
+                semantics but overlook topology; graph models encode structure yet miss semantics. VulnGraph unifies
+                network-theoretic structure with LLM semantics to address these complementary gaps.
+            </p>
+        </section>
+
+        <section class="publication">
+            <h2>Methodology</h2>
+            <p align="justify">
+                The process begins with code-to-graph transformation, where each source file is converted into Control
+                Flow Graphs that capture both syntactic and dependency relationships. Multiple graph encoders (GCN, GAT,
+                GraphSAGE, Node2Vec) generate structural embeddings representing the program's topology, while a local
+                LLM produces semantic embeddings by interpreting the same code in natural-language form. These
+                heterogeneous representations are then projected into a shared latent space, aligning the structural and
+                semantic perspectives of the code.
+            </p>
+            <p align="justify">
+                To fuse both modalities, our method employs a two-way gating mechanism that dynamically balances graph
+                and language signals for each sample—emphasizing structural cues for control-flow vulnerabilities and
+                semantic cues for logic-level flaws. The model is trained using a joint loss that combines
+                classification accuracy, InfoNCE contrastive alignment, and Laplacian regularization to preserve local
+                graph smoothness. For interpretability, VulnGraph provides per-relation gating weights and extracts
+                top-K salient subgraphs with concise textual rationales, enabling developers to trace and understand
+                each vulnerability prediction.
+            </p>
+        </section>
+
+        <section class="publication">
+            <h2>Results</h2>
+            <p align="justify">
+                Our proposed approach achieved significant improvements in both accuracy and interpretability across
+                multiple benchmarks. On a curated Java vulnerability dataset of over 35,000 code files, it reached
+                93.57% accuracy, outperforming GNN-only baselines (85.21%) and LLM-only models (75.76%) by wide margins.
+                The proposed two-way gating fusion effectively balanced structural and semantic cues, yielding a
+                consistent performance gain of 8-18% across vulnerability classes such as resource leaks, injection
+                flaws, and logic errors. Beyond raw metrics, VulnGraph demonstrated strong interpretability—its
+                attention-based gating produced saliency subgraphs and natural-language explanations that aligned
+                closely with expert annotations.
+            </p>
+        </section>
+
+        <section class="publication">
+            <h2>Project & Paper Links</h2>
+            <a href="../projects/vulngraph.html" class="btn">Project Page</a>
+            <a href="https://arxiv.org/abs/2510.10321" class="btn">View Paper</a>
+        </section>
+
+        <div class="back-home">
+            <a href="../publications.html" class="btn btn-outline">← Back to Publications</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
