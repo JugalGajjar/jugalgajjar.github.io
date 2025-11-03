@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MLCPD | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-projects.css" />
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>MLCPD</h1>
+        <p>A Unified Multi-Language Code Parsing Dataset with a Universal AST Schema</p>
+
+        <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <nav id="menu">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html" class="dropbtn">Projects</a>
+            <a href="../publications.html" class="dropbtn">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-section">
+            <img src="../images/mlcpd.png" alt="MLCPD Dataset Overview" class="project-img" />
+
+            <h2>Overview</h2>
+            <p align="justify">
+                MLCPD is a large-scale, language-agnostic dataset unifying syntactic and structural representations of
+                code
+                across 10 programming languages (C, C++, C#, Go, Java, JavaScript, Python, Ruby, Scala,
+                TypeScript).
+                It provides 7M+ parsed source files normalized under a universal AST schema—enabling
+                consistent
+                cross-language reasoning, structural learning, and multilingual software analysis. Each entry includes a
+                lossless hierarchical JSON AST, language-level metadata, and abstracted node semantics, serialized in
+                Parquet for scalable retrieval.
+            </p>
+
+            <h2>Pipeline</h2>
+            <p>
+                1. Curate permissively licensed code and normalize text (UTF-8, de-BOM, deduplication)<br>
+                2. Parse with Tree-sitter grammars for 10 languages and extract full-fidelity ASTs<br>
+                3. Linearize AST to a flat node array with O(1) traversal; attach metadata & diagnostics<br>
+                4. Categorize nodes into universal types (declarations, statements, expressions)<br>
+                5. Build cross-language maps (e.g., function/class) for uniform querying<br>
+                6. Validate JSON schema and write to Parquet for efficient loading
+            </p>
+
+            <h2>Dataset & Stats</h2>
+            <p>
+                • Records: 7,021,722 (success rate ≈ 99.99994%)<br>
+                • Languages: 10 (balanced coverage)<br>
+                • Disk Storage: ~114 GB Parquets (~5.5× compression)<br>
+                • Structures captured: complete AST nodes + cross-language schema mappings<br>
+                • Use cases: cross-language representation learning, vulnerability analysis, explainable code
+                intelligence
+            </p>
+
+            <h2>Features</h2>
+            <p>
+                • Universal AST schema for structural homogeneity without losing language nuances<br>
+                • Lossless node capture (tokens, delimiters, punctuation) + O(1) node addressing<br>
+                • Cross-language function/class maps for uniform queries and analytics<br>
+                • Scalable Parquet storage for fast, large-batch training and analysis
+            </p>
+
+            <h2>Tech. Stack</h2>
+            <p>
+                Python, Tree-sitter, Apache Parquet, Hugging Face Datasets, Pandas, NumPy, PyVis, NetworkX,
+                Matplotlib, Seaborn, TQDM, JSON
+            </p>
+
+            <h2>Links</h2>
+            <p>
+                <a href="../publications/mlcpd.html" target="_blank" class="btn">Publication Page</a>
+                <a href="https://huggingface.co/datasets/jugalgajjar/MultiLang-Code-Parser-Dataset" target="_blank"
+                    class="btn btn-secondary">Hugging Face Dataset</a>
+                <a href="https://github.com/JugalGajjar/MultiLang-Code-Parser-Dataset" target="_blank"
+                    class="btn btn-secondary">GitHub Repository</a>
+                
+            </p>
+        </section>
+
+        <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
