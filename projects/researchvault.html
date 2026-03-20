@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Research Vault | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-y2k.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+    <script src="../chatbot.js"></script>
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="marquee-banner">
+        <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+        <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+        <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+        <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span>
+        </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../experiences.html">Experiences</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../resume.html">Resume/CV</a>
+    </div>
+
+    <div class="mac-window wide">
+        <div class="mac-titlebar">
+            <div class="traffic-lights">
+                <div class="traffic-light close"></div>
+                <div class="traffic-light minimize"></div>
+                <div class="traffic-light maximize"></div>
+            </div>
+            <div class="title">ResearchVault.app - Project Details</div>
+        </div>
+
+        <nav class="finder-nav">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../publications.html">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <div class="nav-right">
+                <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+                <span class="nav-clock" id="menu-clock">12:00 AM</span>
+            </div>
+        </nav>
+
+        <div class="mac-body">
+            <div class="project-detail">
+                <h2>Overview</h2>
+                <p align="justify">
+                    ResearchVault is a full-stack <span class="hl">institutional research repository system</span>
+                    designed for managing, publishing,
+                    and searching scholarly outputs such as papers, datasets, and software. Inspired by large-scale
+                    systems like CERN CDS,
+                    it provides a scalable and extensible infrastructure for modern research workflows.
+                </p>
+
+                <h2>Architecture</h2>
+                <p>
+                    1. <span class="hl">Flask-based backend</span> exposing <span class="hl">REST APIs</span><br>
+                    2. <span class="hl">PostgreSQL</span> database for structured record storage<br>
+                    3. <span class="hl">OpenSearch</span> for full-text search and indexing<br>
+                    4. <span class="hl">React</span> frontend for interactive UI and state management<br>
+                    5. <span class="hl">Docker Compose</span> for containerized deployment
+                </p>
+
+                <h2>Core Features</h2>
+                <p>
+                    • Record lifecycle management (draft, published, archived)<br>
+                    • Automatic DOI-style identifier generation<br>
+                    • Versioning with changelog tracking<br>
+                    • File uploads with metadata and validation<br>
+                    • Faceted search with filters and aggregations
+                </p>
+
+                <h2>Design Highlights</h2>
+                <p align="justify">
+                    The system uses <span class="hl">ULIDs</span> for sortable unique identifiers and <span
+                        class="hl">OpenSearch</span> for scalable search
+                    with fuzzy matching and field boosting. React Query is used for efficient state management, enabling
+                    caching and
+                    background synchronization of server state.
+                </p>
+
+                <h2>System Capabilities</h2>
+                <p>
+                    • Full-text search with real-time indexing<br>
+                    • REST API with pagination and filtering<br>
+                    • Version snapshots with semantic versioning<br>
+                    • Modular backend with service-oriented design
+                </p>
+
+                <h2>Tech. Stack</h2>
+                <p>
+                    <span class="hl">Python</span>, <span class="hl">Flask</span>, <span class="hl">PostgreSQL</span>,
+                    <span class="hl">OpenSearch</span>,
+                    <span class="hl">React</span>, Docker, REST APIs
+                </p>
+
+                <h2>Links</h2>
+                <p>
+                    <a href="https://github.com/JugalGajjar/ResearchVault" target="_blank"
+                        class="mac-btn mac-btn-sm">GitHub Repository</a>
+                </p>
+            </div>
+
+            <div style="text-align:center;margin-top:16px;">
+                <a href="../projects.html" class="mac-btn">&larr; Back to Projects</a>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>ResearchVault.app | Super Mario Edition | Built by Jugal Gajjar</span>
+            <span>Ready</span>
+        </div>
+    </div>
+
+    <div class="y2k-footer" style="max-width:1000px;">
+        <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+        <p style="font-size:10px;">GAME ON</p>
+    </div>
+
+    <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+    <div id="chat-window" class="chat-window">
+        <div class="chat-titlebar">
+            <span>MARIO</span>
+            <span class="chat-close" onclick="toggleChat()">X</span>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects,
+                publications, experience, skills, or education!</div>
+        </div>
+        <div class="chat-input-row">
+            <input type="text" id="chat-input" placeholder="Ask Mario..."
+                onkeydown="if(event.key==='Enter')sendChat()" />
+            <button onclick="sendChat()">GO</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

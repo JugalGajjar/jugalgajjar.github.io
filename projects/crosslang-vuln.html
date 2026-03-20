@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cross-Language Vulnerability Detection | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-y2k.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+    <script src="../chatbot.js"></script>
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="marquee-banner">
+        <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+        <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+        <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+        <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span>
+        </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../experiences.html">Experiences</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../resume.html">Resume/CV</a>
+    </div>
+
+    <div class="mac-window wide">
+        <div class="mac-titlebar">
+            <div class="traffic-lights">
+                <div class="traffic-light close"></div>
+                <div class="traffic-light minimize"></div>
+                <div class="traffic-light maximize"></div>
+            </div>
+            <div class="title">CrossLangVuln.app - Project Details</div>
+        </div>
+
+        <nav class="finder-nav">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../publications.html">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <div class="nav-right">
+                <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+                <span class="nav-clock" id="menu-clock">12:00 AM</span>
+            </div>
+        </nav>
+
+        <div class="mac-body">
+            <div class="project-detail">
+                <h2>Overview</h2>
+                <p align="justify">
+                    This thesis introduces a unified, cross-language vulnerability lifecycle framework integrating
+                    detection, validation, and remediation.
+                    It uses a <span class="hl">Universal Abstract Syntax Tree (uAST)</span> normalization and hybrid AI
+                    reasoning to achieve language-agnostic
+                    structural analysis. The system addresses the fragmentation of traditional security tools by
+                    unifying detection, execution-based validation,
+                    and iterative repair into a single, evidence-driven pipeline.
+                </p>
+
+                <h2>Three-Stage Pipeline</h2>
+                <p>
+                    <strong>1. Detection:</strong> Parses code into a uAST and analyzes it via a hybrid model that fuses
+                    GraphSAGE structural encodings with Qwen2.5-Coder-1.5B semantic embeddings. Achieves <span
+                        class="hl">89.84–92.02%</span> intra-language accuracy.<br>
+                    <strong>2. Validation:</strong> An autonomous agent confirms exploitability through sandboxed
+                    execution, rejecting <span class="hl">58.72–62.37%</span> of detector false positives.<br>
+                    <strong>3. Remediation:</strong> An iterative loop applies minimal code patches for confirmed
+                    vulnerabilities, succeeding in <span class="hl">81.37–87.27%</span> of cases within 2.3–3.4
+                    iterations.
+                </p>
+
+                <h2>Architecture</h2>
+                <p align="justify">
+                    The model integrates <span class="hl">GraphSAGE-based structural encoders</span> on uAST graphs with
+                    <span class="hl">semantic embeddings</span>
+                    from a Qwen2.5-Coder-1.5B model. A two-way gating mechanism adaptively fuses these modalities per
+                    sample. The end-to-end pipeline resolves
+                    <span class="hl">69.74%</span> of vulnerabilities with a total failure rate of <span
+                        class="hl">12.27%</span>, demonstrating stable multi-stage collaboration.
+                </p>
+
+                <h2>Key Capabilities</h2>
+                <p>
+                    • <span class="hl">Cross-Language Generalization:</span> Zero-shot transfer F1 scores of <span
+                        class="hl">74.43–78.18%</span> across Java, Python, and C++.<br>
+                    • <span class="hl">Execution-Based Validation:</span> Confirms <span class="hl">66.84–71.49%</span>
+                    of genuine vulnerabilities while rejecting over half of false positives.<br>
+                    • <span class="hl">Iterative Remediation:</span> Surgical, minimal-diff patches that preserve
+                    functionality and eliminate the confirmed vulnerability.<br>
+                    • <span class="hl">Privacy-Preserving:</span> Entire framework uses locally-deployed models (~3GB
+                    footprint) with no cloud dependencies.
+                </p>
+
+                <h2>Tech. Stack</h2>
+                <p>
+                    <span class="hl">Python</span>, <span class="hl">PyTorch</span>, PyTorch Geometric,
+                    Transformers (Hugging Face),
+                    <span class="hl">Tree-sitter 0.21.0</span>, Docker, LangChain, Qwen2.5-Coder-1.5B, MLX (Apple Silicon).
+                </p>
+
+                <h2>Links</h2>
+                <p>
+                    <a href="../publications/crosslang-vuln.html" class="mac-btn mac-btn-sm">Publication Page</a>
+                    <a href="https://github.com/JugalGajjar/Vuln-Detection-Repair-using-UniversalAST" target="_blank" class="mac-btn mac-btn-sm">GitHub
+                        Repository</a>
+                </p>
+            </div>
+
+            <div style="text-align:center;margin-top:16px;">
+                <a href="../projects.html" class="mac-btn">&larr; Back to Projects</a>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>CrossLangVuln.app | Super Mario Edition | Built by Jugal Gajjar</span>
+            <span>Ready</span>
+        </div>
+    </div>
+
+    <div class="y2k-footer" style="max-width:1000px;">
+        <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+        <p style="font-size:10px;">GAME ON</p>
+    </div>
+
+    <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+    <div id="chat-window" class="chat-window">
+        <div class="chat-titlebar">
+            <span>MARIO</span>
+            <span class="chat-close" onclick="toggleChat()">X</span>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects,
+                publications, experience, skills, or education!</div>
+        </div>
+        <div class="chat-input-row">
+            <input type="text" id="chat-input" placeholder="Ask Mario..."
+                onkeydown="if(event.key==='Enter')sendChat()" />
+            <button onclick="sendChat()">GO</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RSAT | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-y2k.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+    <script src="../chatbot.js"></script>
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="marquee-banner">
+        <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+        <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+        <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+        <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span>
+        </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../experiences.html">Experiences</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../resume.html">Resume/CV</a>
+    </div>
+
+    <div class="mac-window wide">
+        <div class="mac-titlebar">
+            <div class="traffic-lights">
+                <div class="traffic-light close"></div>
+                <div class="traffic-light minimize"></div>
+                <div class="traffic-light maximize"></div>
+            </div>
+            <div class="title">RSAT.app - Project Details</div>
+        </div>
+
+        <nav class="finder-nav">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../publications.html">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <div class="nav-right">
+                <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+                <span class="nav-clock" id="menu-clock">12:00 AM</span>
+            </div>
+        </nav>
+
+        <div class="mac-body">
+            <div class="project-detail">
+                <h2>Overview</h2>
+                <p align="justify">
+                    RSAT (Structured Attribution for Tables) is a reasoning-centric training framework designed to
+                    enable
+                    <span class="hl">small language models (1–8B)</span> to produce <span class="hl">faithful,
+                        step-by-step reasoning</span> grounded in
+                    <span class="hl">explicit cell-level citations</span>. The core motivation is to address attribution
+                    failures in table reasoning,
+                    where models often generate correct answers but rely on <span class="hl">spurious or hallucinated
+                        evidence</span>.
+                    RSAT enforces structured outputs and directly optimizes for attribution quality through
+                    reinforcement learning.
+                </p>
+
+                <h2>Pipeline</h2>
+                <p>
+                    1. Curate ~1K high-quality reasoning traces with <span class="hl">step-wise decomposition + cell
+                        citations</span><br>
+                    2. Perform <span class="hl">Supervised Fine-Tuning (SFT)</span> to teach output format and reasoning
+                    structure<br>
+                    3. Sample multiple candidate outputs per query during RL phase<br>
+                    4. Score each output using a <span class="hl">multi-component reward function</span><br>
+                    5. Optimize model using <span class="hl">Group Relative Policy Optimization (GRPO)</span><br>
+                    6. Output structured reasoning with validated citations and final answer
+                </p>
+
+                <h2>Training Strategy</h2>
+                <p align="justify">
+                    RSAT adopts a two-phase <span class="hl">SFT + GRPO</span> pipeline. Unlike PPO, GRPO removes the
+                    critic model and
+                    enables <span class="hl">direct scoring of individual outputs</span>, which is essential for
+                    structured reasoning tasks.
+                    For each input, the model generates a group of candidate reasoning traces, and optimization is
+                    performed
+                    using relative ranking within the group.
+                </p>
+
+                <h2>Reward Design</h2>
+                <p>
+                    • <span class="hl">Faithfulness (NLI-based)</span>: verifies whether each reasoning step is entailed
+                    by cited cells<br>
+                    • <span class="hl">Citation Validity</span>: ensures referenced table cells exist and are correctly
+                    used<br>
+                    • <span class="hl">Parsimony</span>: penalizes redundant or unnecessarily long reasoning chains<br>
+                    • Final reward is a weighted combination enabling balanced optimization
+                </p>
+
+                <h2>Results</h2>
+                <p>
+                    • <span class="hl">3.7× improvement</span> in attribution faithfulness over SFT-only baseline<br>
+                    • Significant reduction in unsupported reasoning steps<br>
+                    • Strong generalization across unseen table schemas<br>
+                    • Maintains competitive answer accuracy while improving interpretability
+                </p>
+
+                <h2>Tech. Stack</h2>
+                <p>
+                    <span class="hl">Python</span>, <span class="hl">PyTorch</span>, HuggingFace Transformers, TRL
+                    (GRPO), NLI Models, JSON-based structured decoding
+                </p>
+
+                <h2>Links</h2>
+                <p>
+                    <a href="../publications/rsat.html" class="mac-btn mac-btn-sm">Publication Page</a>
+                    <a href="https://github.com/JugalGajjar/RSAT" target="_blank" class="mac-btn mac-btn-sm">GitHub
+                        Repository</a>
+                </p>
+            </div>
+
+            <div style="text-align:center;margin-top:16px;">
+                <a href="../projects.html" class="mac-btn">&larr; Back to Projects</a>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>RSAT.app | Super Mario Edition | Built by Jugal Gajjar</span>
+            <span>Ready</span>
+        </div>
+    </div>
+
+    <div class="y2k-footer" style="max-width:1000px;">
+        <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+        <p style="font-size:10px;">GAME ON</p>
+    </div>
+
+    <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+    <div id="chat-window" class="chat-window">
+        <div class="chat-titlebar">
+            <span>MARIO</span>
+            <span class="chat-close" onclick="toggleChat()">X</span>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects,
+                publications, experience, skills, or education!</div>
+        </div>
+        <div class="chat-input-row">
+            <input type="text" id="chat-input" placeholder="Ask Mario..."
+                onkeydown="if(event.key==='Enter')sendChat()" />
+            <button onclick="sendChat()">GO</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
