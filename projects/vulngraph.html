@@ -1,44 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>VulnGraph | Jugal Gajjar</title>
-    <link rel="stylesheet" href="../styles-projects.css" />
-    <script src="../script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VulnGraph | Jugal Gajjar</title>
+  <link rel="stylesheet" href="../styles-y2k.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+  <script src="../chatbot.js"></script>
+  <script src="../script.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <h1>VulnGraph</h1>
-        <p>Graph-Augmented LLMs for Explainable Software Vulnerability Detection</p>
 
-        <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  <div class="marquee-banner">
+    <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+    <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+    <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+    <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span></div>
+  </div>
 
-        <nav id="menu">
-            <a href="../index.html">Home</a>
-            <a href="../projects.html" class="dropbtn">Projects</a>
-            <a href="../publications.html" class="dropbtn">Publications</a>
-            <a href="../experiences.html">Experiences</a>
-            <a href="../about.html">About</a>
-            <a href="../contact.html">Contact</a>
-            <a href="../resume.html">Resume/CV</a>
-            <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
-        </nav>
-    </header>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../publications.html">Publications</a>
+    <a href="../experiences.html">Experiences</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../resume.html">Resume/CV</a>
+  </div>
 
-    <main>
-        <section class="project-section">
-            <img src="../images/vulngraph.png" alt="VulnGraph Architecture Screenshot" class="project-img" />
+  <div class="mac-window wide">
+    <div class="mac-titlebar">
+      <div class="traffic-lights">
+        <div class="traffic-light close"></div>
+        <div class="traffic-light minimize"></div>
+        <div class="traffic-light maximize"></div>
+      </div>
+      <div class="title">VulnGraph.app - Project Details</div>
+    </div>
 
+    <nav class="finder-nav">
+      <a href="../index.html">Home</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../publications.html">Publications</a>
+      <a href="../experiences.html">Experiences</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../resume.html">Resume/CV</a>
+      <div class="nav-right">
+        <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+        <span class="nav-clock" id="menu-clock">12:00 AM</span>
+      </div>
+    </nav>
+
+    <div class="mac-body">
+      <div class="project-detail">
             <h2>Overview</h2>
             <p align="justify">
-                VulnGraph is a research project integrating graph neural networks (GNNs) with Large Language
-                Models
-                to improve vulnerability detection in Java code. The system extracts Abstract Syntax Trees (ASTs) and
+                VulnGraph is a research project integrating <span class="hl">graph neural networks (GNNs)</span> with <span class="hl">Large Language
+                Models</span>
+                to improve vulnerability detection in <span class="hl">Java</span> code. The system extracts Abstract Syntax Trees (ASTs) and
                 Control Flow
-                Graphs (CFGs) using PROGEX, learns structural embeddings with GNNs, and fuses them with LLM-based
+                Graphs (CFGs) using <span class="hl">PROGEX</span>, learns structural embeddings with GNNs, and fuses them with LLM-based
                 semantic
                 reasoning. This hybrid approach enables deeper code understanding and more accurate detection of subtle
                 security flaws in large codebases.
@@ -55,28 +77,54 @@
 
             <h2>Experiment Results</h2>
             <p>
-                • Dataset: 35.6k cleaned Java files curated from open-source repos and datasets<br>
-                • Proposed Fusion Mechanism: Two-way gating method for dynamic weightage of structure and semantics<br>
-                • Accuracy: 93.57% (GNN-only baseline: 85.21%, LLM-only baseline: 75.76%)<br>
+                • Dataset: <span class="hl">35.6k</span> cleaned Java files curated from open-source repos and datasets<br>
+                • Proposed Fusion Mechanism: <span class="hl">Two-way gating</span> method for dynamic weightage of structure and semantics<br>
+                • Accuracy: <span class="hl">93.57%</span> (GNN-only baseline: <span class="hl">85.21%</span>, LLM-only baseline: 75.76%)<br>
                 • Interpretability: Provides weighted fusion scores, saliency subgraphs, and text explanations<br>
             </p>
 
             <h2>Tech. Stack</h2>
-            <p>Python, Java, PROGEX, Graph Neural Networks (GNNs), PyTorch Geometric, LLMs, HF Transformers</p>
+            <p><span class="hl">Python</span>, <span class="hl">Java</span>, <span class="hl">PROGEX</span>, <span class="hl">Graph Neural Networks (GNNs)</span>, <span class="hl">PyTorch Geometric</span>, LLMs, HF Transformers</p>
 
             <h2>Links</h2>
             <p>
-                <a href="https://github.com/JugalGajjar/VulnGraph" target="_blank" class="btn">GitHub Repository</a>
-                <a href="../publications/vulngraph.html" class="btn btn-secondary">Publication Page</a>
+                <a href="https://github.com/JugalGajjar/VulnGraph" target="_blank" class="mac-btn mac-btn-sm">GitHub Repository</a>
+                <a href="../publications/vulngraph.html" class="mac-btn mac-btn-sm">Publication Page</a>
             </p>
-        </section>
+      </div>
 
-        <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
-    </main>
+      <div style="text-align:center;margin-top:16px;">
+        <a href="../projects.html" class="mac-btn">&larr; Back to Projects</a>
+      </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
-    </footer>
+    <div class="status-bar">
+      <span>VulnGraph.app | Super Mario Edition | Built by Jugal Gajjar</span>
+      <span>Ready</span>
+    </div>
+  </div>
+
+  <div class="under-construction" style="max-width:1000px;margin:0 auto;">This portfolio is always evolving! New research and projects added regularly.</div>
+
+  <div class="y2k-footer" style="max-width:1000px;">
+    <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+    <p style="font-size:10px;">GAME ON</p>
+  </div>
+
+  <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+  <div id="chat-window" class="chat-window">
+    <div class="chat-titlebar">
+      <span>MARIO</span>
+      <span class="chat-close" onclick="toggleChat()">X</span>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects, publications, experience, skills, or education!</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Mario..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button onclick="sendChat()">GO</button>
+    </div>
+  </div>
+
 </body>
-
 </html>

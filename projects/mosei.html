@@ -1,45 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CMU-MOSEI Sentiment | Jugal Gajjar</title>
-  <link rel="stylesheet" href="../styles-projects.css" />
+  <link rel="stylesheet" href="../styles-y2k.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+  <script src="../chatbot.js"></script>
   <script src="../script.js" defer></script>
 </head>
-
 <body>
-  <header>
-    <h1>Multimodal Sentiment Analysis</h1>
-    <p>Transformer-based sentiment prediction on CMU-MOSEI with early fusion of text, audio, and visual features</p>
 
-    <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  <div class="marquee-banner">
+    <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+    <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+    <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+    <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span></div>
+  </div>
 
-    <nav id="menu">
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../publications.html">Publications</a>
+    <a href="../experiences.html">Experiences</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../resume.html">Resume/CV</a>
+  </div>
+
+  <div class="mac-window wide">
+    <div class="mac-titlebar">
+      <div class="traffic-lights">
+        <div class="traffic-light close"></div>
+        <div class="traffic-light minimize"></div>
+        <div class="traffic-light maximize"></div>
+      </div>
+      <div class="title">MultimodalSentiment.app - Project Details</div>
+    </div>
+
+    <nav class="finder-nav">
       <a href="../index.html">Home</a>
-      <a href="../projects.html" class="dropbtn">Projects</a>
-      <a href="../publications.html" class="dropbtn">Publications</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../publications.html">Publications</a>
       <a href="../experiences.html">Experiences</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
       <a href="../resume.html">Resume/CV</a>
-      <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+      <div class="nav-right">
+        <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+        <span class="nav-clock" id="menu-clock">12:00 AM</span>
+      </div>
     </nav>
-  </header>
 
-  <main>
-    <section class="project-section">
-      <img src="../images/mosei.png" alt="CMU-MOSEI Sentiment Screenshot" class="project-img" />
-
+    <div class="mac-body">
+      <div class="project-detail">
       <h2>Overview</h2>
       <p align="justify">
-        This project tackles multimodal sentiment analysis using the CMU-MOSEI dataset, integrating text, audio, and
-        visual inputs. Each modality is encoded using a pre-trained BERT model, and their embeddings are fused early to
-        jointly model sentiment. This early fusion technique enables better cross-modal interaction understanding.
+        This project tackles multimodal sentiment analysis using the <span class="hl">CMU-MOSEI</span> dataset, integrating text, audio, and
+        visual inputs. Each modality is encoded using a pre-trained <span class="hl">BERT</span> model, and their embeddings are fused early to
+        jointly model sentiment. This <span class="hl">early fusion</span> technique enables better cross-modal interaction understanding.
       </p>
       <p align="justify">
-        The model achieves a 97.87% 7-class accuracy and 0.9682 F1-score on the test set. The low MAE of 0.1060 further
+        The model achieves a <span class="hl">97.87%</span> 7-class accuracy and <span class="hl">0.9682 F1-score</span> on the test set. The low MAE of <span class="hl">0.1060</span> further
         confirms its precision. Training involved dropout, Adam optimization (lr=1e-4), and early stopping. Evaluation
         metrics span 7-class and binary sentiment predictions.
       </p>
@@ -55,8 +77,8 @@
 
       <h2>Model & Training</h2>
       <p align="justify">
-        Each modality is encoded separately using a BERT-based encoder. Audio and visual sequences are processed and
-        mean pooled. The model uses early fusion with cross-attention across modalities and a dense classifier. It was
+        Each modality is encoded separately using a <span class="hl">BERT-based encoder</span>. Audio and visual sequences are processed and
+        mean pooled. The model uses <span class="hl">early fusion</span> with cross-attention across modalities and a dense classifier. It was
         trained for 50 epochs with early stopping at epoch 25. Key configurations include:<br>
         • Optimizer: Adam (lr = 1e-4)<br>
         • Dropout: 0.3<br>
@@ -67,30 +89,56 @@
 
       <h2>Experiment Results</h2>
       <p>
-        • Test 7-class Accuracy: 97.87%<br>
-        • Test F1 Score: 0.9682<br>
-        • Test MAE: 0.1060<br>
-        • Binary Accuracy: 95.44%<br>
+        • Test 7-class Accuracy: <span class="hl">97.87%</span><br>
+        • Test F1 Score: <span class="hl">0.9682</span><br>
+        • Test MAE: <span class="hl">0.1060</span><br>
+        • Binary Accuracy: <span class="hl">95.44%</span><br>
         • Binary F1 Score: 0.9767
       </p>
 
       <h2>Tech. Stack</h2>
-      <p>Python, PyTorch, Transformers, BERT, CMU-MOSEI SDK, COVAREP, OpenFace, Multimodal Fusion</p>
+      <p><span class="hl">Python</span>, <span class="hl">PyTorch</span>, <span class="hl">Transformers</span>, <span class="hl">BERT</span>, <span class="hl">CMU-MOSEI SDK</span>, COVAREP, OpenFace, Multimodal Fusion</p>
 
       <h2>Links</h2>
       <p>
         <a href="https://github.com/JugalGajjar/Multimodal-Sentiment-Analysis-with-MOSEI-Dataset" target="_blank"
-          class="btn">GitHub Repository</a>
-        <a href="../publications/mosei.html" class="btn btn-secondary">Publication Page</a>
+          class="mac-btn mac-btn-sm">GitHub Repository</a>
+        <a href="../publications/mosei.html" class="mac-btn mac-btn-sm">Publication Page</a>
       </p>
-    </section>
+      </div>
 
-    <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
-  </main>
+      <div style="text-align:center;margin-top:16px;">
+        <a href="../projects.html" class="mac-btn">&larr; Back to Projects</a>
+      </div>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
-  </footer>
+    <div class="status-bar">
+      <span>MultimodalSentiment.app | Super Mario Edition | Built by Jugal Gajjar</span>
+      <span>Ready</span>
+    </div>
+  </div>
+
+  <div class="under-construction" style="max-width:1000px;margin:0 auto;">This portfolio is always evolving! New research and projects added regularly.</div>
+
+  <div class="y2k-footer" style="max-width:1000px;">
+    <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+    <p style="font-size:10px;">GAME ON</p>
+  </div>
+
+  <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+  <div id="chat-window" class="chat-window">
+    <div class="chat-titlebar">
+      <span>MARIO</span>
+      <span class="chat-close" onclick="toggleChat()">X</span>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects, publications, experience, skills, or education!</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Mario..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button onclick="sendChat()">GO</button>
+    </div>
+  </div>
+
 </body>
-
 </html>

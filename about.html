@@ -1,172 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Jugal Gajjar</title>
-  <link rel="stylesheet" href="styles-about.css" />
+  <link rel="stylesheet" href="styles-y2k.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+  <script src="chatbot.js"></script>
   <script src="script.js" defer></script>
 </head>
-
 <body>
-  <header>
-    <h1>About Me</h1>
-    <p>The person behind the research, projects, and principles</p>
 
-    <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  <div class="marquee-banner">
+    <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+    <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+    <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+    <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span></div>
+  </div>
 
-    <nav id="menu">
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="publications.html">Publications</a>
+    <a href="experiences.html">Experiences</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="resume.html">Resume/CV</a>
+  </div>
+
+  <div class="mac-window wide">
+    <div class="mac-titlebar">
+      <div class="traffic-lights">
+        <div class="traffic-light close"></div>
+        <div class="traffic-light minimize"></div>
+        <div class="traffic-light maximize"></div>
+      </div>
+      <div class="title">About Me - Jugal Gajjar</div>
+    </div>
+
+    <nav class="finder-nav">
       <a href="index.html">Home</a>
-      <a href="projects.html" class="dropbtn">Projects</a>
-      <a href="publications.html" class="dropbtn">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
       <a href="experiences.html">Experiences</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="resume.html">Resume/CV</a>
-      <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
-    </nav>
-  </header>
-
-  <main>
-    <section class="summary-section">
-      <h2 class="section-heading">Beyond the Résumé</h2>
-      <p class="section-subheading">A few facets that reflect who I am—within and beyond code.</p>
-      <div class="card-grid">
-
-        <div class="card">
-          <h3>AI Researcher</h3>
-          <p align="justify">
-            I explore the frontier of reasoning and explainability in Large Language Models (LLMs), Graph Neural
-            Networks (GNNs), and Knowledge Graphs. My goal is to design intelligent systems that can reason
-            structurally, learn adaptively, and explain their decisions, bridging the symbolic and neural
-            representations.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Karate Champion</h3>
-          <p align="justify">
-            A Black Belt and Gold Medalist at the Wado International Karate Championship (2017),
-            representing India. Years of training taught me precision, focus, and calm under pressure—qualities that
-            mirror my approach to research and mentorship.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Early Leadership</h3>
-          <p align="justify">
-            From Class Representative to Junior Sports Leader, I learned that leadership is about empathy,
-            accountability, and shared purpose. These lessons continue to shape how I guide research teams and mentor
-            peers in academic and project settings.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>AIESEC Experience</h3>
-          <p align="justify">
-            With AIESEC Baroda's Outgoing Social Sector team, I coordinated cross-cultural exchange programs that
-            fostered youth leadership and social impact—broadening my worldview and reinforcing my belief in globally
-            responsible AI.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Mentor & Guide</h3>
-          <p align="justify">
-            As a Graduate Assistant at GWU, former Teaching Assistant at Navrachana University, and NVIDIA Jetson AI
-            Project Coordinator, I've mentored over 100 students in AI/ML, big data & analytics, and software
-            testing—guiding them in transforming theory into reproducible research, published work, and hands-on
-            innovation.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Creative Technologist</h3>
-          <p align="justify">I enjoy blending logic with creativity—whether designing tools, writing technical content,
-            or crafting
-            user-centric systems. Innovation, in my opinion, flourishes where structure meets imagination.</p>
-        </div>
-
+      <div class="nav-right">
+        <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+        <span class="nav-clock" id="menu-clock">12:00 AM</span>
       </div>
-    </section>
+    </nav>
 
-    <section class="card">
-      <h2>Professional Background</h2>
-      <p align="justify">
-        I am pursuing an M.S. in Computer Science (Machine Intelligence & Cognition) at The George Washington University
-        (GPA 3.95/4.0), where I serve as a Graduate Assistant for Big Data & Analytics (CSCI 4907/6444). My research
-        centers on LLM reasoning, graph learning, and explainable AI—developing frameworks that unify symbolic structure
-        and neural semantics for interpretable decision-making.
-      </p>
+    <div class="mac-body">
 
-      <p align="justify">
-        My ongoing thesis, <em>AI That Detects, Exploits & Fixes</em>, advances autonomous vulnerability reasoning
-        using multi-agent LLM pipelines. This builds upon prior works including <em>VulnGraph</em> (Complex Networks
-        2025),
-        <em>MalCodeAI</em> (IEEE IRI 2025), <em>SecureFixAgent</em> (ICMLA 2025), and <em>MLCPD</em> (Hugging Face
-        Dataset + arXiv 2025)—each
-        addressing reasoning, structure, and scalability in AI systems.
-      </p>
+      <div class="section-heading">Beyond the R&eacute;sum&eacute;</div>
+      <div class="guestbook-note">A few facets that reflect who I am&mdash;within and beyond code.</div>
 
-      <p align="justify">Alongside my academic work, I served as a teaching assistant during my undergraduate studies,
-        supporting
-        coursework in software testing and mentoring peers in labs and projects. I have co-authored research papers on
-        topics such as multimodal sentiment analysis and the Sentient AI Framework, which explores emotionally
-        intelligent and ethically aware artificial agents.</p>
+      <div class="y2k-card-grid">
+        <div class="y2k-card">
+          <h3>AI Researcher</h3>
+          <p style="text-align:justify;">I explore the frontier of reasoning and explainability in <span class="hl">Large Language Models (LLMs)</span>, <span class="hl">Graph Neural
+            Networks (GNNs)</span>, and <span class="hl">Knowledge Graphs</span>. My goal is to design intelligent systems that can reason
+            structurally, learn adaptively, and explain their decisions, bridging the symbolic and neural representations.</p>
+        </div>
+        <div class="y2k-card">
+          <h3>Karate Champion</h3>
+          <p style="text-align:justify;">A <span class="hl">Black Belt</span> and <span class="hl">Gold Medalist</span> at the <span class="hl">Wado International Karate Championship (2017)</span>,
+            representing India. Years of training taught me precision, focus, and calm under pressure&mdash;qualities that
+            mirror my approach to research and mentorship.</p>
+        </div>
+        <div class="y2k-card">
+          <h3>Early Leadership</h3>
+          <p style="text-align:justify;">From <span class="hl">Class Representative</span> to <span class="hl">Junior Sports Leader</span>, I learned that leadership is about empathy,
+            accountability, and shared purpose. These lessons continue to shape how I guide research teams and mentor
+            peers in academic and project settings.</p>
+        </div>
+        <div class="y2k-card">
+          <h3>AIESEC Experience</h3>
+          <p style="text-align:justify;">With <span class="hl">AIESEC Baroda</span>'s Outgoing Social Sector team, I coordinated <span class="hl">cross-cultural exchange programs</span> that
+            fostered youth leadership and social impact&mdash;broadening my worldview and reinforcing my belief in globally
+            responsible AI.</p>
+        </div>
+        <div class="y2k-card">
+          <h3>Mentor &amp; Guide</h3>
+          <p style="text-align:justify;">As a Graduate Assistant at <span class="hl">GWU</span>, former Teaching Assistant at <span class="hl">Navrachana University</span>, and <span class="hl">NVIDIA Jetson AI
+            Project Coordinator</span>, I've mentored over <span class="hl">100 students</span> in AI/ML, big data &amp; analytics, and software
+            testing&mdash;guiding them in transforming theory into reproducible research, published work, and hands-on innovation.</p>
+        </div>
+        <div class="y2k-card">
+          <h3>Creative Technologist</h3>
+          <p style="text-align:justify;">I enjoy blending logic with creativity&mdash;whether designing tools, writing technical content,
+            or crafting user-centric systems. Innovation, in my opinion, flourishes where structure meets imagination.</p>
+        </div>
+      </div>
 
-      <p align="justify">Outside of research, I have worked as a freelance software developer, delivering end-to-end
-        solutions tailored
-        to business needs. It involved building a Python-based billing and inventory system for a manufacturing
-        firm—automating their processes and improving operational efficiency. This real-world experience honed my skills
-        in client communication, full-stack development, and project delivery.</p>
+      <div class="y2k-divider">● ● ● ★ ● ● ●</div>
 
-      <p align="justify">Earlier in my journey, I led initiatives as the NVIDIA Jetson AI Project Coordinator at
-        Navrachana University
-        under the Jetson AI Specialist Program. I mentored students on deploying AI models on Jetson Nano devices,
-        conducted hands-on workshops in deep learning and computer vision, and guided numerous student projects—more
-        than five of which were selected by the NVIDIA Deep Learning Institute and earned the students official
-        certification as NVIDIA Jetson AI Specialists.</p>
+      <div class="section-heading">Professional Background</div>
+      <div class="guestbook-note" style="text-align:justify;font-style:normal;">
+        <p style="margin-bottom:8px;">I am pursuing an <span class="hl">M.S. in Computer Science</span> (Machine Intelligence &amp; Cognition) at <span class="hl">The George Washington University</span> (GPA <span class="hl">3.95/4.0</span>), where I serve as a Graduate Assistant for Big Data &amp; Analytics (CSCI 4907/6444). My research centers on <span class="hl">LLM reasoning</span>, <span class="hl">graph learning</span>, and explainable AI&mdash;developing frameworks that unify symbolic structure and neural semantics for interpretable decision-making.</p>
+        <p style="margin-bottom:8px;">My ongoing thesis, <em>AI That Detects, Exploits &amp; Fixes</em>, advances autonomous <span class="hl">vulnerability reasoning</span> using <span class="hl">multi-agent LLM pipelines</span>. This builds upon prior works including <em>VulnGraph</em> (<span class="hl">Complex Networks 2025</span>), <em>MalCodeAI</em> (<span class="hl">IEEE IRI 2025</span>), <em>SecureFixAgent</em> (<span class="hl">ICMLA 2025</span>), and <em>MLCPD</em> (Hugging Face Dataset + arXiv 2025)&mdash;each addressing reasoning, structure, and scalability in AI systems.</p>
+        <p style="margin-bottom:8px;">Alongside my academic work, I served as a teaching assistant during my undergraduate studies, supporting coursework in <span class="hl">software testing</span> and mentoring peers in labs and projects. I have co-authored research papers on topics such as <span class="hl">multimodal sentiment analysis</span> and the <span class="hl">Sentient AI Framework</span>, which explores emotionally intelligent and ethically aware artificial agents.</p>
+        <p style="margin-bottom:8px;">Outside of research, I have worked as a <span class="hl">freelance software developer</span>, delivering end-to-end solutions tailored to business needs. It involved building a <span class="hl">Python-based billing and inventory system</span> for a manufacturing firm&mdash;automating their processes and improving operational efficiency. This real-world experience honed my skills in client communication, <span class="hl">full-stack development</span>, and project delivery.</p>
+        <p style="margin-bottom:8px;">Earlier in my journey, I led initiatives as the <span class="hl">NVIDIA Jetson AI Project Coordinator</span> at <span class="hl">Navrachana University</span> under the Jetson AI Specialist Program. I mentored students on deploying AI models on <span class="hl">Jetson Nano</span> devices, conducted hands-on workshops in <span class="hl">deep learning</span> and <span class="hl">computer vision</span>, and guided numerous student projects&mdash;more than five of which were selected by the NVIDIA Deep Learning Institute and earned the students official certification as NVIDIA Jetson AI Specialists.</p>
+        <p>Collectively, my academic and professional journey aims to bridge <span class="hl">graph theory</span>, <span class="hl">language understanding</span>, and <span class="hl">explainable reasoning</span>&mdash;building systems that not only perform intelligently but also reason transparently.</p>
+      </div>
 
-      <p align="justify">Collectively, my academic and professional journey aims to bridge graph theory, language
-        understanding, and explainable reasoning—building systems that not only perform intelligently but also reason
-        transparently.
-      </p>
-    </section>
+      <div class="y2k-divider">● ● ● 🪙 ● ● ●</div>
 
-    <section class="card">
-      <h2>Personal Journey</h2>
-      <p align="justify">My path has been shaped as much by personal discipline as by academic ambition. As a martial
-        artist, I hold a
-        black belt in karate and earned a gold medal representing India at the International Karate Championship, 2017.
-        Years
-        of practice instilled in me mental resilience, strategic focus, and composure under pressure—qualities that
-        deeply influence my approach to challenges.</p>
+      <div class="section-heading">Personal Journey</div>
+      <div class="guestbook-note" style="text-align:justify;font-style:normal;">
+        <p style="margin-bottom:8px;">My path has been shaped as much by personal discipline as by academic ambition. As a martial artist, I hold a <span class="hl">black belt in karate</span> and earned a <span class="hl">gold medal</span> representing India at the <span class="hl">International Karate Championship, 2017</span>. Years of practice instilled in me mental resilience, strategic focus, and composure under pressure&mdash;qualities that deeply influence my approach to challenges.</p>
+        <p style="margin-bottom:8px;">Throughout school, I gravitated toward leadership, receiving <span class="hl">Student of the Year</span> honors three years in a row (grades 8-10) and serving in roles such as <span class="hl">Junior Sports Leader</span> and <span class="hl">Class Representative</span>. These early experiences taught me the importance of responsibility, teamwork, and effective communication.</p>
+        <p style="margin-bottom:8px;">My time with <span class="hl">AIESEC Baroda</span>'s Outgoing Social Sector team exposed me to global development programs and youth-led social initiatives. Facilitating <span class="hl">cross-cultural exchanges</span> broadened my understanding of international collaboration, community impact, and the value of working toward a greater good.</p>
+        <p>Each chapter&mdash;from the dojo to the classroom to community leadership&mdash;has added a layer to who I am. I believe technical work is most impactful when rooted in empathy, discipline, and a drive to contribute meaningfully. These values guide the systems I build and the way I engage with the world.</p>
+      </div>
 
-      <p align="justify">Throughout school, I gravitated toward leadership, receiving Student of the Year honors three
-        years in a row
-        (grades 8-10) and serving in roles such as Junior Sports Leader and Class Representative. These early
-        experiences taught me the importance of responsibility, teamwork, and effective communication.</p>
+      <div style="text-align:center;margin-top:16px;">
+        <a href="index.html" class="mac-btn">&larr; Back to Home</a>
+      </div>
 
-      <p align="justify">My time with AIESEC Baroda's Outgoing Social Sector team exposed me to global development
-        programs and
-        youth-led social initiatives. Facilitating cross-cultural exchanges broadened my understanding of international
-        collaboration, community impact, and the value of working toward a greater good.</p>
-
-      <p align="justify">Each chapter—from the dojo to the classroom to community leadership—has added a layer to who I
-        am. I believe
-        technical work is most impactful when rooted in empathy, discipline, and a drive to contribute meaningfully.
-        These values guide the systems I build and the way I engage with the world.</p>
-    </section>
-
-    <div class="back-home">
-      <a href="index.html" aria-label="Back to Home page">← Back to Home</a>
     </div>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
-  </footer>
+    <div class="status-bar">
+      <span>About.app | Super Mario Edition | Built by Jugal Gajjar</span>
+      <span>Ready</span>
+    </div>
+  </div>
+
+  <div class="under-construction" style="max-width:1000px;margin:0 auto;">This portfolio is always evolving! New research and projects added regularly.</div>
+
+  <div class="y2k-footer" style="max-width:1000px;">
+    <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+    <p style="font-size:10px;">GAME ON</p>
+  </div>
+
+  <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+  <div id="chat-window" class="chat-window">
+    <div class="chat-titlebar">
+      <span>MARIO</span>
+      <span class="chat-close" onclick="toggleChat()">X</span>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects, publications, experience, skills, or education!</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Mario..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button onclick="sendChat()">GO</button>
+    </div>
+  </div>
+
 </body>
-
 </html>

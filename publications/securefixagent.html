@@ -1,100 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SecureFixAgent Publication | Jugal Gajjar</title>
-    <link rel="stylesheet" href="../styles-publications.css" />
-    <script src="../script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecureFixAgent Publication | Jugal Gajjar</title>
+  <link rel="stylesheet" href="../styles-y2k.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+  <script src="../chatbot.js"></script>
+  <script src="../script.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <h1>SecureFixAgent</h1>
-        <p>Hybrid LLM Agent for Automated Python Static Vulnerability Repair</p>
 
-        <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  <div class="marquee-banner">
+    <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+    <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+    <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+    <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span></div>
+  </div>
 
-        <nav id="menu">
-            <a href="../index.html">Home</a>
-            <a href="../projects.html" class="dropbtn">Projects</a>
-            <a href="../publications.html" class="dropbtn">Publications</a>
-            <a href="../experiences.html">Experiences</a>
-            <a href="../about.html">About</a>
-            <a href="../contact.html">Contact</a>
-            <a href="../resume.html">Resume/CV</a>
-            <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
-        </nav>
-    </header>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../publications.html">Publications</a>
+    <a href="../experiences.html">Experiences</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../resume.html">Resume/CV</a>
+  </div>
 
-    <main>
-        <section class="publication">
-            <h2>Abstract</h2>
-            <p align="justify">
-                Modern software development pipelines face growing challenges in securing large codebases with extensive
-                dependencies. Static analysis tools like Bandit are effective at vulnerability detection but suffer from
-                high false positives and lack repair capabilities. Large Language Models (LLMs), in contrast, can
-                suggest fixes but often hallucinate changes and lack self-validation. We present SecureFixAgent, a
-                hybrid repair framework integrating Bandit with lightweight local LLMs (&lt;8B parameters) in an
-                iterative detect-repair-validate loop. To improve precision, we apply parameter-efficient LoRA-based
-                fine-tuning on a diverse, curated dataset spanning multiple Python project domains, mitigating dataset
-                bias and reducing unnecessary edits. SecureFixAgent uses Bandit for detection, the LLM for candidate
-                fixes with explanations, and Bandit re-validation for verification, all executed locally to preserve
-                privacy and reduce cloud reliance. Experiments show SecureFixAgent reduces false positives by 10.8% over
-                static analysis, improves fix accuracy by 13.51%, and lowers false positives by 5.46% compared to
-                pre-trained LLMs, typically converging within three iterations. Beyond metrics, developer studies rate
-                explanation quality 4.5/5, highlighting its value for human trust and adoption. By combining verifiable
-                security improvements with transparent rationale in a resource-efficient local framework, SecureFixAgent
-                advances trustworthy, automated vulnerability remediation for modern pipelines.
-            </p>
-        </section>
+  <div class="mac-window wide">
+    <div class="mac-titlebar">
+      <div class="traffic-lights">
+        <div class="traffic-light close"></div>
+        <div class="traffic-light minimize"></div>
+        <div class="traffic-light maximize"></div>
+      </div>
+      <div class="title">SecureFixAgent - Publication</div>
+    </div>
 
-        <section class="publication">
-            <h2>Related Work</h2>
-            <p align="justify">
-                Static analyzers (e.g., Bandit) offer precise rule-based detection but lack automated remediation and
-                can yield high false positives. LLM-based repair proposes fixes but often lacks verification and privacy
-                guarantees. Prior systems (e.g., APR tools, Copilot) rarely couple repair with rigorous validation loops
-                or local, privacy-preserving deployment—gaps that SecureFixAgent addresses by fusing Bandit with local
-                LLMs and enforceable re-validation.
-            </p>
-        </section>
+    <nav class="finder-nav">
+      <a href="../index.html">Home</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../publications.html">Publications</a>
+      <a href="../experiences.html">Experiences</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../resume.html">Resume/CV</a>
+      <div class="nav-right">
+        <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+        <span class="nav-clock" id="menu-clock">12:00 AM</span>
+      </div>
+    </nav>
 
-        <section class="publication">
-            <h2>Methodology</h2>
-            <p align="justify">
-                The pipeline: (1) Bandit flags vulnerabilities; (2) a local LLM validates and proposes minimal patches
-                with explanations; (3) Bandit re-validates; (4) iterate until convergence or limit. Models (&le;8B) are
-                quantized for on-prem deployment; LoRA fine-tuning on curated vulnerable/fixed pairs reduces unnecessary
-                edits and improves patch fidelity. Structured prompts yield parseable outputs for CI/CD.
-            </p>
-        </section>
+    <div class="mac-body">
+      <section class="pub-detail">
+        <h2>Abstract</h2>
+        <p align="justify">
+          Modern software development pipelines face growing challenges in securing large codebases with extensive
+          dependencies. Static analysis tools like <span class="hl">Bandit</span> are effective at vulnerability detection but suffer from
+          high false positives and lack repair capabilities. <span class="hl">Large Language Models (LLMs)</span>, in contrast, can
+          suggest fixes but often hallucinate changes and lack self-validation. We present SecureFixAgent, a
+          hybrid repair framework integrating Bandit with lightweight local LLMs (&lt;8B parameters) in an
+          iterative detect-repair-validate loop. To improve precision, we apply parameter-efficient <span class="hl">LoRA</span>-based
+          fine-tuning on a diverse, curated dataset spanning multiple Python project domains, mitigating dataset
+          bias and reducing unnecessary edits. SecureFixAgent uses Bandit for detection, the LLM for candidate
+          fixes with explanations, and Bandit re-validation for verification, all executed locally to preserve
+          privacy and reduce cloud reliance. Experiments show SecureFixAgent reduces false positives by <span class="hl">10.8%</span> over
+          static analysis, improves fix accuracy by <span class="hl">13.51%</span>, and lowers false positives by 5.46% compared to
+          pre-trained LLMs, typically converging within three iterations. Beyond metrics, developer studies rate
+          explanation quality <span class="hl">4.5/5</span>, highlighting its value for human trust and adoption. By combining verifiable
+          security improvements with transparent rationale in a resource-efficient local framework, SecureFixAgent
+          advances trustworthy, automated vulnerability remediation for modern pipelines.
+        </p>
+      </section>
 
-        <section class="publication">
-            <h2>Results</h2>
-            <p align="justify">
-                Across synthetic and real CVE datasets, SecureFixAgent reduces false positives by 10.8% over static
-                analysis and improves fix accuracy by 13.51% over pre-trained LLMs, converging in ~3 iterations on
-                average. Developer evaluations highlight high explanation quality (4.5/5), supporting human trust and
-                adoption in pipelines.
-            </p>
-        </section>
+      <section class="pub-detail">
+        <h2>Related Work</h2>
+        <p align="justify">
+          Static analyzers (e.g., <span class="hl">Bandit</span>) offer precise rule-based detection but lack automated remediation and
+          can yield high false positives. LLM-based repair proposes fixes but often lacks verification and privacy
+          guarantees. Prior systems (e.g., APR tools, Copilot) rarely couple repair with rigorous validation loops
+          or local, privacy-preserving deployment—gaps that SecureFixAgent addresses by fusing Bandit with local
+          <span class="hl">LLMs</span> and enforceable re-validation.
+        </p>
+      </section>
 
-        <section class="publication">
-            <h2>Project & Paper Links</h2>
-            <a href="../projects/securefixagent.html" class="btn">Project Page</a>
-            <a href="https://arxiv.org/abs/2509.16275" class="btn">View Paper</a>
-        </section>
+      <section class="pub-detail">
+        <h2>Methodology</h2>
+        <p align="justify">
+          The pipeline: (1) <span class="hl">Bandit</span> flags vulnerabilities; (2) a local LLM validates and proposes minimal patches
+          with explanations; (3) Bandit re-validates; (4) iterate until convergence or limit. Models (&le;8B) are
+          quantized for on-prem deployment; <span class="hl">LoRA fine-tuning</span> on curated vulnerable/fixed pairs reduces unnecessary
+          edits and improves patch fidelity. Structured prompts yield parseable outputs for <span class="hl">CI/CD</span>.
+        </p>
+      </section>
 
-        <div class="back-home">
-            <a href="../publications.html" class="btn btn-outline">← Back to Publications</a>
-        </div>
-    </main>
+      <section class="pub-detail">
+        <h2>Results</h2>
+        <p align="justify">
+          Across synthetic and real CVE datasets, SecureFixAgent reduces false positives by <span class="hl">10.8%</span> over static
+          analysis and improves fix accuracy by <span class="hl">13.51%</span> over pre-trained LLMs, converging in <span class="hl">~3 iterations</span> on
+          average. Developer evaluations highlight high explanation quality (<span class="hl">4.5/5</span>), supporting human trust and
+          adoption in pipelines.
+        </p>
+      </section>
 
-    <footer>
-        <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
-    </footer>
+      <section class="pub-detail">
+        <h2>Project & Paper Links</h2>
+        <a href="../projects/securefixagent.html" class="mac-btn mac-btn-sm">Project Page</a>
+        <a href="https://arxiv.org/abs/2509.16275" class="mac-btn mac-btn-sm">View Paper</a>
+      </section>
+
+      <div style="text-align:center;margin-top:16px;">
+        <a href="../publications.html" class="mac-btn">&larr; Back to Publications</a>
+      </div>
+    </div>
+
+    <div class="status-bar">
+      <span>SecureFixAgent.app | Super Mario Edition | Built by Jugal Gajjar</span>
+      <span>Ready</span>
+    </div>
+  </div>
+
+  <div class="under-construction" style="max-width:1000px;margin:0 auto;">This portfolio is always evolving! New research and projects added regularly.</div>
+
+  <div class="y2k-footer" style="max-width:1000px;">
+    <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+    <p style="font-size:10px;">GAME ON</p>
+  </div>
+
+  <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+  <div id="chat-window" class="chat-window">
+    <div class="chat-titlebar">
+      <span>MARIO</span>
+      <span class="chat-close" onclick="toggleChat()">X</span>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects, publications, experience, skills, or education!</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Mario..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button onclick="sendChat()">GO</button>
+    </div>
+  </div>
+
 </body>
-
 </html>

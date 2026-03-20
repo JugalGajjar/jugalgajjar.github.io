@@ -1,65 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MLCPD | Jugal Gajjar</title>
-    <link rel="stylesheet" href="../styles-projects.css" />
-    <script src="../script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MLCPD | Jugal Gajjar</title>
+  <link rel="stylesheet" href="../styles-y2k.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+  <script src="../chatbot.js"></script>
+  <script src="../script.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <h1>MLCPD</h1>
-        <p>A Unified Multi-Language Code Parsing Dataset with a Universal AST Schema</p>
 
-        <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  <div class="marquee-banner">
+    <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+    <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+    <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+    <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span></div>
+  </div>
 
-        <nav id="menu">
-            <a href="../index.html">Home</a>
-            <a href="../projects.html" class="dropbtn">Projects</a>
-            <a href="../publications.html" class="dropbtn">Publications</a>
-            <a href="../experiences.html">Experiences</a>
-            <a href="../about.html">About</a>
-            <a href="../contact.html">Contact</a>
-            <a href="../resume.html">Resume/CV</a>
-            <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
-        </nav>
-    </header>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../publications.html">Publications</a>
+    <a href="../experiences.html">Experiences</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../resume.html">Resume/CV</a>
+  </div>
 
-    <main>
-        <section class="project-section">
-            <img src="../images/mlcpd.png" alt="MLCPD Dataset Overview" class="project-img" />
+  <div class="mac-window wide">
+    <div class="mac-titlebar">
+      <div class="traffic-lights">
+        <div class="traffic-light close"></div>
+        <div class="traffic-light minimize"></div>
+        <div class="traffic-light maximize"></div>
+      </div>
+      <div class="title">MLCPD.app - Project Details</div>
+    </div>
 
+    <nav class="finder-nav">
+      <a href="../index.html">Home</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../publications.html">Publications</a>
+      <a href="../experiences.html">Experiences</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../resume.html">Resume/CV</a>
+      <div class="nav-right">
+        <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+        <span class="nav-clock" id="menu-clock">12:00 AM</span>
+      </div>
+    </nav>
+
+    <div class="mac-body">
+      <div class="project-detail">
             <h2>Overview</h2>
             <p align="justify">
                 MLCPD is a large-scale, language-agnostic dataset unifying syntactic and structural representations of
                 code
-                across 10 programming languages (C, C++, C#, Go, Java, JavaScript, Python, Ruby, Scala,
+                across <span class="hl">10 programming languages</span> (C, C++, C#, Go, Java, JavaScript, Python, Ruby, Scala,
                 TypeScript).
-                It provides 7M+ parsed source files normalized under a universal AST schema—enabling
+                It provides <span class="hl">7M+ parsed source files</span> normalized under a <span class="hl">universal AST schema</span>—enabling
                 consistent
                 cross-language reasoning, structural learning, and multilingual software analysis. Each entry includes a
                 lossless hierarchical JSON AST, language-level metadata, and abstracted node semantics, serialized in
-                Parquet for scalable retrieval.
+                <span class="hl">Parquet</span> for scalable retrieval.
             </p>
 
             <h2>Pipeline</h2>
             <p>
                 1. Curate permissively licensed code and normalize text (UTF-8, de-BOM, deduplication)<br>
-                2. Parse with Tree-sitter grammars for 10 languages and extract full-fidelity ASTs<br>
-                3. Linearize AST to a flat node array with O(1) traversal; attach metadata & diagnostics<br>
+                2. Parse with <span class="hl">Tree-sitter</span> grammars for 10 languages and extract full-fidelity ASTs<br>
+                3. Linearize AST to a flat node array with <span class="hl">O(1) traversal</span>; attach metadata & diagnostics<br>
                 4. Categorize nodes into universal types (declarations, statements, expressions)<br>
                 5. Build cross-language maps (e.g., function/class) for uniform querying<br>
-                6. Validate JSON schema and write to Parquet for efficient loading
+                6. Validate JSON schema and write to <span class="hl">Parquet</span> for efficient loading
             </p>
 
             <h2>Dataset & Stats</h2>
             <p>
-                • Records: 7,021,722 (success rate ≈ 99.99994%)<br>
-                • Languages: 10 (balanced coverage)<br>
-                • Disk Storage: ~114 GB Parquets (~5.5× compression)<br>
+                • Records: <span class="hl">7,021,722</span> (success rate ≈ <span class="hl">99.99994%</span>)<br>
+                • Languages: <span class="hl">10</span> (balanced coverage)<br>
+                • Disk Storage: <span class="hl">~114 GB</span> Parquets (~5.5× compression)<br>
                 • Structures captured: complete AST nodes + cross-language schema mappings<br>
                 • Use cases: cross-language representation learning, vulnerability analysis, explainable code
                 intelligence
@@ -75,27 +97,52 @@
 
             <h2>Tech. Stack</h2>
             <p>
-                Python, Tree-sitter, Apache Parquet, Hugging Face Datasets, Pandas, NumPy, PyVis, NetworkX,
+                <span class="hl">Python</span>, <span class="hl">Tree-sitter</span>, <span class="hl">Apache Parquet</span>, <span class="hl">Hugging Face Datasets</span>, Pandas, NumPy, PyVis, NetworkX,
                 Matplotlib, Seaborn, TQDM, JSON
             </p>
 
             <h2>Links</h2>
             <p>
-                <a href="../publications/mlcpd.html" target="_blank" class="btn">Publication Page</a>
+                <a href="../publications/mlcpd.html" class="mac-btn mac-btn-sm">Publication Page</a>
                 <a href="https://huggingface.co/datasets/jugalgajjar/MultiLang-Code-Parser-Dataset" target="_blank"
-                    class="btn btn-secondary">Hugging Face Dataset</a>
+                    class="mac-btn mac-btn-sm">Hugging Face Dataset</a>
                 <a href="https://github.com/JugalGajjar/MultiLang-Code-Parser-Dataset" target="_blank"
-                    class="btn btn-secondary">GitHub Repository</a>
-                
+                    class="mac-btn mac-btn-sm">GitHub Repository</a>
             </p>
-        </section>
+      </div>
 
-        <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
-    </main>
+      <div style="text-align:center;margin-top:16px;">
+        <a href="../projects.html" class="mac-btn">&larr; Back to Projects</a>
+      </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
-    </footer>
+    <div class="status-bar">
+      <span>MLCPD.app | Super Mario Edition | Built by Jugal Gajjar</span>
+      <span>Ready</span>
+    </div>
+  </div>
+
+  <div class="under-construction" style="max-width:1000px;margin:0 auto;">This portfolio is always evolving! New research and projects added regularly.</div>
+
+  <div class="y2k-footer" style="max-width:1000px;">
+    <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+    <p style="font-size:10px;">GAME ON</p>
+  </div>
+
+  <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+  <div id="chat-window" class="chat-window">
+    <div class="chat-titlebar">
+      <span>MARIO</span>
+      <span class="chat-close" onclick="toggleChat()">X</span>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects, publications, experience, skills, or education!</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Mario..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button onclick="sendChat()">GO</button>
+    </div>
+  </div>
+
 </body>
-
 </html>

@@ -1,81 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Jugal Gajjar</title>
-  <link rel="stylesheet" href="styles-contact.css" />
+  <link rel="stylesheet" href="styles-y2k.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+  <script src="chatbot.js"></script>
   <script src="script.js" defer></script>
 </head>
-
 <body>
-  <header>
-    <h1>Contact</h1>
-    <p>Get in touch or connect professionally with Jugal Gajjar</p>
 
-    <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  <div class="marquee-banner">
+    <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+    <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+    <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+    <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span></div>
+  </div>
 
-    <nav id="menu">
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="publications.html">Publications</a>
+    <a href="experiences.html">Experiences</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="resume.html">Resume/CV</a>
+  </div>
+
+  <div class="mac-window wide">
+    <div class="mac-titlebar">
+      <div class="traffic-lights">
+        <div class="traffic-light close"></div>
+        <div class="traffic-light minimize"></div>
+        <div class="traffic-light maximize"></div>
+      </div>
+      <div class="title">Contact - Let's Connect</div>
+    </div>
+
+    <nav class="finder-nav">
       <a href="index.html">Home</a>
-      <a href="projects.html" class="dropbtn">Projects</a>
-      <a href="publications.html" class="dropbtn">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
       <a href="experiences.html">Experiences</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="resume.html">Resume/CV</a>
-      <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+      <div class="nav-right">
+        <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+        <span class="nav-clock" id="menu-clock">12:00 AM</span>
+      </div>
     </nav>
-  </header>
 
-  <main>
-    <section class="contact-section">
-      <h2>Let's Connect</h2>
-
-      <p>If you'd like to discuss a project, research, collaboration, or just say hello — feel free to reach out!</p>
+    <div class="mac-body">
+      <div class="section-heading">Let's Connect</div>
+      <div class="guestbook-note">If you'd like to discuss a project, research, collaboration, or just say hello &mdash; feel free to reach out!</div>
 
       <div class="contact-grid">
         <div class="contact-box">
           <h3>Email</h3>
           <p><a href="mailto:812jugalgajjar@gmail.com">812jugalgajjar@gmail.com</a></p>
         </div>
-
         <div class="contact-box">
           <h3>LinkedIn</h3>
           <p><a href="https://www.linkedin.com/in/jugalgajjar/" target="_blank">linkedin.com/in/jugalgajjar</a></p>
         </div>
-
         <div class="contact-box">
           <h3>Medium</h3>
           <p><a href="https://medium.com/@812jugalgajjar" target="_blank">medium.com/@812jugalgajjar</a></p>
         </div>
-
         <div class="contact-box">
           <h3>GitHub</h3>
           <p><a href="https://github.com/JugalGajjar" target="_blank">github.com/JugalGajjar</a></p>
         </div>
-
         <div class="contact-box">
           <h3>Google Scholar</h3>
-          <p><a href="https://scholar.google.com/citations?user=ywXjCXwAAAAJ&hl=en" target="_blank">View
-              Publications</a></p>
-        </div>
-
-        <div class="contact-box">
-          <h3>ResearchGate</h3>
-          <p><a href="https://www.researchgate.net/profile/Jugal-Gajjar-2" target="_blank">View Profile</a></p>
+          <p><a href="https://scholar.google.com/citations?user=ywXjCXwAAAAJ&hl=en" target="_blank">View Publications</a></p>
         </div>
       </div>
-    </section>
 
-    <div class="back-home">
-      <a href="index.html" class="btn btn-outline">← Back to Home</a>
+      <div style="text-align:center;margin-top:16px;">
+        <a href="index.html" class="mac-btn">&larr; Back to Home</a>
+      </div>
     </div>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
-  </footer>
+    <div class="status-bar">
+      <span>Contact.app | Super Mario Edition | Built by Jugal Gajjar</span>
+      <span>Ready</span>
+    </div>
+  </div>
+
+  <div class="under-construction" style="max-width:1000px;margin:0 auto;">This portfolio is always evolving! New research and projects added regularly.</div>
+
+  <div class="y2k-footer" style="max-width:1000px;">
+    <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+    <p style="font-size:10px;">GAME ON</p>
+  </div>
+
+  <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+  <div id="chat-window" class="chat-window">
+    <div class="chat-titlebar">
+      <span>MARIO</span>
+      <span class="chat-close" onclick="toggleChat()">X</span>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects, publications, experience, skills, or education!</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Mario..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button onclick="sendChat()">GO</button>
+    </div>
+  </div>
+
 </body>
-
 </html>

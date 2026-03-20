@@ -1,48 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EzyCart | Jugal Gajjar</title>
-  <link rel="stylesheet" href="../styles-projects.css" />
+  <link rel="stylesheet" href="../styles-y2k.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+  <script src="../chatbot.js"></script>
   <script src="../script.js" defer></script>
 </head>
-
 <body>
-  <header>
-    <h1>EzyCart</h1>
-    <p>Computer vision-enabled autonomous smart shopping cart</p>
 
-    <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  <div class="marquee-banner">
+    <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+    <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+    <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+    <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span></div>
+  </div>
 
-    <nav id="menu">
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../publications.html">Publications</a>
+    <a href="../experiences.html">Experiences</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../resume.html">Resume/CV</a>
+  </div>
+
+  <div class="mac-window wide">
+    <div class="mac-titlebar">
+      <div class="traffic-lights">
+        <div class="traffic-light close"></div>
+        <div class="traffic-light minimize"></div>
+        <div class="traffic-light maximize"></div>
+      </div>
+      <div class="title">EzyCart.app - Project Details</div>
+    </div>
+
+    <nav class="finder-nav">
       <a href="../index.html">Home</a>
-      <a href="../projects.html" class="dropbtn">Projects</a>
-      <a href="../publications.html" class="dropbtn">Publications</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../publications.html">Publications</a>
       <a href="../experiences.html">Experiences</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
       <a href="../resume.html">Resume/CV</a>
-      <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+      <div class="nav-right">
+        <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+        <span class="nav-clock" id="menu-clock">12:00 AM</span>
+      </div>
     </nav>
-  </header>
 
-  <main>
-    <section class="project-section">
-      <img src="../images/ezycart.png" alt="EzyCart Screenshot" class="project-img" />
-
+    <div class="mac-body">
+      <div class="project-detail">
       <h2>Overview</h2>
       <p align="justify">
-        EzyCart is an AI-powered smart shopping cart system that integrates computer vision and sensor-based technology
+        EzyCart is an AI-powered smart shopping cart system that integrates <span class="hl">computer vision</span> and sensor-based technology
         to autonomously identify items placed into the cart. It eliminates manual barcode scanning and checkout by using
-        object detection, weight verification, and fallback scanning mechanisms to ensure robust and reliable billing.
+        <span class="hl">object detection</span>, weight verification, and fallback scanning mechanisms to ensure robust and reliable billing.
         Designed to streamline retail shopping, it delivers an intuitive, contactless experience.
       </p>
 
       <h2>Pipeline</h2>
       <p>
-        1. Real-time object detection via YOLOv5 from a live camera feed<br>
+        1. Real-time object detection via <span class="hl">YOLOv5</span> from a live camera feed<br>
         2. Weight measurement using load cells to validate item placement and quantity<br>
         3. Barcode scanner fallback to improve robustness for hard-to-detect items<br>
         4. Product database lookup and dynamic billing updates<br>
@@ -52,7 +74,7 @@
 
       <h2>Hardware & Integration</h2>
       <p align="justify">
-        The prototype is built using an NVIDIA Jetson Nano module with a Pi Camera for vision, load cells for real-time
+        The prototype is built using an <span class="hl">NVIDIA Jetson Nano</span> module with a Pi Camera for vision, <span class="hl">load cells</span> for real-time
         weight sensing, and a barcode scanner module for redundancy. The cart uses a compact embedded frame with a
         display unit and interactive interface. Weight validation is cross-referenced with vision predictions to prevent
         mismatches and frauds.
@@ -60,7 +82,7 @@
 
       <h2>Highlights</h2>
       <p>
-        • 97%+ object recognition accuracy and real-time billing feedback<br>
+        • <span class="hl">97%+</span> object recognition accuracy and real-time billing feedback<br>
         • Designed to support 30+ grocery items in prototype<br>
         • Integrated weight sensors for fraud prevention and redundancy<br>
         • Barcode scanner for fallback when CV confidence is low<br>
@@ -69,17 +91,43 @@
 
       <h2>Tech. Stack</h2>
       <p>
-        Python, PyTorch, YOLOv5, OpenCV, Jetson Nano, Load Cells, HX711, Barcode Scanner, SQLite, Raspberry Pi Camera,
+        <span class="hl">Python</span>, <span class="hl">PyTorch</span>, <span class="hl">YOLOv5</span>, <span class="hl">OpenCV</span>, <span class="hl">Jetson Nano</span>, Load Cells, HX711, Barcode Scanner, SQLite, Raspberry Pi Camera,
         HTML/CSS/JS
       </p>
-    </section>
+      </div>
 
-    <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
-  </main>
+      <div style="text-align:center;margin-top:16px;">
+        <a href="../projects.html" class="mac-btn">&larr; Back to Projects</a>
+      </div>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
-  </footer>
+    <div class="status-bar">
+      <span>EzyCart.app | Super Mario Edition | Built by Jugal Gajjar</span>
+      <span>Ready</span>
+    </div>
+  </div>
+
+  <div class="under-construction" style="max-width:1000px;margin:0 auto;">This portfolio is always evolving! New research and projects added regularly.</div>
+
+  <div class="y2k-footer" style="max-width:1000px;">
+    <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+    <p style="font-size:10px;">GAME ON</p>
+  </div>
+
+  <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+  <div id="chat-window" class="chat-window">
+    <div class="chat-titlebar">
+      <span>MARIO</span>
+      <span class="chat-close" onclick="toggleChat()">X</span>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects, publications, experience, skills, or education!</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Mario..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button onclick="sendChat()">GO</button>
+    </div>
+  </div>
+
 </body>
-
 </html>

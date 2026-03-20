@@ -1,40 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SciChat | Jugal Gajjar</title>
-  <link rel="stylesheet" href="../styles-projects.css" />
+  <link rel="stylesheet" href="../styles-y2k.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+  <script src="../chatbot.js"></script>
   <script src="../script.js" defer></script>
 </head>
-
 <body>
-  <header>
-    <h1>SciChat</h1>
-    <p>LLM-powered academic assistant with PDF support and semantic retrieval</p>
 
-    <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  <div class="marquee-banner">
+    <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+    <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+    <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+    <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span></div>
+  </div>
 
-    <nav id="menu">
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../publications.html">Publications</a>
+    <a href="../experiences.html">Experiences</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../resume.html">Resume/CV</a>
+  </div>
+
+  <div class="mac-window wide">
+    <div class="mac-titlebar">
+      <div class="traffic-lights">
+        <div class="traffic-light close"></div>
+        <div class="traffic-light minimize"></div>
+        <div class="traffic-light maximize"></div>
+      </div>
+      <div class="title">SciChat.app - Project Details</div>
+    </div>
+
+    <nav class="finder-nav">
       <a href="../index.html">Home</a>
-      <a href="../projects.html" class="dropbtn">Projects</a>
-      <a href="../publications.html" class="dropbtn">Publications</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../publications.html">Publications</a>
       <a href="../experiences.html">Experiences</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
       <a href="../resume.html">Resume/CV</a>
-      <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+      <div class="nav-right">
+        <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+        <span class="nav-clock" id="menu-clock">12:00 AM</span>
+      </div>
     </nav>
-  </header>
 
-  <main>
-    <section class="project-section">
-      <img src="../images/scichat.png" alt="SciChat Screenshot" class="project-img" />
-
+    <div class="mac-body">
+      <div class="project-detail">
       <h2>Overview</h2>
       <p align="justify">
-        SciChat is a lightweight yet powerful LLM-driven academic assistant built with Mistral7b and LangChain. It
+        SciChat is a lightweight yet powerful LLM-driven academic assistant built with <span class="hl">Mistral7b</span> and <span class="hl">LangChain</span>. It
         enables users to chat with the model naturally and upload PDFs to retrieve context-aware responses from embedded
         documents. Designed with researchers and students in mind, SciChat enhances access to scientific insights
         through an intuitive interface and intelligent query understanding.
@@ -51,9 +73,9 @@
 
       <h2>Model & Design</h2>
       <p align="justify">
-        The system uses the open-source Mistral7B:instruct model through Ollama for inference. When no files are
-        uploaded, direct LLM prompting is used. When PDFs are uploaded, it leverages a Retrieval-Augmented Generation
-        (RAG) flow powered by LangChain, Pinecone, and HuggingFace embeddings to enable precise context-based answers.
+        The system uses the open-source <span class="hl">Mistral7B:instruct</span> model through <span class="hl">Ollama</span> for inference. When no files are
+        uploaded, direct LLM prompting is used. When PDFs are uploaded, it leverages a <span class="hl">Retrieval-Augmented Generation
+        (RAG)</span> flow powered by <span class="hl">LangChain</span>, <span class="hl">Pinecone</span>, and HuggingFace embeddings to enable precise context-based answers.
         The app runs on Flask with minimal hardware requirements and is optimized for quick bootstrapping.
       </p>
 
@@ -68,22 +90,48 @@
 
       <h2>Tech. Stack</h2>
       <p>
-        Python, Flask, Ollama, Mistral7b, LangChain, Pinecone, sentence-transformers, HTML/CSS/JS
+        <span class="hl">Python</span>, <span class="hl">Flask</span>, <span class="hl">Ollama</span>, <span class="hl">Mistral7b</span>, <span class="hl">LangChain</span>, <span class="hl">Pinecone</span>, sentence-transformers, HTML/CSS/JS
       </p>
 
       <h2>Links</h2>
       <p>
-        <a href="https://github.com/JugalGajjar/SciChat-LLM-with-PDF-Support" target="_blank" class="btn">GitHub
+        <a href="https://github.com/JugalGajjar/SciChat-LLM-with-PDF-Support" target="_blank" class="mac-btn mac-btn-sm">GitHub
           Repository</a>
       </p>
-    </section>
+      </div>
 
-    <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
-  </main>
+      <div style="text-align:center;margin-top:16px;">
+        <a href="../projects.html" class="mac-btn">&larr; Back to Projects</a>
+      </div>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
-  </footer>
+    <div class="status-bar">
+      <span>SciChat.app | Super Mario Edition | Built by Jugal Gajjar</span>
+      <span>Ready</span>
+    </div>
+  </div>
+
+  <div class="under-construction" style="max-width:1000px;margin:0 auto;">This portfolio is always evolving! New research and projects added regularly.</div>
+
+  <div class="y2k-footer" style="max-width:1000px;">
+    <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+    <p style="font-size:10px;">GAME ON</p>
+  </div>
+
+  <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+  <div id="chat-window" class="chat-window">
+    <div class="chat-titlebar">
+      <span>MARIO</span>
+      <span class="chat-close" onclick="toggleChat()">X</span>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects, publications, experience, skills, or education!</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Mario..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button onclick="sendChat()">GO</button>
+    </div>
+  </div>
+
 </body>
-
 </html>

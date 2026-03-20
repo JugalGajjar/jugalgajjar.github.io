@@ -1,51 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HyperComplEx | Jugal Gajjar</title>
-    <link rel="stylesheet" href="../styles-projects.css" />
-    <script src="../script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HyperComplEx | Jugal Gajjar</title>
+  <link rel="stylesheet" href="../styles-y2k.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+  <script src="../chatbot.js"></script>
+  <script src="../script.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <h1>HyperComplEx</h1>
-        <p>Adaptive Multi-Space Knowledge Graph Embeddings for Scalable Link Prediction</p>
 
-        <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  <div class="marquee-banner">
+    <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+    <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+    <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+    <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span></div>
+  </div>
 
-        <nav id="menu">
-            <a href="../index.html">Home</a>
-            <a href="../projects.html" class="dropbtn">Projects</a>
-            <a href="../publications.html" class="dropbtn">Publications</a>
-            <a href="../experiences.html">Experiences</a>
-            <a href="../about.html">About</a>
-            <a href="../contact.html">Contact</a>
-            <a href="../resume.html">Resume/CV</a>
-            <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
-        </nav>
-    </header>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../publications.html">Publications</a>
+    <a href="../experiences.html">Experiences</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../resume.html">Resume/CV</a>
+  </div>
 
-    <main>
-        <section class="project-section">
-            <img src="../images/hypercomplex.png" alt="HyperComplEx Multi-Space Embedding Diagram"
-                class="project-img" />
+  <div class="mac-window wide">
+    <div class="mac-titlebar">
+      <div class="traffic-lights">
+        <div class="traffic-light close"></div>
+        <div class="traffic-light minimize"></div>
+        <div class="traffic-light maximize"></div>
+      </div>
+      <div class="title">HyperComplEx.app - Project Details</div>
+    </div>
 
+    <nav class="finder-nav">
+      <a href="../index.html">Home</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../publications.html">Publications</a>
+      <a href="../experiences.html">Experiences</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../resume.html">Resume/CV</a>
+      <div class="nav-right">
+        <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+        <span class="nav-clock" id="menu-clock">12:00 AM</span>
+      </div>
+    </nav>
+
+    <div class="mac-body">
+      <div class="project-detail">
             <h2>Overview</h2>
             <p align="justify">
-                HyperComplEx is a hybrid KGE framework that unifies hyperbolic, complex, and Euclidean geometries via
+                HyperComplEx is a hybrid <span class="hl">KGE framework</span> that unifies <span class="hl">hyperbolic</span>, complex, and <span class="hl">Euclidean</span> geometries via
                 relation-specific adaptive attention and a multi-space consistency loss. It models hierarchical,
-                asymmetric, and translational patterns simultaneously, achieving state-of-the-art link prediction while
-                scaling near-linearly from thousands to tens of millions of entities.
+                asymmetric, and translational patterns simultaneously, achieving <span class="hl">state-of-the-art link prediction</span> while
+                scaling near-linearly from thousands to <span class="hl">tens of millions of entities</span>.
             </p>
 
             <h2>Pipeline</h2>
             <p>
-                1. Embed entities/relations in three subspaces: Hyperbolic (hierarchy), Complex (asymmetry), Euclidean
+                1. Embed entities/relations in three subspaces: <span class="hl">Hyperbolic</span> (hierarchy), <span class="hl">Complex</span> (asymmetry), <span class="hl">Euclidean</span>
                 (translation)<br>
-                2. Compute subspace scores (Poincaré distance, Hermitian bilinear, translational L2)<br>
+                2. Compute subspace scores (<span class="hl">Poincaré distance</span>, Hermitian bilinear, translational L2)<br>
                 3. Learn relation-specific attention α = softmax(W) to combine subspace scores<br>
                 4. Train with self-adversarial ranking loss + multi-space consistency + L2 regularization<br>
                 5. Output link scores, learned attention per relation, and final embeddings
@@ -53,9 +74,9 @@
 
             <h2>Experiment Results</h2>
             <p>
-                • Datasets: Our CS scholarly KGs (1K → 10M papers) Family + DBP15K, Hetionet, FB15K benchmarks<br>
-                • Performance: MRR 0.612 on CS-10M (+4.8% over best baseline); consistent SOTA across scales<br>
-                • Efficiency: Near-linear training scaling (T ∝ |E|<sup>1.06</sup>); ~85 ms/triple inference on
+                • Datasets: Our CS scholarly KGs (1K → <span class="hl">10M papers</span>) Family + DBP15K, Hetionet, FB15K benchmarks<br>
+                • Performance: <span class="hl">MRR 0.612</span> on CS-10M (<span class="hl">+4.8%</span> over best baseline); consistent SOTA across scales<br>
+                • Efficiency: Near-linear training scaling (T ∝ |E|<sup>1.06</sup>); <span class="hl">~85 ms/triple</span> inference on
                 CS-10M<br>
                 • Interpretability: Relation-wise attention aligns with semantics (e.g., hyperbolic for hierarchies,
                 complex for citations)
@@ -70,26 +91,52 @@
 
             <h2>Tech. Stack</h2>
             <p>
-                Python, PyTorch, PyTorch Geometric, PyKeen, NumPy, Pandas, SciPy, scikit-learn, NetworkX, PyYAML, TQDM,
+                <span class="hl">Python</span>, <span class="hl">PyTorch</span>, <span class="hl">PyTorch Geometric</span>, <span class="hl">PyKeen</span>, NumPy, Pandas, SciPy, scikit-learn, NetworkX, PyYAML, TQDM,
                 CUDA/Metal backends
             </p>
 
             <h2>Links</h2>
             <p>
-                <a href="../publications/hypercomplex.html" target="_blank" class="btn">Publication Page</a>
+                <a href="../publications/hypercomplex.html" class="mac-btn mac-btn-sm">Publication Page</a>
                 <a href="https://github.com/JugalGajjar/HyperComplEx-Multi-Space-KG-Embeddings" target="_blank"
-                    class="btn btn-secondary">GitHub Repository</a>
-                <a href="https://zenodo.org/records/17436948" target="_blank" class="btn btn-secondary">Zenodo Data
+                    class="mac-btn mac-btn-sm">GitHub Repository</a>
+                <a href="https://zenodo.org/records/17436948" target="_blank" class="mac-btn mac-btn-sm">Zenodo Data
                     Repository</a>
             </p>
-        </section>
+      </div>
 
-        <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
-    </main>
+      <div style="text-align:center;margin-top:16px;">
+        <a href="../projects.html" class="mac-btn">&larr; Back to Projects</a>
+      </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
-    </footer>
+    <div class="status-bar">
+      <span>HyperComplEx.app | Super Mario Edition | Built by Jugal Gajjar</span>
+      <span>Ready</span>
+    </div>
+  </div>
+
+  <div class="under-construction" style="max-width:1000px;margin:0 auto;">This portfolio is always evolving! New research and projects added regularly.</div>
+
+  <div class="y2k-footer" style="max-width:1000px;">
+    <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+    <p style="font-size:10px;">GAME ON</p>
+  </div>
+
+  <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+  <div id="chat-window" class="chat-window">
+    <div class="chat-titlebar">
+      <span>MARIO</span>
+      <span class="chat-close" onclick="toggleChat()">X</span>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects, publications, experience, skills, or education!</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Mario..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button onclick="sendChat()">GO</button>
+    </div>
+  </div>
+
 </body>
-
 </html>

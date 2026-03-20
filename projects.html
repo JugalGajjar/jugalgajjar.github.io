@@ -1,240 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Jugal Gajjar</title>
-  <link rel="stylesheet" href="styles-projects.css" />
+  <link rel="stylesheet" href="styles-y2k.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+  <script src="chatbot.js"></script>
   <script src="script.js" defer></script>
 </head>
-
 <body>
-  <header>
-    <h1>Projects</h1>
-    <p>Selected projects worked-on by Jugal Gajjar</p>
 
-    <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  <div class="marquee-banner">
+    <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+    <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+    <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+    <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span></div>
+  </div>
 
-    <nav id="menu">
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="publications.html">Publications</a>
+    <a href="experiences.html">Experiences</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="resume.html">Resume/CV</a>
+  </div>
+
+  <div class="mac-window wide">
+    <div class="mac-titlebar">
+      <div class="traffic-lights">
+        <div class="traffic-light close"></div>
+        <div class="traffic-light minimize"></div>
+        <div class="traffic-light maximize"></div>
+      </div>
+      <div class="title">Projects.app - Research &amp; Engineering Portfolio</div>
+    </div>
+
+    <nav class="finder-nav">
       <a href="index.html">Home</a>
-      <a href="projects.html" class="dropbtn">Projects</a>
-      <a href="publications.html" class="dropbtn">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
       <a href="experiences.html">Experiences</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="resume.html">Resume/CV</a>
-      <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+      <div class="nav-right">
+        <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+        <span class="nav-clock" id="menu-clock">12:00 AM</span>
+      </div>
     </nav>
-  </header>
 
-  <main>
-    <section id="hypercomplex" class="project-section">
-      <h2>HyperComplEx: Adaptive Multi-Space KG Embeddings</h2>
-      <img src="images/hypercomplex.png" alt="VulnGraph Project Architecture Screenshot" class="project-img" />
-      <p align="justify">
-        HyperComplEx is a novel hybrid embedding framework that adaptively combines hyperbolic, complex, and Euclidean
-        spaces
-        via learned attention mechanisms for knowledge graph completion. The model introduces relation-specific space
-        weighting
-        that dynamically selects optimal geometries for each relation type, along with multi-space consistency loss to
-        ensure
-        coherent predictions across spaces. Evaluated on computer science research knowledge graphs ranging from 1K to
-        10M papers and benchmark datasets like DBP15K, etc.,
-        HyperComplEx demonstrates consistent improvements over baselines, achieving up to 18% relative gain in MRR
-        while maintaining efficient training and near-linear scalability with graph size.
-      </p>
-      <p><strong>Technologies:</strong> Python, PyTorch, Geometric Deep Learning, Knowledge Graph Embeddings,
-        Multi-space Representation Learning</p>
-      <a href="projects/hypercomplex.html" class="btn">Project Page</a>
-      <a href="https://github.com/JugalGajjar/HyperComplEx-Multi-Space-KG-Embeddings" target="_blank"
-        class="btn btn-secondary">GitHub
-        Repository</a>
-      </p>
-    </section>
+    <div class="mac-body">
 
-    <section id="mlcpd" class="project-section">
-      <h2>MultiLang Code Parser Dataset (MLCPD)</h2>
-      <img src="images/mlcpd.png" alt="Comparing Java and Python's Universal AST" class="project-img" />
-      <p align="justify">
-        MLCPD is a large-scale, unified dataset of parsed source code across 10 major programming languages,
-        represented under a universal schema that captures syntax, semantics, and structure in a consistent format.
-        The dataset enables robust cross-language analysis, code understanding, and representation learning by
-        providing a consistent, language-agnostic data structure suitable for both traditional ML and modern
-        LLM-based workflows. With over 7 million successfully parsed code files and 99.9999% conversion rate,
-        it facilitates comparative code structure analysis across multiple programming ecosystems.
-      </p>
-      <p><strong>Technologies:</strong> Python, Tree-sitter, Apache Parquet, Hugging Face Datasets, Data Engineering,
-        AST Processing</p>
-      <p>
-        <a href="projects/mlcpd.html" class="btn">Project Page</a>
-        <a href="https://github.com/JugalGajjar/MultiLang-Code-Parser-Dataset" target="_blank"
-          class="btn btn-secondary">GitHub
-          Repository</a>
-      </p>
-    </section>
+      <div class="section-heading">All Projects</div>
 
-    <section id="vulngraph" class="project-section">
-      <h2>VulnGraph: Bridging Semantics & Structure for Software Vulnerability Detection</h2>
-      <img src="images/vulngraph.png" alt="VulnGraph Project Architecture Screenshot" class="project-img" />
-      <p align="justify">
-        VulnGraph is a research project integrating graph neural networks (GNNs) with Large Language
-        Models
-        to improve vulnerability detection in Java code. The system extracts Abstract Syntax Trees (ASTs) and Control
-        Flow
-        Graphs (CFGs) using PROGEX, learns structural embeddings with GNNs, and fuses them with LLM-based semantic
-        reasoning. This hybrid approach enables deeper code understanding and more accurate detection of subtle
-        security flaws in large codebases.
-      </p>
-      <p><strong>Technologies:</strong> Python, Java, PROGEX, Graph Neural Networks (GNNs), PyTorch Geometric, LLMs, HF
-        Transformers</p>
-      <p>
-        <a href="projects/vulngraph.html" class="btn">Project Page</a>
-        <a href="https://github.com/JugalGajjar/VulnGraph" target="_blank" class="btn btn-secondary">GitHub
-          Repository</a>
-      </p>
-    </section>
+      <div class="projects-grid">
 
-    <section id="financeagent" class="project-section">
-      <h2>Multi-Agent Financial Assistant</h2>
-      <img src="images/financeagent.png" alt="MalCodeAI Project Screenshot" class="project-img" />
-      <p align="justify">
-        A web-based multi-agent assistant built with the Phi multi-agent framework and Groq-powered LLaMA3, designed for
-        real-time financial queries and intelligent web search. The system delegates tasks between specialized agents
-        (Finance & Web Search), integrates live stock data via yfinance, supports web search with citations,
-        and renders responses in a Markdown chat UI with light/dark theme support.
-      </p>
-      <p><strong>Technologies:</strong> Python, Flask, Phi Data Agents, Groq, yfinance, Google
-        Search API, JavaScript, HTML/CSS</p>
-      <p>
-        <a href="projects/financeagent.html" class="btn">Project Page</a>
-        <a href="https://github.com/JugalGajjar/Multi-Agent-Financial-Assistant" target="_blank"
-          class="btn btn-secondary">GitHub Repository</a>
-      </p>
-    </section>
+        <div class="project-card" id="hypercomplex">
+          <h3>HyperComplEx</h3>
+          <p style="text-align:justify;">HyperComplEx is a novel hybrid embedding framework that adaptively combines <span class="hl">hyperbolic, complex, and Euclidean spaces</span> via learned attention mechanisms for <span class="hl">knowledge graph completion</span>. Achieves up to <span class="hl">18% relative gain in MRR</span> while maintaining near-linear scalability.</p>
+          <p><strong>Technologies:</strong> Python, PyTorch, Geometric Deep Learning, Knowledge Graph Embeddings</p>
+          <div class="proj-buttons">
+            <a href="projects/hypercomplex.html" class="mac-btn mac-btn-sm">Project Page</a>
+            <a href="https://github.com/JugalGajjar/HyperComplEx-Multi-Space-KG-Embeddings" target="_blank" class="mac-btn mac-btn-sm">GitHub</a>
+          </div>
+        </div>
 
-    <section id="securefixagent" class="project-section">
-      <h2>SecureFixAgent: A Hybrid LLM Agent for Automated Python Static Vulnerability Repair</h2>
-      <img src="images/securefix.png" alt="SecureFixAgent Architecture Screenshot" class="project-img" />
-      <p align="justify">
-        SecureFixAgent is a hybrid agent system that augments static analysis tools (like Bandit) with
-        Large Language Models to detect and repair vulnerabilities in Python source code. The pipeline benchmarks
-        multiple open-source LLMs, parses their outputs for actionable fixes, and automatically injects safe patches
-        into the original files. By combining deterministic static analysis with adaptive LLM reasoning, the agent
-        enhances both accuracy and automation in software vulnerability remediation.
-      </p>
-      <p><strong>Technologies:</strong> Python, LLMs, HuggingFace, Apple MLX, NVIDIA CUDA, Bandit Static Code Analysis,
-        Security</p>
-      <p>
-        <a href="projects/securefixagent.html" class="btn">Project Page</a>
-        <a href="https://github.com/JugalGajjar/SecureFixAgent" target="_blank" class="btn btn-secondary">GitHub
-          Repository</a>
-      </p>
-    </section>
+        <div class="project-card" id="mlcpd">
+          <h3>MLCPD</h3>
+          <p style="text-align:justify;">A large-scale, unified dataset of parsed source code across <span class="hl">10 major programming languages</span> under a <span class="hl">universal AST schema</span>. Over <span class="hl">7 million parsed code files</span> with <span class="hl">99.9999% conversion rate</span>. Published on Hugging Face.</p>
+          <p><strong>Technologies:</strong> Python, Tree-sitter, Apache Parquet, Hugging Face Datasets</p>
+          <div class="proj-buttons">
+            <a href="projects/mlcpd.html" class="mac-btn mac-btn-sm">Project Page</a>
+            <a href="https://github.com/JugalGajjar/MultiLang-Code-Parser-Dataset" target="_blank" class="mac-btn mac-btn-sm">GitHub</a>
+          </div>
+        </div>
 
-    <section id="orderbook++" class="project-section">
-      <h2>OrderBook++: High-Performance C++ Order Matching Engine with Python Bindings</h2>
-      <img src="images/orderbook++.png" alt="OrderBook++ Order Book Visualization" class="project-img" />
-      <p align="justify">
-        OrderBook++ is a modular, low-latency order matching engine implemented in modern C++ for simulating and
-        analyzing
-        financial trading systems. It supports limit, market, and cancel orders, maintains bid/ask order books, executes
-        trades with precise matching logic, and tracks a complete trade history. The project exposes Python bindings via
-        pybind11 for interactive experimentation, analytics, and real-time visualization.
-      </p>
-      <p><strong>Technologies:</strong> C++17, pybind11, CMake, Google Test, Python (visualization & demos),
-        Performance Benchmarking</p>
-      <p>
-        <a href="projects/orderbook++.html" class="btn">Project Page</a>
-        <a href="https://github.com/JugalGajjar/OrderBookPlusPlus" target="_blank" class="btn btn-secondary">GitHub
-          Repository</a>
-      </p>
-    </section>
+        <div class="project-card" id="vulngraph">
+          <h3>VulnGraph</h3>
+          <p style="text-align:justify;">Integrates <span class="hl">graph neural networks (GNNs)</span> with <span class="hl">Large Language Models</span> for <span class="hl">vulnerability detection</span> in Java code. Uses <span class="hl">PROGEX</span> for AST/CFG extraction. <span class="hl">93.57% accuracy</span>, 17.81% above LLM baselines.</p>
+          <p><strong>Technologies:</strong> Python, Java, PROGEX, GNNs, PyTorch Geometric, LLMs</p>
+          <div class="proj-buttons">
+            <a href="projects/vulngraph.html" class="mac-btn mac-btn-sm">Project Page</a>
+            <a href="https://github.com/JugalGajjar/VulnGraph" target="_blank" class="mac-btn mac-btn-sm">GitHub</a>
+          </div>
+        </div>
 
-    <section id="malcodeai" class="project-section">
-      <h2>MalCodeAI: AI-Powered Malicious Code Detection</h2>
-      <img src="images/malcodeai.png" alt="MalCodeAI Project Screenshot" class="project-img" />
-      <p align="justify">
-        MalCodeAI is a cutting-edge dual-stage pipeline leveraging Large Language Models (LLMs) to detect, exploit, and
-        automatically remediate software vulnerabilities in source code. The system integrates static analysis, exploit
-        simulation, and fix suggestions for autonomous secure coding workflows.
-      </p>
-      <p><strong>Technologies:</strong> Python, LLMs, HuggingFace, Apple MLX, Static Code Analysis, Security Exploit
-        Simulation</p>
-      <p>
-        <a href="projects/malcodeai.html" class="btn">Project Page</a>
-        <a href="https://github.com/JugalGajjar/MalCodeAI-AI-Powered-Malicious-Code-Detection" target="_blank"
-          class="btn btn-secondary">GitHub Repository</a>
-      </p>
-    </section>
+        <div class="project-card" id="financeagent">
+          <h3>Multi-Agent Financial Assistant</h3>
+          <p style="text-align:justify;">A web-based <span class="hl">multi-agent assistant</span> built with <span class="hl">Phi framework</span> and <span class="hl">Groq-powered LLaMA3</span> for real-time financial queries. Integrates live stock data via <span class="hl">yfinance</span> with web search citations.</p>
+          <p><strong>Technologies:</strong> Python, Flask, Phi Data Agents, Groq, yfinance</p>
+          <div class="proj-buttons">
+            <a href="projects/financeagent.html" class="mac-btn mac-btn-sm">Project Page</a>
+            <a href="https://github.com/JugalGajjar/Multi-Agent-Financial-Assistant" target="_blank" class="mac-btn mac-btn-sm">GitHub</a>
+          </div>
+        </div>
 
-    <section id="mosei" class="project-section">
-      <h2>Multimodal Sentiment Analysis with CMU-MOSEI Dataset</h2>
-      <img src="images/mosei.png" alt="Multimodal Sentiment Analysis Screenshot" class="project-img" />
-      <p align="justify">
-        This project presents a Transformer-based approach for sentiment analysis on the CMU-MOSEI dataset, combining
-        textual, visual, and acoustic cues to achieve deeper emotional understanding. By early fusing multimodal
-        information, the system enhances sentiment prediction performance for complex human communication.
-      </p>
-      <p><strong>Technologies:</strong> Python, PyTorch, HuggingFace, Multimodal Deep Learning, Sentiment Analysis</p>
-      <p>
-        <a href="projects/mosei.html" class="btn">Project Page</a>
-        <a href="https://github.com/JugalGajjar/Multimodal-Sentiment-Analysis-with-MOSEI-Dataset" target="_blank"
-          class="btn btn-secondary">GitHub Repository</a>
-      </p>
-    </section>
+        <div class="project-card" id="securefixagent">
+          <h3>SecureFixAgent</h3>
+          <p style="text-align:justify;">Hybrid agent augmenting <span class="hl">Bandit</span> static analysis with <span class="hl">LLMs</span> to detect and repair <span class="hl">Python</span> vulnerabilities. Reduces false positives by <span class="hl">10.8%</span>, improves fix accuracy by <span class="hl">13.51%</span>. Developer rating: <span class="hl">4.5/5</span>.</p>
+          <p><strong>Technologies:</strong> Python, LLMs, HuggingFace, Apple MLX, Bandit</p>
+          <div class="proj-buttons">
+            <a href="projects/securefixagent.html" class="mac-btn mac-btn-sm">Project Page</a>
+            <a href="https://github.com/JugalGajjar/SecureFixAgent" target="_blank" class="mac-btn mac-btn-sm">GitHub</a>
+          </div>
+        </div>
 
-    <section id="scichat" class="project-section">
-      <h2>SciChat: PDF-Aware Scientific Chatbot</h2>
-      <img src="images/scichat.png" alt="SciChat Project Screenshot" class="project-img" />
-      <p align="justify">
-        SciChat enables interactive question-answering over scientific documents by combining LangChain, Pinecone vector
-        search, and the Mistral7B language model. It provides context-aware responses and is optimized for research
-        assistance, knowledge retrieval, and document comprehension.
-      </p>
-      <p><strong>Technologies:</strong> Python, LangChain, Pinecone, LLMs, NLP</p>
-      <p>
-        <a href="projects/scichat.html" class="btn">Project Page</a>
-        <a href="https://github.com/JugalGajjar/SciChat-LLM-with-PDF-Support" target="_blank"
-          class="btn btn-secondary">GitHub Repository</a>
-      </p>
-    </section>
+        <div class="project-card" id="orderbook++">
+          <h3>OrderBook++</h3>
+          <p style="text-align:justify;">A modular, <span class="hl">low-latency order matching engine</span> in <span class="hl">C++</span> for financial trading simulation. Supports limit, market, and cancel orders. Exposes <span class="hl">Python bindings</span> via <span class="hl">pybind11</span>.</p>
+          <p><strong>Technologies:</strong> C++17, pybind11, CMake, Google Test, Python</p>
+          <div class="proj-buttons">
+            <a href="projects/orderbook++.html" class="mac-btn mac-btn-sm">Project Page</a>
+            <a href="https://github.com/JugalGajjar/OrderBookPlusPlus" target="_blank" class="mac-btn mac-btn-sm">GitHub</a>
+          </div>
+        </div>
 
-    <section id="ezycart" class="project-section">
-      <h2>EzyCart: Computer Vision Powered Portable E-Cart System</h2>
-      <img src="images/ezycart.png" alt="EzyCart Project Screenshot" class="project-img" />
-      <p align="justify">
-        EzyCart is an AI-powered smart shopping cart system that uses computer vision to automatically identify
-        products, enabling seamless, on-the-go billing & checkout. The project includes a patent published in India and
-        showcases real-time embedded AI, object detection, and edge computing for retail automation.
-      </p>
-      <p><strong>Technologies:</strong> Computer Vision, Edge Computing, Embedded Systems, Python, OpenCV, PyTorch,
-        RoboFlow</p>
-      <p>
-        <a href="projects/ezycart.html" class="btn">Project Page</a>
-      </p>
-    </section>
+        <div class="project-card" id="malcodeai">
+          <h3>MalCodeAI</h3>
+          <p style="text-align:justify;">Dual-stage pipeline leveraging <span class="hl">LLMs</span> to detect, exploit, and remediate <span class="hl">software vulnerabilities</span> across <span class="hl">14 programming languages</span>. Integrates <span class="hl">static analysis</span> and exploit simulation. Usefulness: <span class="hl">8.06/10</span>.</p>
+          <p><strong>Technologies:</strong> Python, LLMs, HuggingFace, Apple MLX, Static Code Analysis</p>
+          <div class="proj-buttons">
+            <a href="projects/malcodeai.html" class="mac-btn mac-btn-sm">Project Page</a>
+            <a href="https://github.com/JugalGajjar/MalCodeAI-AI-Powered-Malicious-Code-Detection" target="_blank" class="mac-btn mac-btn-sm">GitHub</a>
+          </div>
+        </div>
 
-    <section id="cryptchat" class="project-section">
-      <h2>Crypt Chat: Encrypted Messaging with Steganography</h2>
-      <img src="images/cryptchat.png" alt="Crypt Chat Project Screenshot" class="project-img" />
-      <p align="justify">
-        Crypt Chat is a secure Android messaging application that integrates AES-256 encryption with steganography for
-        covert communication. It enables confidential text exchanges with hidden data transmission embedded within media
-        files, offering enhanced privacy for both personal and sensitive professional use.
-      </p>
-      <p><strong>Technologies:</strong> Android, Java, AES-256, Steganography, Google Firebase</p>
-      <p>
-        <a href="projects/cryptchat.html" class="btn">Project Page</a>
-      </p>
-    </section>
+        <div class="project-card" id="mosei">
+          <h3>Multimodal Sentiment Analysis</h3>
+          <p style="text-align:justify;"><span class="hl">Transformer-based</span> <span class="hl">sentiment analysis</span> on <span class="hl">CMU-MOSEI</span> dataset with <span class="hl">early fusion</span> of text, audio, and visual modalities. Achieves <span class="hl">97.87% accuracy</span> and <span class="hl">0.9682 F1-score</span>.</p>
+          <p><strong>Technologies:</strong> Python, PyTorch, HuggingFace, Multimodal Deep Learning</p>
+          <div class="proj-buttons">
+            <a href="projects/mosei.html" class="mac-btn mac-btn-sm">Project Page</a>
+            <a href="https://github.com/JugalGajjar/Multimodal-Sentiment-Analysis-with-MOSEI-Dataset" target="_blank" class="mac-btn mac-btn-sm">GitHub</a>
+          </div>
+        </div>
 
-    <p class="back-home"><a href="index.html" class="btn btn-outline">← Back to Home</a></p>
-  </main>
+        <div class="project-card" id="scichat">
+          <h3>SciChat</h3>
+          <p style="text-align:justify;">PDF-aware scientific chatbot combining <span class="hl">LangChain</span>, <span class="hl">Pinecone vector search</span>, and <span class="hl">Mistral7B</span> for interactive <span class="hl">question-answering</span> over research papers.</p>
+          <p><strong>Technologies:</strong> Python, LangChain, Pinecone, LLMs, NLP</p>
+          <div class="proj-buttons">
+            <a href="projects/scichat.html" class="mac-btn mac-btn-sm">Project Page</a>
+            <a href="https://github.com/JugalGajjar/SciChat-LLM-with-PDF-Support" target="_blank" class="mac-btn mac-btn-sm">GitHub</a>
+          </div>
+        </div>
 
-  <footer>
-    <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
-  </footer>
+        <div class="project-card" id="ezycart">
+          <h3>EzyCart</h3>
+          <p style="text-align:justify;">AI-powered smart shopping cart using <span class="hl">computer vision</span> for automatic product identification and billing. Includes a <span class="hl">patent published in India</span>. Uses <span class="hl">object detection</span> and <span class="hl">edge computing</span>.</p>
+          <p><strong>Technologies:</strong> Computer Vision, Python, OpenCV, PyTorch, RoboFlow</p>
+          <div class="proj-buttons">
+            <a href="projects/ezycart.html" class="mac-btn mac-btn-sm">Project Page</a>
+          </div>
+        </div>
+
+        <div class="project-card" id="cryptchat">
+          <h3>CryptChat</h3>
+          <p style="text-align:justify;">Secure <span class="hl">Android</span> messaging app integrating <span class="hl">AES-256 encryption</span> with <span class="hl">steganography</span> for covert communication. Hidden data embedded within media files.</p>
+          <p><strong>Technologies:</strong> Android, Java, AES-256, Steganography, Firebase</p>
+          <div class="proj-buttons">
+            <a href="projects/cryptchat.html" class="mac-btn mac-btn-sm">Project Page</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:16px;">
+        <a href="index.html" class="mac-btn">&larr; Back to Home</a>
+      </div>
+
+    </div>
+
+    <div class="status-bar">
+      <span>Projects.app | Super Mario Edition | Built by Jugal Gajjar</span>
+      <span>Ready</span>
+    </div>
+  </div>
+
+  <div class="under-construction" style="max-width:1000px;margin:0 auto;">This portfolio is always evolving! New research and projects added regularly.</div>
+
+  <div class="y2k-footer" style="max-width:1000px;">
+    <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+    <p style="font-size:10px;">GAME ON</p>
+  </div>
+
+  <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+  <div id="chat-window" class="chat-window">
+    <div class="chat-titlebar">
+      <span>MARIO</span>
+      <span class="chat-close" onclick="toggleChat()">X</span>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects, publications, experience, skills, or education!</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Mario..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button onclick="sendChat()">GO</button>
+    </div>
+  </div>
+
 </body>
-
 </html>

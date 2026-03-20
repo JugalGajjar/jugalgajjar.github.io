@@ -1,110 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VulnGraph Publication | Jugal Gajjar</title>
-    <link rel="stylesheet" href="../styles-publications.css" />
-    <script src="../script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VulnGraph Publication | Jugal Gajjar</title>
+  <link rel="stylesheet" href="../styles-y2k.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+  <script src="../chatbot.js"></script>
+  <script src="../script.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <h1>VulnGraph</h1>
-        <p>Bridging Semantics & Structure for Explainable Vulnerability Detection</p>
 
-        <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  <div class="marquee-banner">
+    <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+    <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+    <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+    <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span></div>
+  </div>
 
-        <nav id="menu">
-            <a href="../index.html">Home</a>
-            <a href="../projects.html" class="dropbtn">Projects</a>
-            <a href="../publications.html" class="dropbtn">Publications</a>
-            <a href="../experiences.html">Experiences</a>
-            <a href="../about.html">About</a>
-            <a href="../contact.html">Contact</a>
-            <a href="../resume.html">Resume/CV</a>
-            <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
-        </nav>
-    </header>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../publications.html">Publications</a>
+    <a href="../experiences.html">Experiences</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../resume.html">Resume/CV</a>
+  </div>
 
-    <main>
-        <section class="publication">
-            <h2>Abstract</h2>
-            <p align="justify">
-                Software vulnerabilities remain a persistent risk, yet static and dynamic analyses often overlook
-                structural dependencies that shape insecure behaviors. Viewing programs as heterogeneous graphs, we
-                capture control- and data-flow relations as complex interaction networks. Our hybrid framework combines
-                these graph representations with light-weight (&lt;4B) local LLMs, uniting topological features with
-                semantic reasoning while avoiding the cost and privacy concerns of large cloud models. Evaluated on Java
-                vulnerability detection (binary classification), our method achieves 93.57% accuracy-an 8.36% gain over
-                Graph Attention Network-based embeddings and 17.81% over pretrained LLM baselines such as Qwen2.5 Coder
-                3B. Beyond accuracy, the approach extracts salient subgraphs and generates natural language
-                explanations, improving interpretability for developers. These results pave the way for scalable,
-                explainable, and locally deployable tools that can shift vulnerability analysis from purely syntactic
-                checks to deeper structural and semantic insights, facilitating broader adoption in real-world secure
-                software development.
-            </p>
-        </section>
+  <div class="mac-window wide">
+    <div class="mac-titlebar">
+      <div class="traffic-lights">
+        <div class="traffic-light close"></div>
+        <div class="traffic-light minimize"></div>
+        <div class="traffic-light maximize"></div>
+      </div>
+      <div class="title">VulnGraph - Publication</div>
+    </div>
 
-        <section class="publication">
-            <h2>Related Work</h2>
-            <p align="justify">
-                Traditional static/dynamic analyses miss global structural dependencies; sequence models/LLMs capture
-                semantics but overlook topology; graph models encode structure yet miss semantics. VulnGraph unifies
-                network-theoretic structure with LLM semantics to address these complementary gaps.
-            </p>
-        </section>
+    <nav class="finder-nav">
+      <a href="../index.html">Home</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../publications.html">Publications</a>
+      <a href="../experiences.html">Experiences</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../resume.html">Resume/CV</a>
+      <div class="nav-right">
+        <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+        <span class="nav-clock" id="menu-clock">12:00 AM</span>
+      </div>
+    </nav>
 
-        <section class="publication">
-            <h2>Methodology</h2>
-            <p align="justify">
-                The process begins with code-to-graph transformation, where each source file is converted into Control
-                Flow Graphs that capture both syntactic and dependency relationships. Multiple graph encoders (GCN, GAT,
-                GraphSAGE, Node2Vec) generate structural embeddings representing the program's topology, while a local
-                LLM produces semantic embeddings by interpreting the same code in natural-language form. These
-                heterogeneous representations are then projected into a shared latent space, aligning the structural and
-                semantic perspectives of the code.
-            </p>
-            <p align="justify">
-                To fuse both modalities, our method employs a two-way gating mechanism that dynamically balances graph
-                and language signals for each sample—emphasizing structural cues for control-flow vulnerabilities and
-                semantic cues for logic-level flaws. The model is trained using a joint loss that combines
-                classification accuracy, InfoNCE contrastive alignment, and Laplacian regularization to preserve local
-                graph smoothness. For interpretability, VulnGraph provides per-relation gating weights and extracts
-                top-K salient subgraphs with concise textual rationales, enabling developers to trace and understand
-                each vulnerability prediction.
-            </p>
-        </section>
+    <div class="mac-body">
+      <section class="pub-detail">
+        <h2>Abstract</h2>
+        <p align="justify">
+          Software vulnerabilities remain a persistent risk, yet static and dynamic analyses often overlook
+          structural dependencies that shape insecure behaviors. Viewing programs as <span class="hl">heterogeneous graphs</span>, we
+          capture control- and data-flow relations as complex interaction networks. Our hybrid framework combines
+          these graph representations with light-weight (&lt;4B) local <span class="hl">LLMs</span>, uniting topological features with
+          semantic reasoning while avoiding the cost and privacy concerns of large cloud models. Evaluated on Java
+          vulnerability detection (binary classification), our method achieves <span class="hl">93.57% accuracy</span>-an <span class="hl">8.36% gain</span> over
+          Graph Attention Network-based embeddings and <span class="hl">17.81%</span> over pretrained LLM baselines such as Qwen2.5 Coder
+          3B. Beyond accuracy, the approach extracts salient subgraphs and generates natural language
+          explanations, improving interpretability for developers. These results pave the way for scalable,
+          explainable, and locally deployable tools that can shift vulnerability analysis from purely syntactic
+          checks to deeper structural and semantic insights, facilitating broader adoption in real-world secure
+          software development.
+        </p>
+      </section>
 
-        <section class="publication">
-            <h2>Results</h2>
-            <p align="justify">
-                Our proposed approach achieved significant improvements in both accuracy and interpretability across
-                multiple benchmarks. On a curated Java vulnerability dataset of over 35,000 code files, it reached
-                93.57% accuracy, outperforming GNN-only baselines (85.21%) and LLM-only models (75.76%) by wide margins.
-                The proposed two-way gating fusion effectively balanced structural and semantic cues, yielding a
-                consistent performance gain of 8-18% across vulnerability classes such as resource leaks, injection
-                flaws, and logic errors. Beyond raw metrics, VulnGraph demonstrated strong interpretability—its
-                attention-based gating produced saliency subgraphs and natural-language explanations that aligned
-                closely with expert annotations.
-            </p>
-        </section>
+      <section class="pub-detail">
+        <h2>Related Work</h2>
+        <p align="justify">
+          Traditional static/dynamic analyses miss global structural dependencies; sequence models/<span class="hl">LLMs</span> capture
+          semantics but overlook topology; <span class="hl">graph models</span> encode structure yet miss semantics. VulnGraph unifies
+          network-theoretic structure with LLM semantics to address these complementary gaps.
+        </p>
+      </section>
 
-        <section class="publication">
-            <h2>Project & Paper Links</h2>
-            <a href="../projects/vulngraph.html" class="btn">Project Page</a>
-            <a href="https://arxiv.org/abs/2510.10321" class="btn">View Paper</a>
-        </section>
+      <section class="pub-detail">
+        <h2>Methodology</h2>
+        <p align="justify">
+          The process begins with code-to-graph transformation, where each source file is converted into <span class="hl">Control
+          Flow Graphs</span> that capture both syntactic and dependency relationships. Multiple graph encoders (<span class="hl">GCN</span>, <span class="hl">GAT</span>,
+          <span class="hl">GraphSAGE</span>, Node2Vec) generate structural embeddings representing the program's topology, while a local
+          LLM produces semantic embeddings by interpreting the same code in natural-language form. These
+          heterogeneous representations are then projected into a shared latent space, aligning the structural and
+          semantic perspectives of the code.
+        </p>
+        <p align="justify">
+          To fuse both modalities, our method employs a <span class="hl">two-way gating mechanism</span> that dynamically balances graph
+          and language signals for each sample—emphasizing structural cues for control-flow vulnerabilities and
+          semantic cues for logic-level flaws. The model is trained using a joint loss that combines
+          classification accuracy, <span class="hl">InfoNCE contrastive alignment</span>, and <span class="hl">Laplacian regularization</span> to preserve local
+          graph smoothness. For interpretability, VulnGraph provides per-relation gating weights and extracts
+          top-K salient subgraphs with concise textual rationales, enabling developers to trace and understand
+          each vulnerability prediction.
+        </p>
+      </section>
 
-        <div class="back-home">
-            <a href="../publications.html" class="btn btn-outline">← Back to Publications</a>
-        </div>
-    </main>
+      <section class="pub-detail">
+        <h2>Results</h2>
+        <p align="justify">
+          Our proposed approach achieved significant improvements in both accuracy and interpretability across
+          multiple benchmarks. On a curated Java vulnerability dataset of over <span class="hl">35,000 code files</span>, it reached
+          <span class="hl">93.57% accuracy</span>, outperforming GNN-only baselines (<span class="hl">85.21%</span>) and LLM-only models (75.76%) by wide margins.
+          The proposed two-way gating fusion effectively balanced structural and semantic cues, yielding a
+          consistent performance gain of <span class="hl">8-18%</span> across vulnerability classes such as resource leaks, injection
+          flaws, and logic errors. Beyond raw metrics, VulnGraph demonstrated strong interpretability—its
+          attention-based gating produced saliency subgraphs and natural-language explanations that aligned
+          closely with expert annotations.
+        </p>
+      </section>
 
-    <footer>
-        <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
-    </footer>
+      <section class="pub-detail">
+        <h2>Project & Paper Links</h2>
+        <a href="../projects/vulngraph.html" class="mac-btn mac-btn-sm">Project Page</a>
+        <a href="https://arxiv.org/abs/2510.10321" class="mac-btn mac-btn-sm">View Paper</a>
+      </section>
+
+      <div style="text-align:center;margin-top:16px;">
+        <a href="../publications.html" class="mac-btn">&larr; Back to Publications</a>
+      </div>
+    </div>
+
+    <div class="status-bar">
+      <span>VulnGraph.app | Super Mario Edition | Built by Jugal Gajjar</span>
+      <span>Ready</span>
+    </div>
+  </div>
+
+  <div class="under-construction" style="max-width:1000px;margin:0 auto;">This portfolio is always evolving! New research and projects added regularly.</div>
+
+  <div class="y2k-footer" style="max-width:1000px;">
+    <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+    <p style="font-size:10px;">GAME ON</p>
+  </div>
+
+  <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+  <div id="chat-window" class="chat-window">
+    <div class="chat-titlebar">
+      <span>MARIO</span>
+      <span class="chat-close" onclick="toggleChat()">X</span>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects, publications, experience, skills, or education!</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Mario..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button onclick="sendChat()">GO</button>
+    </div>
+  </div>
+
 </body>
-
 </html>

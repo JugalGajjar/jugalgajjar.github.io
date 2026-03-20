@@ -1,108 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MLCPD Publication | Jugal Gajjar</title>
-    <link rel="stylesheet" href="../styles-publications.css" />
-    <script src="../script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MLCPD Publication | Jugal Gajjar</title>
+  <link rel="stylesheet" href="../styles-y2k.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+  <script src="../chatbot.js"></script>
+  <script src="../script.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <h1>MLCPD</h1>
-        <p>A Unified Multi-Language Code Parsing Dataset with Universal AST Schema</p>
 
-        <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  <div class="marquee-banner">
+    <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+    <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+    <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+    <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span></div>
+  </div>
 
-        <nav id="menu">
-            <a href="../index.html">Home</a>
-            <a href="../projects.html" class="dropbtn">Projects</a>
-            <a href="../publications.html" class="dropbtn">Publications</a>
-            <a href="../experiences.html">Experiences</a>
-            <a href="../about.html">About</a>
-            <a href="../contact.html">Contact</a>
-            <a href="../resume.html">Resume/CV</a>
-            <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
-        </nav>
-    </header>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../publications.html">Publications</a>
+    <a href="../experiences.html">Experiences</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../resume.html">Resume/CV</a>
+  </div>
 
-    <main>
-        <section class="publication">
-            <h2>Abstract</h2>
-            <p align="justify">
-                We introduce the MultiLang Code Parser Dataset (MLCPD), a large-scale, language-agnostic dataset
-                unifying syntactic and structural representations of code across ten major programming languages. MLCPD
-                contains over seven million parsed source files normalized under our proposed universal Abstract Syntax
-                Tree (AST) schema, enabling consistent cross-language reasoning, structural learning, and multilingual
-                software analysis. Unlike existing corpora that focus purely on token-level code or isolated parsers,
-                MLCPD provides both hierarchical tree representations and rich metadata for every file, ensuring
-                lossless syntactic coverage and structural uniformity. Each entry includes a normalized schema,
-                language-level metadata, and abstracted node semantics stored in Parquet format for scalable retrieval.
-                Empirical analyses reveal strong cross-language structural regularities-demonstrating that syntactic
-                graphs from languages as diverse as Python, Java, and Go can be aligned under a shared schema. We
-                release the dataset publicly on Hugging Face and the accompanying codebase on GitHub, which includes
-                complete pipelines for dataset reproduction, grammar compilation, and a visualization tool for exploring
-                the unified AST across languages. Together, these resources establish MLCPD as an open, reproducible
-                foundation for future research in cross-language representation learning and program analysis.
-            </p>
-        </section>
+  <div class="mac-window wide">
+    <div class="mac-titlebar">
+      <div class="traffic-lights">
+        <div class="traffic-light close"></div>
+        <div class="traffic-light minimize"></div>
+        <div class="traffic-light maximize"></div>
+      </div>
+      <div class="title">MLCPD - Publication</div>
+    </div>
 
-        <section class="publication">
-            <h2>Related Work</h2>
-            <p align="justify">
-                Prior corpora (The Stack, StarCoder, CodeSearchNet) emphasize token-level data and lack unified
-                structural supervision. IRs and parsers offer partial structure but inconsistent semantics across
-                languages. MLCPD addresses this gap with a lossless, uniform, and scalable universal AST schema covering
-                ten languages.
-            </p>
-        </section>
+    <nav class="finder-nav">
+      <a href="../index.html">Home</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../publications.html">Publications</a>
+      <a href="../experiences.html">Experiences</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../resume.html">Resume/CV</a>
+      <div class="nav-right">
+        <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+        <span class="nav-clock" id="menu-clock">12:00 AM</span>
+      </div>
+    </nav>
 
-        <section class="publication">
-            <h2>Methodology</h2>
-            <p align="justify">
-                MLCPD employs a modular data pipeline built on Tree-sitter grammars to parse and unify code
-                across ten major programming languages. The framework performs automated language detection, AST
-                extraction, and normalization into a four-layer universal schema that captures syntactic, semantic, and
-                structural information. Each parsed file includes metadata, a flat node array, and categorized
-                constructs—such as declarations, statements, and expressions—allowing consistent interpretation across
-                diverse languages.
-            </p>
-            <p align="justify">
-                To ensure efficiency and scalability, all processed data undergo schema validation before being
-                serialized into the Apache Parquet format. This design supports distributed processing, fast I/O, and
-                large-scale query execution for training and analysis. The pipeline also integrates custom validators
-                for error handling, achieving a 99.9999% successful conversion rate across 7 million+ code files.
-            </p>
-        </section>
+    <div class="mac-body">
+      <section class="pub-detail">
+        <h2>Abstract</h2>
+        <p align="justify">
+          We introduce the MultiLang Code Parser Dataset (MLCPD), a large-scale, language-agnostic dataset
+          unifying syntactic and structural representations of code across <span class="hl">ten major programming languages</span>. MLCPD
+          contains over <span class="hl">seven million parsed source files</span> normalized under our proposed <span class="hl">universal Abstract Syntax
+          Tree (AST) schema</span>, enabling consistent cross-language reasoning, structural learning, and multilingual
+          software analysis. Unlike existing corpora that focus purely on token-level code or isolated parsers,
+          MLCPD provides both hierarchical tree representations and rich metadata for every file, ensuring
+          lossless syntactic coverage and structural uniformity. Each entry includes a normalized schema,
+          language-level metadata, and abstracted node semantics stored in <span class="hl">Parquet</span> format for scalable retrieval.
+          Empirical analyses reveal strong cross-language structural regularities-demonstrating that syntactic
+          graphs from languages as diverse as Python, Java, and Go can be aligned under a shared schema. We
+          release the dataset publicly on <span class="hl">Hugging Face</span> and the accompanying codebase on GitHub, which includes
+          complete pipelines for dataset reproduction, grammar compilation, and a visualization tool for exploring
+          the unified AST across languages. Together, these resources establish MLCPD as an open, reproducible
+          foundation for future research in cross-language representation learning and program analysis.
+        </p>
+      </section>
 
-        <section class="publication">
-            <h2>Results & Analysis</h2>
-            <p align="justify">
-                The final MLCPD dataset encompasses 7,021,722 parsed source files across ten languages, occupying
-                approximately 114 GB in Parquet format. Statistical analysis reveals consistent structural patterns and
-                balanced representation across language families, demonstrating the robustness of the universal AST
-                schema. MLCPD enables cross-language reasoning, code similarity search, and structure-aware pretraining
-                for LLMs and graph-based models. Its uniform schema and high parsing fidelity make it a foundational
-                benchmark for multilingual code understanding and scalable program analysis research.
-            </p>
-        </section>
+      <section class="pub-detail">
+        <h2>Related Work</h2>
+        <p align="justify">
+          Prior corpora (<span class="hl">The Stack</span>, <span class="hl">StarCoder</span>, <span class="hl">CodeSearchNet</span>) emphasize token-level data and lack unified
+          structural supervision. IRs and parsers offer partial structure but inconsistent semantics across
+          languages. MLCPD addresses this gap with a lossless, uniform, and scalable universal AST schema covering
+          ten languages.
+        </p>
+      </section>
 
-        <section class="publication">
-            <h2>Project & Paper Links</h2>
-            <a href="../projects/mlcpd.html" class="btn">Project Page</a>
-            <a href="https://arxiv.org/abs/2510.16357" class="btn">View Paper</a>
-        </section>
+      <section class="pub-detail">
+        <h2>Methodology</h2>
+        <p align="justify">
+          MLCPD employs a modular data pipeline built on <span class="hl">Tree-sitter</span> grammars to parse and unify code
+          across ten major programming languages. The framework performs automated language detection, AST
+          extraction, and normalization into a <span class="hl">four-layer universal schema</span> that captures syntactic, semantic, and
+          structural information. Each parsed file includes metadata, a flat node array, and categorized
+          constructs—such as declarations, statements, and expressions—allowing consistent interpretation across
+          diverse languages.
+        </p>
+        <p align="justify">
+          To ensure efficiency and scalability, all processed data undergo schema validation before being
+          serialized into the <span class="hl">Apache Parquet</span> format. This design supports distributed processing, fast I/O, and
+          large-scale query execution for training and analysis. The pipeline also integrates custom validators
+          for error handling, achieving a <span class="hl">99.9999%</span> successful conversion rate across <span class="hl">7 million+</span> code files.
+        </p>
+      </section>
 
-        <div class="back-home">
-            <a href="../publications.html" class="btn btn-outline">← Back to Publications</a>
-        </div>
-    </main>
+      <section class="pub-detail">
+        <h2>Results & Analysis</h2>
+        <p align="justify">
+          The final MLCPD dataset encompasses <span class="hl">7,021,722</span> parsed source files across ten languages, occupying
+          approximately <span class="hl">114 GB</span> in Parquet format. Statistical analysis reveals consistent structural patterns and
+          balanced representation across language families, demonstrating the robustness of the universal AST
+          schema. MLCPD enables cross-language reasoning, code similarity search, and structure-aware pretraining
+          for <span class="hl">LLMs</span> and graph-based models. Its uniform schema and high parsing fidelity make it a foundational
+          benchmark for multilingual code understanding and scalable program analysis research.
+        </p>
+      </section>
 
-    <footer>
-        <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
-    </footer>
+      <section class="pub-detail">
+        <h2>Project & Paper Links</h2>
+        <a href="../projects/mlcpd.html" class="mac-btn mac-btn-sm">Project Page</a>
+        <a href="https://arxiv.org/abs/2510.16357" class="mac-btn mac-btn-sm">View Paper</a>
+      </section>
+
+      <div style="text-align:center;margin-top:16px;">
+        <a href="../publications.html" class="mac-btn">&larr; Back to Publications</a>
+      </div>
+    </div>
+
+    <div class="status-bar">
+      <span>MLCPD.app | Super Mario Edition | Built by Jugal Gajjar</span>
+      <span>Ready</span>
+    </div>
+  </div>
+
+  <div class="under-construction" style="max-width:1000px;margin:0 auto;">This portfolio is always evolving! New research and projects added regularly.</div>
+
+  <div class="y2k-footer" style="max-width:1000px;">
+    <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+    <p style="font-size:10px;">GAME ON</p>
+  </div>
+
+  <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+  <div id="chat-window" class="chat-window">
+    <div class="chat-titlebar">
+      <span>MARIO</span>
+      <span class="chat-close" onclick="toggleChat()">X</span>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects, publications, experience, skills, or education!</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Mario..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button onclick="sendChat()">GO</button>
+    </div>
+  </div>
+
 </body>
-
 </html>

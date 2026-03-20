@@ -1,65 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resume | Jugal Gajjar</title>
-  <link rel="stylesheet" href="styles-resume.css" />
+  <link rel="stylesheet" href="styles-y2k.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+  <script src="chatbot.js"></script>
   <script src="script.js" defer></script>
 </head>
-
 <body>
-  <header>
-    <h1>Resume/CV</h1>
-    <p>A snapshot of Jugal Gajjar's academic and professional journey</p>
 
-    <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  <div class="marquee-banner">
+    <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+    <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+    <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+    <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span></div>
+  </div>
 
-    <nav id="menu">
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="publications.html">Publications</a>
+    <a href="experiences.html">Experiences</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="resume.html">Resume/CV</a>
+  </div>
+
+  <div class="mac-window wide">
+    <div class="mac-titlebar">
+      <div class="traffic-lights">
+        <div class="traffic-light close"></div>
+        <div class="traffic-light minimize"></div>
+        <div class="traffic-light maximize"></div>
+      </div>
+      <div class="title">CV.pdf - Resume Preview</div>
+    </div>
+
+    <nav class="finder-nav">
       <a href="index.html">Home</a>
-      <a href="projects.html" class="dropbtn">Projects</a>
-      <a href="publications.html" class="dropbtn">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
       <a href="experiences.html">Experiences</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="resume.html">Resume/CV</a>
-      <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
-    </nav>
-  </header>
-
-  <main class="resume-container">
-    <section class="summary-section">
-      <h2 style="color: #0077cc">Quick Overview</h2>
-      <ul>
-        <li><strong>Education:</strong> M.S. in CS @ GWU, USA (GPA 3.95/4.0, 2026); B.Tech in CSE @ NUV, India (CGPA
-          9.39/10, 2024)</li>
-        <li><strong>Focus Areas:</strong> Large Language Models (LLMs), Graph Neural Networks (GNNs), Knowledge Graphs,
-          Reasoning & Explainability, AI + X (AI for Science, Security, and Society), AI Agents, Human-AI Collaboration
-        </li>
-        <li><strong>Skills:</strong> Python, Java, PyTorch, TensorFlow, LangChain, Transformers, Graph Learning, NLP,
-          Deep Learning, SQL, Git, Software Engineering</li>
-        <li><strong>Publications & Datasets:</strong> IEEE IRI 2025, ICMLA 2025, Complex Networks 2025, IEEE BigData
-          2025, arXiv (cs.Cl, cs.SE), HuggingFace, Zenodo</li>
-        <li><strong>Awards & Honors:</strong> GW Dean's Scholarship Award, NVIDIA Jetson AI Specialist, Hackathon
-          Runner-Up, International Karate Gold Medalist (India Team)</li>
-      </ul>
-    </section>
-
-    <section class="resume-section">
-      <div class="resume-toolbar">
-        <h2>Resume/CV Preview</h2>
-        <a href="assets/CV.pdf" download class="btn btn-outline">Download PDF</a>
+      <div class="nav-right">
+        <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+        <span class="nav-clock" id="menu-clock">12:00 AM</span>
       </div>
-      <iframe src="assets/CV.pdf#toolbar=0" width="100%" height="800px" class="resume-frame">
+    </nav>
+
+    <div class="mac-body">
+      <div class="section-heading">Quick Overview</div>
+      <div class="bondi-panel">
+        <div class="resume-overview">
+          <ul>
+            <li><strong>Education:</strong> <span class="hl">M.S. in CS</span> @ <span class="hl">GWU</span>, USA (GPA <span class="hl">3.95/4.0</span>, 2026); <span class="hl">B.Tech in CSE</span> @ <span class="hl">NUV</span>, India (CGPA <span class="hl">9.39/10</span>, 2024)</li>
+            <li><strong>Focus Areas:</strong> <span class="hl">Large Language Models (LLMs)</span>, <span class="hl">Graph Neural Networks (GNNs)</span>, <span class="hl">Knowledge Graphs</span>, Reasoning &amp; Explainability, AI + X (AI for Science, Security, and Society), <span class="hl">AI Agents</span>, Human-AI Collaboration</li>
+            <li><strong>Skills:</strong> <span class="hl">Python</span>, <span class="hl">Java</span>, <span class="hl">PyTorch</span>, <span class="hl">TensorFlow</span>, <span class="hl">LangChain</span>, Transformers, Graph Learning, NLP, Deep Learning, SQL, Git, Software Engineering</li>
+            <li><strong>Publications &amp; Datasets:</strong> <span class="hl">IEEE IRI 2025</span>, <span class="hl">ICMLA 2025</span>, <span class="hl">Complex Networks 2025</span>, <span class="hl">IEEE BigData 2025</span>, arXiv (cs.Cl, cs.SE), HuggingFace, Zenodo</li>
+            <li><strong>Awards &amp; Honors:</strong> <span class="hl">GW Dean's Scholarship Award</span>, <span class="hl">NVIDIA Jetson AI Specialist</span>, Hackathon Runner-Up, <span class="hl">International Karate Gold Medalist</span> (India Team)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="y2k-divider">● ● ● ★ ● ● ●</div>
+
+      <div class="section-heading">Resume/CV Preview</div>
+      <div class="resume-toolbar">
+        <span style="font-family:var(--font-system);font-size:14px;font-weight:bold;color:var(--text-primary);">CV.pdf</span>
+        <a href="assets/CV.pdf" download class="mac-btn mac-btn-primary">Download PDF</a>
+      </div>
+      <iframe src="assets/CV.pdf#toolbar=0" class="resume-frame">
         <p>Your browser doesn't support PDF embedding. <a href="assets/CV.pdf">Download it here</a>.</p>
       </iframe>
-    </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
-  </footer>
+      <div style="text-align:center;margin-top:16px;">
+        <a href="index.html" class="mac-btn">&larr; Back to Home</a>
+      </div>
+    </div>
+
+    <div class="status-bar">
+      <span>Resume.app | Super Mario Edition | Built by Jugal Gajjar</span>
+      <span>Ready</span>
+    </div>
+  </div>
+
+  <div class="under-construction" style="max-width:1000px;margin:0 auto;">This portfolio is always evolving! New research and projects added regularly.</div>
+
+  <div class="y2k-footer" style="max-width:1000px;">
+    <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+    <p style="font-size:10px;">GAME ON</p>
+  </div>
+
+  <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+  <div id="chat-window" class="chat-window">
+    <div class="chat-titlebar">
+      <span>MARIO</span>
+      <span class="chat-close" onclick="toggleChat()">X</span>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects, publications, experience, skills, or education!</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Mario..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button onclick="sendChat()">GO</button>
+    </div>
+  </div>
+
 </body>
-
 </html>

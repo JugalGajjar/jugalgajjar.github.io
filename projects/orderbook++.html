@@ -1,46 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>OrderBook++ | Jugal Gajjar</title>
-    <link rel="stylesheet" href="../styles-projects.css" />
-    <script src="../script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OrderBook++ | Jugal Gajjar</title>
+  <link rel="stylesheet" href="../styles-y2k.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+  <script src="../chatbot.js"></script>
+  <script src="../script.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <h1>OrderBook++</h1>
-        <p>High-performance C++ order matching engine with Python bindings</p>
 
-        <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  <div class="marquee-banner">
+    <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+    <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+    <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+    <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span></div>
+  </div>
 
-        <nav id="menu">
-            <a href="../index.html">Home</a>
-            <a href="../projects.html" class="dropbtn">Projects</a>
-            <a href="../publications.html" class="dropbtn">Publications</a>
-            <a href="../experiences.html">Experiences</a>
-            <a href="../about.html">About</a>
-            <a href="../contact.html">Contact</a>
-            <a href="../resume.html">Resume/CV</a>
-            <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
-        </nav>
-    </header>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../publications.html">Publications</a>
+    <a href="../experiences.html">Experiences</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../resume.html">Resume/CV</a>
+  </div>
 
-    <main>
-        <section class="project-section">
-            <img src="../images/orderbook++.png" alt="OrderBook++ Fancy Image" class="project-img" />
+  <div class="mac-window wide">
+    <div class="mac-titlebar">
+      <div class="traffic-lights">
+        <div class="traffic-light close"></div>
+        <div class="traffic-light minimize"></div>
+        <div class="traffic-light maximize"></div>
+      </div>
+      <div class="title">OrderBook++.app - Project Details</div>
+    </div>
 
+    <nav class="finder-nav">
+      <a href="../index.html">Home</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../publications.html">Publications</a>
+      <a href="../experiences.html">Experiences</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../resume.html">Resume/CV</a>
+      <div class="nav-right">
+        <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+        <span class="nav-clock" id="menu-clock">12:00 AM</span>
+      </div>
+    </nav>
+
+    <div class="mac-body">
+      <div class="project-detail">
             <h2>Overview</h2>
             <p align="justify">
-                OrderBook++ is a custom-built C++ order matching engine designed for speed, scalability, and seamless
-                Python
+                OrderBook++ is a custom-built <span class="hl">C++</span> order matching engine designed for speed, scalability, and seamless
+                <span class="hl">Python</span>
                 integration. It supports market, limit, and cancel orders with efficient trade execution and history
                 tracking.
-                The project also exposes Python bindings via pybind11 for interactive experimentation, analytics, and
+                The project also exposes Python bindings via <span class="hl">pybind11</span> for interactive experimentation, analytics, and
                 visualization.
-                The engine serves as a foundation for simulating electronic markets and developing algorithmic trading
+                The engine serves as a foundation for simulating electronic markets and developing <span class="hl">algorithmic trading</span>
                 strategies.
             </p>
 
@@ -55,9 +77,9 @@
 
             <h2>Design & Implementation</h2>
             <p align="justify">
-                The system is implemented in C++ with optimization for low-latency order matching using custom
+                The system is implemented in <span class="hl">C++</span> with optimization for <span class="hl">low-latency order matching</span> using custom
                 data structures.
-                It includes unit tests with Google Test, performance benchmarks, and pybind11 Python bindings for
+                It includes unit tests with <span class="hl">Google Test</span>, performance benchmarks, and <span class="hl">pybind11</span> Python bindings for
                 integration with data science workflows. Python scripts provide visualization and strategy
                 backtesting on top of the engine.
             </p>
@@ -73,22 +95,48 @@
 
             <h2>Tech. Stack</h2>
             <p>
-                C++17, pybind11, CMake, Google Test, Python (visualization & demos), Performance Benchmarking
+                <span class="hl">C++17</span>, <span class="hl">pybind11</span>, <span class="hl">CMake</span>, <span class="hl">Google Test</span>, Python (visualization & demos), Performance Benchmarking
             </p>
 
             <h2>Links</h2>
             <p>
-                <a href="https://github.com/JugalGajjar/OrderBookPlusPlus" target="_blank" class="btn">GitHub
+                <a href="https://github.com/JugalGajjar/OrderBookPlusPlus" target="_blank" class="mac-btn mac-btn-sm">GitHub
                     Repository</a>
             </p>
-        </section>
+      </div>
 
-        <p class="back-home"><a href="../projects.html" class="btn btn-outline">← Back to Projects</a></p>
-    </main>
+      <div style="text-align:center;margin-top:16px;">
+        <a href="../projects.html" class="mac-btn">&larr; Back to Projects</a>
+      </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Jugal Gajjar. All rights reserved.</p>
-    </footer>
+    <div class="status-bar">
+      <span>OrderBook++.app | Super Mario Edition | Built by Jugal Gajjar</span>
+      <span>Ready</span>
+    </div>
+  </div>
+
+  <div class="under-construction" style="max-width:1000px;margin:0 auto;">This portfolio is always evolving! New research and projects added regularly.</div>
+
+  <div class="y2k-footer" style="max-width:1000px;">
+    <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+    <p style="font-size:10px;">GAME ON</p>
+  </div>
+
+  <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+  <div id="chat-window" class="chat-window">
+    <div class="chat-titlebar">
+      <span>MARIO</span>
+      <span class="chat-close" onclick="toggleChat()">X</span>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects, publications, experience, skills, or education!</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Mario..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button onclick="sendChat()">GO</button>
+    </div>
+  </div>
+
 </body>
-
 </html>
