@@ -6,7 +6,7 @@
 
 // ── Worker Proxy URL ──
 // CHANGE THIS after deploying your Cloudflare Worker
-var WORKER_URL = 'https://jugal-portfolio-chatbot.YOUR_SUBDOMAIN.workers.dev';
+var WORKER_URL = 'https://jugal-portfolio-chatbot.812jugalgajjar.workers.dev';
 
 // ── Chat history ──
 var chatMessages = [];
