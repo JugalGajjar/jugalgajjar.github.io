@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FASS Publication | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-y2k.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+    <script src="../chatbot.js"></script>
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="marquee-banner">
+        <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+        <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+        <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+        <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span>
+        </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../experiences.html">Experiences</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../resume.html">Resume/CV</a>
+    </div>
+
+    <div class="mac-window wide">
+        <div class="mac-titlebar">
+            <div class="traffic-lights">
+                <div class="traffic-light close"></div>
+                <div class="traffic-light minimize"></div>
+                <div class="traffic-light maximize"></div>
+            </div>
+            <div class="title">Feature Attribution Stability Suite: How Stable Are Post-Hoc Attributions? - Publication</div>
+        </div>
+
+        <nav class="finder-nav">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../publications.html">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <div class="nav-right">
+                <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+                <span class="nav-clock" id="menu-clock">12:00 AM</span>
+            </div>
+        </nav>
+
+        <div class="mac-body">
+            <section class="pub-detail">
+                <h2>Abstract</h2>
+                <p align="justify">
+                    Post-hoc feature attribution methods are widely deployed in safety-critical vision systems, yet
+                    their stability under realistic input perturbations remains poorly characterized. Existing metrics
+                    evaluate explanations primarily under additive noise, collapse stability to a single scalar, and
+                    fail to condition on prediction preservation, conflating explanation fragility with model
+                    sensitivity. We introduce the <span class="hl">Feature Attribution Stability Suite (FASS)</span>, a
+                    benchmark that enforces prediction-invariance filtering, decomposes stability into three
+                    complementary metrics: structural similarity, rank correlation, and top-k Jaccard overlap–and
+                    evaluates across geometric, photometric, and compression perturbations. Evaluating four attribution
+                    methods (<span class="hl">Integrated Gradients</span>, <span class="hl">GradientSHAP</span>, <span
+                        class="hl">Grad-CAM</span>, <span class="hl">LIME</span>) across four architectures and three
+                    datasets–ImageNet-1K, MS COCO, and CIFAR-10, FASS shows that stability estimates depend critically
+                    on perturbation family and prediction-invariance filtering. <span class="hl">Geometric
+                        perturbations</span> expose substantially greater attribution instability than photometric
+                    changes, and without conditioning on prediction preservation, up to 99% of evaluated pairs involve
+                    changed predictions. Under this controlled evaluation, we observe consistent method-level trends,
+                    with <span class="hl">Grad-CAM</span> achieving the highest stability across datasets.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Related Work</h2>
+                <p align="justify">
+                    Prior approaches mainly focus on additive noise and collapse stability into a single metric without
+                    conditioning on predictions. <span class="hl">FASS</span> addresses these limitations through
+                    prediction-invariant evaluation, multi-axis stability measurement, and diverse perturbation testing.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Methodology</h2>
+                <p align="justify">
+                    Each input image is first subjected to controlled perturbations, including geometric (rotation,
+                    translation), photometric (brightness, noise), and compression (JPEG). Only pairs where the
+                    predicted class remains unchanged pass through a <span class="hl">prediction-invariance
+                        filter</span>, ensuring that stability is measured without conflating with model decision
+                    changes.
+                </p>
+
+                <p align="justify">
+                    Filtered pairs are evaluated across three axes: spatial coherence, rank-order preservation, and
+                    top-k salient feature overlap. The resulting <span class="hl">FASS score</span> is the mean of these
+                    three metrics, providing a multi-dimensional view of explanation stability.
+                </p>
+
+                <p align="justify">
+                    Four post-hoc attribution methods—<span class="hl">Grad-CAM</span>, Integrated Gradients,
+                    GradientSHAP, and LIME—are evaluated across multiple architectures and datasets. This modular setup
+                    allows direct comparison of method robustness under diverse perturbation families.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Results</h2>
+                <p align="justify">
+                    Evaluation shows that <span class="hl">Grad-CAM</span> consistently achieves the highest stability
+                    across datasets and architectures, with a global mean FASS of <span class="hl">0.718</span>. Other
+                    methods score lower: IG 0.509, GradientSHAP 0.479, LIME 0.407. <span class="hl">Geometric
+                        perturbations</span> are most destabilizing (mean FASS 0.484), compared to photometric changes
+                    (0.546) and JPEG compression (0.511). Prediction-invariant filtering is essential, as many
+                    perturbations would otherwise alter the predicted class.
+                </p>
+
+                <p align="justify">
+                    Method choice dominates architecture effects: the stability gap between Grad-CAM and other methods
+                    (≈0.21) is roughly twice the largest within-method architecture variation (≈0.09). These results
+                    highlight that attribution method selection is critical for explanation reliability, and FASS
+                    provides a unified benchmark to measure and compare stability under diverse perturbations.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Project & Paper Links</h2>
+                <a href="../projects/fass.html" class="mac-btn mac-btn-sm">Project Page</a>
+                <a href="To be updated" target="_blank" class="mac-btn mac-btn-sm">View Paper</a>
+            </section>
+
+            <div style="text-align:center;margin-top:16px;">
+                <a href="../publications.html" class="mac-btn">&larr; Back to Publications</a>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>FASS.app | Super Mario Edition | Built by Jugal Gajjar</span>
+            <span>Ready</span>
+        </div>
+    </div>
+
+    <div class="y2k-footer" style="max-width:1000px;">
+        <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+        <p style="font-size:10px;">GAME ON</p>
+    </div>
+
+    <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+    <div id="chat-window" class="chat-window">
+        <div class="chat-titlebar">
+            <span>MARIO</span>
+            <span class="chat-close" onclick="toggleChat()">X</span>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects,
+                publications, experience, skills, or education!</div>
+        </div>
+        <div class="chat-input-row">
+            <input type="text" id="chat-input" placeholder="Ask Mario..."
+                onkeydown="if(event.key==='Enter')sendChat()" />
+            <button onclick="sendChat()">GO</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

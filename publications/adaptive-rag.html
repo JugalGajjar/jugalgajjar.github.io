@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adaptive RAG Publication | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-y2k.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+    <script src="../chatbot.js"></script>
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="marquee-banner">
+        <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+        <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+        <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+        <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span>
+        </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../experiences.html">Experiences</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../resume.html">Resume/CV</a>
+    </div>
+
+    <div class="mac-window wide">
+        <div class="mac-titlebar">
+            <div class="traffic-lights">
+                <div class="traffic-light close"></div>
+                <div class="traffic-light minimize"></div>
+                <div class="traffic-light maximize"></div>
+            </div>
+            <div class="title">Adaptive Retrieval-Augmented Generation: Learning When and How Much to Retrieve Across Model Scales - Publication</div>
+        </div>
+
+        <nav class="finder-nav">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../publications.html">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <div class="nav-right">
+                <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+                <span class="nav-clock" id="menu-clock">12:00 AM</span>
+            </div>
+        </nav>
+
+        <div class="mac-body">
+            <section class="pub-detail">
+                <h2>Abstract</h2>
+                <p align="justify">
+                    Retrieval-Augmented Generation (RAG) systems typically use fixed retrieval strategies, retrieving
+                    the same number of documents regardless of question complexity or model capacity. We present
+                    <span class="hl">Adaptive RAG</span>, a reinforcement learning framework that learns when and how
+                    much to retrieve
+                    based on question difficulty and model confidence. Using Deep Q-Learning across 7 models (3.8B–120B
+                    parameters) on 199,847 questions from 9 QA datasets, we show Adaptive RAG <span class="hl">achieves
+                        3.2–6.5% higher
+                        accuracy</span> while using 14–37% fewer retrievals than fixed baselines. Efficiency gains
+                    increase with
+                    model scale, with 120B models <span class="hl">showing 37% retrieval reduction versus 14% for 4B
+                        models</span>. High
+                    retrieval variance (σ > 0.95) confirms genuine adaptive behavior.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Motivation</h2>
+                <p align="justify">
+                    Traditional <span class="hl">RAG systems</span> apply a fixed retrieval strategy regardless of query
+                    difficulty.
+                    This leads to unnecessary computation for simple queries and insufficient reasoning for complex
+                    ones.
+                    Adaptive RAG introduces <span class="hl">dynamic routing</span> to optimize both performance and
+                    efficiency.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Methodology</h2>
+                <p align="justify">
+                    Adaptive RAG introduces a <span class="hl">dynamic retrieval-routing mechanism</span> that selects
+                    the most appropriate
+                    reasoning strategy based on <span class="hl">query complexity</span> and <span
+                        class="hl">information requirements</span>.
+                    The pipeline begins with a lightweight <span class="hl">query analyzer</span> that classifies
+                    incoming queries into
+                    different categories such as <span class="hl">simple lookup</span>, <span class="hl">multi-hop
+                        reasoning</span>, or
+                    <span class="hl">ambiguous queries</span>.
+                </p>
+
+                <p align="justify">
+                    Based on this classification, a <span class="hl">controller module</span> dynamically routes the
+                    query through one of
+                    multiple execution paths. Simple queries are handled using
+                    <span class="hl">single-pass retrieval</span> with minimal latency, while complex queries trigger
+                    <span class="hl">multi-hop retrieval</span>, where evidence is iteratively fetched and refined
+                    across multiple steps.
+                    For ambiguous or underspecified queries, the system performs
+                    <span class="hl">iterative retrieval-generation loops</span> to progressively refine context.
+                </p>
+
+                <p align="justify">
+                    The retrieved documents are then integrated into the generation phase using
+                    <span class="hl">context-aware prompting</span>, ensuring that responses remain grounded in external
+                    knowledge.
+                    Additionally, the framework incorporates <span class="hl">relevance scoring</span> and
+                    <span class="hl">context pruning</span> to filter noisy information and maintain efficiency.
+                    This adaptive design enables a balance between <span class="hl">accuracy</span>,
+                    <span class="hl">latency</span>, and <span class="hl">computational cost</span>.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Results</h2>
+                <p align="justify">
+                    Adaptive RAG consistently outperforms fixed retrieval strategies across models, achieving a superior
+                    balance between
+                    <span class="hl">accuracy and efficiency</span>. Accuracy improvements over the commonly used
+                    Fixed-3 baseline range from
+                    <span class="hl">+5.3% (small models)</span> to <span class="hl">+3.2% (large models)</span>, while
+                    reducing the number of
+                    retrievals by up to <span class="hl">37%</span>. For example, on Qwen3-4B, Adaptive RAG achieves
+                    <span class="hl">0.764 accuracy</span> with only <span class="hl">2.58 retrievals</span>,
+                    outperforming all fixed strategies.
+                    Similar gains are observed across scales, including large models such as GPT-OSS-120B, which reaches
+                    <span class="hl">0.874 accuracy</span> with just <span class="hl">1.90 retrievals</span> on average.
+                </p>
+
+                <p align="justify">
+                    The method demonstrates <span class="hl">true adaptive behavior</span>, with retrieval variance (σ =
+                    0.95–1.52) confirming
+                    that the system dynamically adjusts based on question difficulty. For simple queries, it uses as few
+                    as
+                    <span class="hl">1.4–1.9 retrievals</span>, while harder queries trigger up to <span class="hl">4
+                        retrievals</span>,
+                    leading to accuracy gains of up to <span class="hl">5.1%</span>. Scaling analysis further shows that
+                    larger models require
+                    fewer retrievals due to stronger parametric knowledge, making Adaptive RAG increasingly efficient as
+                    model size grows.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Project & Paper Links</h2>
+                <a href="../projects/adaptive-rag.html" class="mac-btn mac-btn-sm">Project Page</a>
+                <a href="To be updated" target="_blank" class="mac-btn mac-btn-sm">View Paper</a>
+            </section>
+
+            <div style="text-align:center;margin-top:16px;">
+                <a href="../publications.html" class="mac-btn">&larr; Back to Publications</a>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>AdaptiveRAG.app | Super Mario Edition | Built by Jugal Gajjar</span>
+            <span>Ready</span>
+        </div>
+    </div>
+
+    <div class="y2k-footer" style="max-width:1000px;">
+        <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+        <p style="font-size:10px;">GAME ON</p>
+    </div>
+
+    <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+    <div id="chat-window" class="chat-window">
+        <div class="chat-titlebar">
+            <span>MARIO</span>
+            <span class="chat-close" onclick="toggleChat()">X</span>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects,
+                publications, experience, skills, or education!</div>
+        </div>
+        <div class="chat-input-row">
+            <input type="text" id="chat-input" placeholder="Ask Mario..."
+                onkeydown="if(event.key==='Enter')sendChat()" />
+            <button onclick="sendChat()">GO</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

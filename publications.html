@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publications | Jugal Gajjar</title>
   <link rel="stylesheet" href="styles-y2k.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
   <script src="chatbot.js"></script>
   <script src="script.js" defer></script>
 </head>
+
 <body>
 
   <div class="marquee-banner">
@@ -59,9 +62,81 @@
       <div class="projects-grid">
 
         <div class="project-card">
+          <h3>RSAT (SURGeLLM Workshop @ ACL 2026)</h3>
+          <p><strong>Authors:</strong> Jugal Gajjar, Kamalasankari Subramaniakuppusamy</p>
+          <p style="text-align:justify;">
+            RSAT trains small language models to produce step-by-step table reasoning with <span class="hl">cell-level
+              citations</span>.
+            Using a <span class="hl">two-phase SFT+GRPO</span> pipeline, RSAT improves attribution faithfulness <span
+              class="hl">3.7×</span> while maintaining
+            structured, verifiable outputs. Post-hoc attribution fails (<span class="hl">~13% success</span>),
+            highlighting the need for integrated reasoning.
+          </p>
+          <div class="proj-buttons">
+            <a href="publications/rsat.html" class="mac-btn mac-btn-sm">Publication Page</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>FASS (XAI4CV Workshop @ CVPR 2026)</h3>
+          <p><strong>Authors:</strong> Kamalasankari Subramaniakuppusamy, Jugal Gajjar</p>
+          <p style="text-align:justify;">
+            Introduces the <span class="hl">Feature Attribution Stability Suite (FASS)</span>, a benchmark measuring
+            post-hoc attribution stability under <span class="hl">geometric, photometric, and compression
+              perturbations</span>.
+            FASS enforces <span class="hl">prediction-invariance filtering</span> and evaluates <span
+              class="hl">Grad-CAM, IG, GradientSHAP, LIME</span>,
+            showing method-level stability differences, with <span class="hl">Grad-CAM</span> consistently most stable.
+          </p>
+          <div class="proj-buttons">
+            <a href="publications/fass.html" class="mac-btn mac-btn-sm">Publication Page</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Adaptive RAG (GEM Workshop @ ACL 2026)</h3>
+          <p><strong>Author:</strong> Jugal Gajjar</p>
+          <p style="text-align:justify;">
+            Introduces <span class="hl">Adaptive RAG</span>, a <span class="hl">reinforcement learning framework</span>
+            that dynamically selects retrieval counts based on <span class="hl">query difficulty and model
+              confidence</span>.
+            Achieves <span class="hl">3.2–6.5% higher accuracy</span> while reducing retrievals by <span
+              class="hl">14–37%</span>
+            across 7 models (3.8B–120B parameters) on 9 QA datasets, demonstrating <span class="hl">efficient, adaptive
+              behavior</span>.
+          </p>
+          <div class="proj-buttons">
+            <a href="publications/adaptive-rag.html" class="mac-btn mac-btn-sm">Publication Page</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>HyperComplEx (IEEE BigData 2025)</h3>
+          <p><strong>Authors:</strong> Jugal Gajjar, Kaustik Ranaware, Kamalasankari Subramaniakuppusamy, Vaibhav Gandhi
+          </p>
+          <p style="text-align:justify;">
+            Introduces <span class="hl">HyperComplEx</span>, a <span class="hl">hybrid multi-space embedding
+              framework</span>
+            combining <span class="hl">hyperbolic, complex, and Euclidean geometries</span> with
+            <span class="hl">adaptive relation-specific attention</span>. Achieves <span class="hl">0.612 MRR on
+              10M-node CS graph</span>
+            and demonstrates <span class="hl">near-linear scalability</span> with <span class="hl">interpretable
+              geometric reasoning</span>.
+            Ablation studies highlight the importance of adaptive attention and multi-space consistency.
+          </p>
+          <div class="proj-buttons">
+            <a href="publications/hypercomplex.html" class="mac-btn mac-btn-sm">Publication Page</a>
+          </div>
+        </div>
+
+        <div class="project-card">
           <h3>VulnGraph (Complex Networks 2025)</h3>
           <p><strong>Authors:</strong> Jugal Gajjar, Kaustik Ranaware, Kamalasankari Subramaniakuppusamy</p>
-          <p style="text-align:justify;">Our hybrid framework combines <span class="hl">heterogeneous graph</span> representations with local <span class="hl">LLMs</span> for <span class="hl">Java vulnerability detection</span>. Achieves <span class="hl">93.57% accuracy</span> &mdash; an <span class="hl">8.36% gain</span> over GAT embeddings and <span class="hl">17.81%</span> over pretrained LLM baselines. Extracts salient subgraphs with natural language explanations.</p>
+          <p style="text-align:justify;">Our hybrid framework combines <span class="hl">heterogeneous graph</span>
+            representations with local <span class="hl">LLMs</span> for <span class="hl">Java vulnerability
+              detection</span>. Achieves <span class="hl">93.57% accuracy</span> &mdash; an <span class="hl">8.36%
+              gain</span> over GAT embeddings and <span class="hl">17.81%</span> over pretrained LLM baselines. Extracts
+            salient subgraphs with natural language explanations.</p>
           <div class="proj-buttons">
             <a href="publications/vulngraph.html" class="mac-btn mac-btn-sm">Publication Page</a>
           </div>
@@ -69,8 +144,12 @@
 
         <div class="project-card">
           <h3>SecureFixAgent (ICMLA 2025)</h3>
-          <p><strong>Authors:</strong> Jugal Gajjar, Kamalasankari Subramaniakuppusamy, Relsy Puthal, Kaustik Ranaware</p>
-          <p style="text-align:justify;">Hybrid repair framework integrating <span class="hl">Bandit</span> with lightweight local <span class="hl">LLMs</span> (&lt;8B params) in an iterative detect-repair-validate loop. Reduces false positives by <span class="hl">10.8%</span>, improves fix accuracy by <span class="hl">13.51%</span>. Developer explanation quality: <span class="hl">4.5/5</span>.</p>
+          <p><strong>Authors:</strong> Jugal Gajjar, Kamalasankari Subramaniakuppusamy, Relsy Puthal, Kaustik Ranaware
+          </p>
+          <p style="text-align:justify;">Hybrid repair framework integrating <span class="hl">Bandit</span> with
+            lightweight local <span class="hl">LLMs</span> (&lt;8B params) in an iterative detect-repair-validate loop.
+            Reduces false positives by <span class="hl">10.8%</span>, improves fix accuracy by <span
+              class="hl">13.51%</span>. Developer explanation quality: <span class="hl">4.5/5</span>.</p>
           <div class="proj-buttons">
             <a href="publications/securefixagent.html" class="mac-btn mac-btn-sm">Publication Page</a>
           </div>
@@ -79,7 +158,12 @@
         <div class="project-card">
           <h3>MalCodeAI (IEEE IRI 2025)</h3>
           <p><strong>Authors:</strong> Jugal Gajjar, Kamalasankari Subramaniakuppusamy, Noha El Kachach</p>
-          <p style="text-align:justify;"><span class="hl">Language-agnostic</span> multi-stage AI pipeline using fine-tuned <span class="hl">Qwen2.5-Coder-3B</span> with <span class="hl">LoRA</span> within <span class="hl">MLX framework</span>. Covers <span class="hl">14 programming languages</span>. Usefulness: <span class="hl">8.06/10</span>, interpretability: <span class="hl">7.40/10</span>, readability: <span class="hl">7.53/10</span>.</p>
+          <p style="text-align:justify;"><span class="hl">Language-agnostic</span> multi-stage AI pipeline using
+            fine-tuned <span class="hl">Qwen2.5-Coder-3B</span> with <span class="hl">LoRA</span> within <span
+              class="hl">MLX framework</span>. Covers <span class="hl">14 programming languages</span>. Usefulness:
+            <span class="hl">8.06/10</span>, interpretability: <span class="hl">7.40/10</span>, readability: <span
+              class="hl">7.53/10</span>.
+          </p>
           <div class="proj-buttons">
             <a href="publications/malcodeai.html" class="mac-btn mac-btn-sm">Publication Page</a>
           </div>
@@ -94,7 +178,12 @@
         <div class="project-card">
           <h3>MLCPD (arXiv cs.SE, 2025)</h3>
           <p><strong>Authors:</strong> Jugal Gajjar, Kamalasankari Subramaniakuppusamy</p>
-          <p style="text-align:justify;">Large-scale <span class="hl">language-agnostic</span> dataset unifying code across <span class="hl">ten major programming languages</span>. Over <span class="hl">seven million parsed source files</span> under a universal AST schema for <span class="hl">cross-language reasoning</span> and <span class="hl">multilingual software analysis</span>. Published on <a href="https://huggingface.co/datasets/jugalgajjar/MultiLang-Code-Parser-Dataset">Hugging Face</a>.</p>
+          <p style="text-align:justify;">Large-scale <span class="hl">language-agnostic</span> dataset unifying code
+            across <span class="hl">ten major programming languages</span>. Over <span class="hl">seven million parsed
+              source files</span> under a universal AST schema for <span class="hl">cross-language reasoning</span> and
+            <span class="hl">multilingual software analysis</span>. Published on <a
+              href="https://huggingface.co/datasets/jugalgajjar/MultiLang-Code-Parser-Dataset">Hugging Face</a>.
+          </p>
           <div class="proj-buttons">
             <a href="publications/mlcpd.html" class="mac-btn mac-btn-sm">Publication Page</a>
           </div>
@@ -103,7 +192,10 @@
         <div class="project-card">
           <h3>Multimodal Sentiment (arXiv cs.CL, 2025)</h3>
           <p><strong>Authors:</strong> Jugal Gajjar, Kaustik Ranaware</p>
-          <p style="text-align:justify;"><span class="hl">Multimodal sentiment analysis</span> on <span class="hl">CMU-MOSEI</span> using <span class="hl">transformer-based models</span> with early fusion of text, audio, and visual modalities. Achieves <span class="hl">97.87% 7-class accuracy</span> and <span class="hl">0.9682 F1-score</span>.</p>
+          <p style="text-align:justify;"><span class="hl">Multimodal sentiment analysis</span> on <span
+              class="hl">CMU-MOSEI</span> using <span class="hl">transformer-based models</span> with early fusion of
+            text, audio, and visual modalities. Achieves <span class="hl">97.87% 7-class accuracy</span> and <span
+              class="hl">0.9682 F1-score</span>.</p>
           <div class="proj-buttons">
             <a href="publications/mosei.html" class="mac-btn mac-btn-sm">Publication Page</a>
           </div>
@@ -111,16 +203,25 @@
 
       </div>
 
-      <!-- Journal Publications -->
-      <div class="section-heading">Journal Publications</div>
+      <!-- Thesis -->
+      <div class="section-heading">Thesis</div>
       <div class="projects-grid">
 
         <div class="project-card">
-          <h3>SAIF (IJCRT, 2024)</h3>
-          <p><strong>Authors:</strong> Jugal Gajjar, Sanjana Nathani</p>
-          <p style="text-align:justify;">Proposes the <span class="hl">Sentient AI Framework (SAIF)</span> for integrating <span class="hl">emotional intelligence</span> in AI systems. Discusses cultivating <span class="hl">trust and empathy</span> in human-AI interaction, paving the way for AI integration in <span class="hl">society and policy-making</span>.</p>
+          <h3>AI That Detects, Validates, and Repairs: A Cross-Language Autonomous Vulnerability Lifecycle Framework (GWU)
+          </h3>
+          <p><strong>Author:</strong> Jugal Gajjar</p>
+          <p><strong>Advisor:</strong> Prof. Shi Feng</p>
+          <p style="text-align:justify;">Presents a <span class="hl">unified cross-language vulnerability lifecycle
+              framework</span> that combines <span class="hl">detection, validation, and remediation</span> using <span
+              class="hl">Universal AST normalization</span> and <span class="hl">hybrid AI reasoning</span>.
+            Demonstrates <span class="hl">high detection accuracy (89.84–92.02%)</span>, <span class="hl">cross-language
+              transfer (74–78% F1)</span>, <span class="hl">execution-based validation</span> confirming <span
+              class="hl">66–71% of genuine vulnerabilities</span>, and <span class="hl">iterative remediation success
+              (81–87%)</span>. Enables <span class="hl">efficient, locally deployable CI/CD integration</span>,
+            supporting scalable and reliable security lifecycle management across Java, Python, and C++.</p>
           <div class="proj-buttons">
-            <a href="publications/saif.html" class="mac-btn mac-btn-sm">Publication Page</a>
+            <a href="publications/crosslang-vuln.html" class="mac-btn mac-btn-sm">Publication Page</a>
           </div>
         </div>
 
@@ -138,8 +239,6 @@
     </div>
   </div>
 
-  <div class="under-construction" style="max-width:1000px;margin:0 auto;">This portfolio is always evolving! New research and projects added regularly.</div>
-
   <div class="y2k-footer" style="max-width:1000px;">
     <p>&copy; 2025 Jugal Gajjar | 1UP</p>
     <p style="font-size:10px;">GAME ON</p>
@@ -152,7 +251,8 @@
       <span class="chat-close" onclick="toggleChat()">X</span>
     </div>
     <div class="chat-body" id="chat-body">
-      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects, publications, experience, skills, or education!</div>
+      <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects,
+        publications, experience, skills, or education!</div>
     </div>
     <div class="chat-input-row">
       <input type="text" id="chat-input" placeholder="Ask Mario..." onkeydown="if(event.key==='Enter')sendChat()" />
@@ -161,4 +261,5 @@
   </div>
 
 </body>
+
 </html>

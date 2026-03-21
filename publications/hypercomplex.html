@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HyperComplEx Publication | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-y2k.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+    <script src="../chatbot.js"></script>
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="marquee-banner">
+        <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+        <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+        <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+        <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span>
+        </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../experiences.html">Experiences</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../resume.html">Resume/CV</a>
+    </div>
+
+    <div class="mac-window wide">
+        <div class="mac-titlebar">
+            <div class="traffic-lights">
+                <div class="traffic-light close"></div>
+                <div class="traffic-light minimize"></div>
+                <div class="traffic-light maximize"></div>
+            </div>
+            <div class="title">HyperComplEx: Adaptive Multi-Space Knowledge Graph Embeddings - Publication</div>
+        </div>
+
+        <nav class="finder-nav">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../publications.html">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <div class="nav-right">
+                <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+                <span class="nav-clock" id="menu-clock">12:00 AM</span>
+            </div>
+        </nav>
+
+        <div class="mac-body">
+            <section class="pub-detail">
+                <h2>Abstract</h2>
+                <p align="justify">
+                <p>
+                    Knowledge graphs have emerged as <span class="hl">fundamental structures</span> for representing
+                    complex relational data across <span class="hl">scientific</span> and <span class="hl">enterprise
+                        domains</span>. However, existing embedding methods face critical limitations when modeling
+                    diverse relationship types at scale: <span class="hl">Euclidean models</span> struggle with
+                    hierarchies, <span class="hl">vector space models</span> cannot capture asymmetry, and <span
+                        class="hl">hyperbolic models</span> fail on symmetric relations. We propose <span
+                        class="hl">HyperComplEx</span>, a <span class="hl">hybrid embedding framework</span> that
+                    adaptively combines <span class="hl">hyperbolic</span>, <span class="hl">complex</span>, and <span
+                        class="hl">Euclidean spaces</span> via <span class="hl">learned attention mechanisms</span>. A
+                    <span class="hl">relation-specific space weighting strategy</span> dynamically selects optimal
+                    geometries for each relation type, while a <span class="hl">multi-space consistency loss</span>
+                    ensures coherent predictions across spaces. We evaluate HyperComplEx on <span class="hl">computer
+                        science research knowledge graphs</span> ranging from 1K papers (~25K triples) to 10M papers
+                    (~45M triples), demonstrating consistent improvements over <span class="hl">state-of-the-art
+                        baselines</span> including TransE, RotatE, DistMult, ComplEx, SEPA, and UltraE. Additional tests
+                    on <span class="hl">standard benchmarks</span> confirm significantly higher results than all
+                    baselines. On the 10M-paper dataset, HyperComplEx achieves <span class="hl">0.612 MRR</span>, a
+                    <span class="hl">4.8% relative gain</span> over the best baseline, while maintaining efficient
+                    training, achieving <span class="hl">85 ms inference per triple</span>. The model scales <span
+                        class="hl">near-linearly</span> with graph size through <span class="hl">adaptive dimension
+                        allocation</span>. We release our implementation and dataset family to facilitate <span
+                        class="hl">reproducible research</span> in scalable knowledge graph embeddings.
+                </p>
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Motivation</h2>
+                <p align="justify">
+                    Traditional knowledge graph embedding approaches assume fixed geometries—Euclidean for translation,
+                    complex for asymmetry, or hyperbolic for hierarchies—limiting their effectiveness on heterogeneous
+                    graphs that combine hierarchical, symmetric, and asymmetric relations. <span class="hl">Scientific
+                        knowledge graphs</span>, in particular, contain diverse relation types such as citations,
+                    authorships, collaborations, and hierarchical classifications. These constraints motivate the need
+                    for a framework that can <span class="hl">adaptively select geometric spaces</span> for each
+                    relation type while remaining scalable to millions of entities.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Methodology</h2>
+                <p align="justify">
+                    <span class="hl">HyperComplEx</span> represents entities and relations in a unified multi-space
+                    embedding <span class="hl">combining hyperbolic, complex, and Euclidean geometries</span>. Each
+                    entity e and relation r is
+                    encoded as a triplet of embeddings, capturing hierarchical, asymmetric, and translational patterns
+                    simultaneously. Subspace-specific scoring functions ϕH, ϕC, and ϕE ensure each geometry contributes
+                    appropriately to link prediction.
+                </p>
+
+                <p align="justify">
+                    A <span class="hl">relation-specific adaptive attention</span> vector αr dynamically weights each
+                    subspace, enabling automatic geometry selection per relation. Training optimizes a combined loss
+                    <span class="hl">L =
+                        Lrank + λ1Lconsistency + λ2Lreg</span>, which includes a self-adversarial ranking term,
+                    multi-space
+                    consistency regularization to align embeddings across geometries, and standard ℓ2 regularization to
+                    reduce overfitting. This ensures both discriminative and geometrically coherent representations.
+                </p>
+
+                <p align="justify">
+                    Scalability is achieved through <span class="hl">adaptive dimension allocation</span>, sharded and
+                    cached embeddings for large graphs, and mixed-precision optimization. The inference complexity
+                    scales linearly with effective embedding size, achieving sub-100 ms latency per triple even on
+                    10M-entity graphs.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Results</h2>
+                <p align="justify">
+                    Across eight datasets, HyperComplEx consistently outperforms six strong baselines, achieving highest
+                    <span class="hl">MRR</span> scores (0.612 on CS-10M, 0.411 on DBP15K). Its adaptive multi-space
+                    embeddings capture diverse relational structures: <span class="hl">hyperbolic</span> for
+                    hierarchical relations, <span class="hl">complex</span> for asymmetric dependencies, and <span
+                        class="hl">Euclidean</span> for symmetric collaborations.
+                </p>
+
+                <p align="justify">
+                    Scalability experiments show near-linear training (β1 = 1.06) and sublinear inference scaling (λ ≈
+                    0.42). Ablation studies confirm that both adaptive attention and multi-space consistency are
+                    critical, with largest performance degradation occurring when removing the <span
+                        class="hl">complex</span> subspace. These findings demonstrate that HyperComplEx provides <span
+                        class="hl">state-of-the-art link prediction</span>, interpretable geometric reasoning, and
+                    efficient large-scale deployment.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Project & Paper Links</h2>
+                <a href="../projects/hypercomplex.html" class="mac-btn mac-btn-sm">Project Page</a>
+                <a href="https://ieeexplore.ieee.org/abstract/document/11400828" target="_blank" class="mac-btn mac-btn-sm">View
+                    Paper</a>
+            </section>
+
+            <div style="text-align:center;margin-top:16px;">
+                <a href="../publications.html" class="mac-btn">&larr; Back to Publications</a>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>HyperComplEx.app | Super Mario Edition | Built by Jugal Gajjar</span>
+            <span>Ready</span>
+        </div>
+    </div>
+
+    <div class="y2k-footer" style="max-width:1000px;">
+        <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+        <p style="font-size:10px;">GAME ON</p>
+    </div>
+
+    <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+    <div id="chat-window" class="chat-window">
+        <div class="chat-titlebar">
+            <span>MARIO</span>
+            <span class="chat-close" onclick="toggleChat()">X</span>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects,
+                publications, experience, skills, or education!</div>
+        </div>
+        <div class="chat-input-row">
+            <input type="text" id="chat-input" placeholder="Ask Mario..."
+                onkeydown="if(event.key==='Enter')sendChat()" />
+            <button onclick="sendChat()">GO</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

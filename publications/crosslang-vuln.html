@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cross-Language Vulnerability Detection & Repair Thesis Publication | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-y2k.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+    <script src="../chatbot.js"></script>
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="marquee-banner">
+        <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+        <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+        <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+        <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span>
+        </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../experiences.html">Experiences</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../resume.html">Resume/CV</a>
+    </div>
+
+    <div class="mac-window wide">
+        <div class="mac-titlebar">
+            <div class="traffic-lights">
+                <div class="traffic-light close"></div>
+                <div class="traffic-light minimize"></div>
+                <div class="traffic-light maximize"></div>
+            </div>
+            <div class="title">AI That Detects, Validates, and Repairs: A Cross-Language Autonomous Vulnerability Lifecycle Framework - Thesis Publication</div>
+        </div>
+
+        <nav class="finder-nav">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../publications.html">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <div class="nav-right">
+                <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+                <span class="nav-clock" id="menu-clock">12:00 AM</span>
+            </div>
+        </nav>
+
+        <div class="mac-body">
+            <section class="pub-detail">
+                <h2>Abstract</h2>
+                <p align="justify">
+                    Software vulnerabilities remain critical threats to modern computing systems, yet existing detection
+                    tools operate in isolation, producing high false-positive rates and lacking exploitability
+                    confirmation. This thesis presents a <span class="hl">unified cross-language vulnerability lifecycle
+                        framework
+                        integrating detection, validation, and remediation through Universal Abstract Syntax Tree (uAST)
+                        normalization and hybrid AI reasoning</span>. The framework achieves <span
+                        class="hl">89.84–92.02% detection accuracy</span>
+                    through structural-semantic fusion, with <span class="hl">cross-language transfer F1 scores of
+                        74.43–78.18%</span>
+                    demonstrating meaningful zero-shot generalization across Java, Python, and C++. Execution-based
+                    validation confirms <span class="hl">66.84–71.49% of genuine vulnerabilities</span> while rejecting
+                    <span class="hl">58.72–62.37% of detector
+                        false positives</span>. Iterative repair <span class="hl">81.37–87.27% of cases</span>,
+                    converging in <span class="hl">2.3–3.4
+                        iterations</span>, with <span class="hl">end-to-end pipeline integration resolving 69.74% of
+                        vulnerabilities at 12.27% total
+                        failure rate</span>. Ablation studies validate architectural necessity: removing Universal AST
+                    degrades
+                    cross-language performance by 23.42%, while disabling validation increases unnecessary repairs by
+                    131.7% and reduces end-to-end success by 9.56 percentage points. Operating with <span
+                        class="hl">lightweight
+                        locally-deployed models</span> (~3GB footprint), the framework processes 1,700–2,400 samples
+                    daily on
+                    consumer-grade GPUs, enabling practical CI/CD integration without cloud dependencies. This
+                    demonstrates that scalable multi-language security lifecycle management is achievable through
+                    principled integration of structural abstraction, semantic reasoning, and execution-based evidence.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Motivation</h2>
+                <p align="justify">
+                    Existing vulnerability detection techniques suffer from key limitations that hinder their practical
+                    effectiveness: static analysis produces high false positives without confirming exploitability,
+                    dynamic analysis is constrained by limited coverage and environmental complexity, and modern machine
+                    learning approaches remain largely language-specific while relying on static patterns. These
+                    challenges highlight the need for a unified, cross-language framework that integrates detection with
+                    execution-based validation, ensuring that identified vulnerabilities are not only detected
+                    accurately but also verified as genuinely exploitable, thereby improving reliability, scalability,
+                    and real-world applicability in polyglot software systems.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Architecture</h2>
+                <p align="justify">
+                    The proposed framework follows a <span class="hl">three-stage vulnerability lifecycle
+                        architecture</span>
+                    consisting of <span class="hl">detection, validation, and remediation</span>. In the first stage,
+                    source code
+                    is parsed into a <span class="hl">Universal Abstract Syntax Tree (uAST)</span> and analyzed using a
+                    hybrid model
+                    that combines <span class="hl">graph neural networks</span> with <span class="hl">lightweight
+                        language models</span>
+                    to produce a binary vulnerability prediction. The second stage performs
+                    <span class="hl">execution-based validation</span>, where detected vulnerabilities are tested
+                    through
+                    autonomous exploit generation and sandboxed execution to confirm real-world exploitability. Finally,
+                    the
+                    remediation stage applies <span class="hl">iterative patch generation</span>, re-running detection
+                    after each
+                    modification until the vulnerability is resolved or a predefined iteration budget is reached.
+                </p>
+
+                <p align="justify">
+                    The architecture is guided by three key principles. First,
+                    <span class="hl">lifecycle integration</span> ensures that each stage feeds verified outputs to the
+                    next,
+                    eliminating fragmentation seen in traditional tools. Second,
+                    <span class="hl">evidence-driven processing</span> guarantees that remediation only occurs after
+                    exploit
+                    confirmation, significantly reducing false positives. Third,
+                    <span class="hl">cross-language generalization</span> enables a single model to operate across
+                    Java, Python, and C++ using a unified structural representation. All components are designed to run
+                    on
+                    <span class="hl">locally deployable models (&lt;2B parameters)</span>, ensuring scalability,
+                    efficiency, and
+                    data privacy without reliance on cloud-based systems.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Methodology</h2>
+                <p align="justify">
+                    The methodology begins with constructing a <span class="hl">Universal Abstract Syntax Tree
+                        (uAST)</span>,
+                    which normalizes language-specific syntax into a shared structural representation. Using
+                    <span class="hl">Tree-sitter parsing</span>, source code from multiple languages is converted into a
+                    unified schema consisting of node-level representations, semantic mappings, and hierarchical
+                    relationships.
+                    This allows the system to capture <span class="hl">language-invariant vulnerability patterns</span>,
+                    such as
+                    taint flows and unsafe API usage, while preserving full syntactic fidelity. The resulting uAST is
+                    then
+                    represented as a graph and processed alongside raw source code to enable both structural and
+                    semantic reasoning.
+                </p>
+
+                <p align="justify">
+                    Vulnerability detection is performed through a <span class="hl">hybrid fusion model</span> combining
+                    a
+                    <span class="hl">GraphSAGE-based structural encoder</span> and a <span class="hl">Qwen2.5-Coder
+                        semantic encoder</span>.
+                    Structural embeddings capture control/data-flow relationships, while semantic embeddings encode
+                    contextual
+                    signals such as API usage and developer intent. These representations are fused using a
+                    <span class="hl">two-way gating mechanism</span> that dynamically weights each modality per sample.
+                    Detected vulnerabilities are then validated through a <span class="hl">plan-execute-verify
+                        loop</span>,
+                    where an autonomous agent generates exploit hypotheses, executes them in a sandboxed environment
+                    with
+                    language-specific instrumentation, and confirms exploitability based on runtime evidence.
+                    Finally, confirmed vulnerabilities undergo <span class="hl">iterative remediation</span>, where
+                    minimal
+                    patches are generated, applied, and re-evaluated until the vulnerability is eliminated, ensuring
+                    both
+                    correctness and functional preservation.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Results</h2>
+                <p align="justify">
+                    The proposed cross-language vulnerability framework demonstrates strong performance across
+                    detection, validation,
+                    and remediation stages. In detection, the <span class="hl">hybrid model (uAST + LLM)</span> achieves
+                    the best results,
+                    reaching <span class="hl">89.84–92.02% accuracy</span> and up to <span class="hl">0.9109 F1</span>
+                    across Java, Python, and C++.
+                    In cross-language transfer, the hybrid approach significantly outperforms structural-only and
+                    semantic-only baselines,
+                    achieving <span class="hl">76–80% accuracy</span> despite zero-shot transfer, highlighting the
+                    effectiveness of
+                    <span class="hl">universal AST normalization</span> for learning language-invariant vulnerability
+                    patterns.
+                </p>
+
+                <p align="justify">
+                    Beyond detection, the system demonstrates strong end-to-end effectiveness. Validation achieves
+                    <span class="hl">66–71% exploit confirmation rates</span> and removes over <span class="hl">60% of
+                        false positives</span>,
+                    improving downstream reliability. The remediation stage achieves
+                    <span class="hl">81–87% repair success rates</span> with an average of <span class="hl">2.3–3.4
+                        iterations</span>,
+                    and post-repair verification confirms <span class="hl">90%+ vulnerability elimination</span>.
+                    Overall, the full pipeline
+                    successfully resolves <span class="hl">69.74% of vulnerabilities</span> while maintaining a low
+                    <span class="hl">12.27% failure rate</span>, demonstrating robust real-world applicability.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Project & Paper Links</h2>
+                <a href="../projects/crosslang-vuln.html" class="mac-btn mac-btn-sm">Project Page</a>
+                <a href="To be updated" target="_blank" class="mac-btn mac-btn-sm">View Paper</a>
+            </section>
+
+            <div style="text-align:center;margin-top:16px;">
+                <a href="../publications.html" class="mac-btn">&larr; Back to Publications</a>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>CrossLangVulnDetectRepair.app | Super Mario Edition | Built by Jugal Gajjar</span>
+            <span>Ready</span>
+        </div>
+    </div>
+
+    <div class="y2k-footer" style="max-width:1000px;">
+        <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+        <p style="font-size:10px;">GAME ON</p>
+    </div>
+
+    <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+    <div id="chat-window" class="chat-window">
+        <div class="chat-titlebar">
+            <span>MARIO</span>
+            <span class="chat-close" onclick="toggleChat()">X</span>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects,
+                publications, experience, skills, or education!</div>
+        </div>
+        <div class="chat-input-row">
+            <input type="text" id="chat-input" placeholder="Ask Mario..."
+                onkeydown="if(event.key==='Enter')sendChat()" />
+            <button onclick="sendChat()">GO</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

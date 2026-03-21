@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSAT Publication | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-y2k.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+    <script src="../chatbot.js"></script>
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="marquee-banner">
+        <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+        <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+        <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+        <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span>
+        </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../experiences.html">Experiences</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../resume.html">Resume/CV</a>
+    </div>
+
+    <div class="mac-window wide">
+        <div class="mac-titlebar">
+            <div class="traffic-lights">
+                <div class="traffic-light close"></div>
+                <div class="traffic-light minimize"></div>
+                <div class="traffic-light maximize"></div>
+            </div>
+            <div class="title">RSAT: Structured Attribution Makes Small Language Models\\Faithful Table Reasoners - Publication</div>
+        </div>
+
+        <nav class="finder-nav">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../publications.html">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <div class="nav-right">
+                <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+                <span class="nav-clock" id="menu-clock">12:00 AM</span>
+            </div>
+        </nav>
+
+        <div class="mac-body">
+            <section class="pub-detail">
+                <h2>Abstract</h2>
+                <p align="justify">
+                    When a language model answers a table question, users have no way to verify which cells informed
+                    which reasoning steps. We introduce <span class="hl">RSAT</span>, a method that trains small
+                    language models (SLMs,
+                    1–8B) to produce step-by-step reasoning with cell-level citations grounded in table evidence.
+                    <span class="hl">Phase 1 (SFT)</span> teaches a structured JSON output format from verified
+                    reasoning traces. <span class="hl">Phase 2 (GRPO)</span>
+                    optimizes a composite reward centered on NLI-based faithfulness, alongside citation validity and
+                    parsimony. Across six models from two families—Qwen2.5 (1.5B/3B/7B) and Llama3 (1B/3B/8B)—<span
+                        class="hl">RSAT
+                        improves faithfulness 3.7ｘ over SFT alone (0.224→0.826)</span>, with
+                    near-perfect citation validity (0.992). Post-hoc attribution collapses below 13% format success,
+                    confirming that attribution must be integrated into reasoning, not retrofitted. Ablations show the
+                    faithfulness reward is essential: removing it drops faithfulness from 0.97 to 0.03.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Related Work</h2>
+                <p align="justify">
+                    RSAT addresses a critical gap in <span class="hl">table reasoning with LLMs</span>: models often
+                    produce correct answers but
+                    fail to justify them with accurate evidence. Our approach enforces <span class="hl">structured
+                        outputs</span> consisting of
+                    step-by-step reasoning paired with <span class="hl">explicit cell references</span>, enabling
+                    verifiable and interpretable predictions.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Methodology</h2>
+                <p align="justify">
+                    RSAT follows a <span class="hl">two-phase training paradigm</span> designed to enforce both
+                    structured reasoning and
+                    faithful attribution. In the first phase, <span class="hl">Supervised Fine-Tuning (SFT)</span> is
+                    performed on a curated
+                    dataset of high-quality reasoning traces, where each example contains
+                    <span class="hl">step-by-step intermediate reasoning</span> along with
+                    <span class="hl">explicit cell-level citations</span>. This phase teaches the model the required
+                    output format, including
+                    <span class="hl">JSON-style structured responses</span>, citation grounding, and logical
+                    decomposition.
+                </p>
+
+                <p align="justify">
+                    In the second phase, the model is optimized using <span class="hl">Group Relative Policy
+                        Optimization (GRPO)</span>,
+                    a reinforcement learning method that removes the need for a critic model and enables
+                    <span class="hl">direct scoring of generated outputs</span>. For each query, multiple candidate
+                    reasoning traces are sampled,
+                    and a <span class="hl">multi-component reward function</span> evaluates them based on:
+                    <span class="hl">answer correctness</span>, <span class="hl">citation precision</span>,
+                    <span class="hl">step-level attribution alignment</span>, and <span class="hl">format
+                        validity</span>.
+                </p>
+
+                <p align="justify">
+                    The optimization objective encourages the model to prefer outputs that are not only correct but also
+                    <span class="hl">fully grounded in evidence</span>. By combining structured supervision with
+                    <span class="hl">reward-driven refinement</span>, RSAT effectively learns to produce
+                    <span class="hl">faithful, interpretable reasoning traces</span> without increasing model size.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Results</h2>
+                <p align="justify">
+                    RSAT achieves consistent improvements across all evaluated models and metrics, with the most
+                    significant gains in
+                    <span class="hl">attribution faithfulness</span>. Averaged across six models, RSAT reaches a
+                    faithfulness score of
+                    <span class="hl">0.826</span>, compared to <span class="hl">0.224</span> for SFT-only—representing a
+                    <span class="hl">3.7× improvement</span>. Importantly, this gain does not come at the cost of answer
+                    quality:
+                    <span class="hl">Answer F1 improves by +0.09</span> on average. Structural metrics such as
+                    <span class="hl">citation validity</span> and <span class="hl">format success</span> remain
+                    near-perfect
+                    (>0.97), confirming that the GRPO stage enhances grounding while preserving the structured reasoning
+                    learned during SFT.
+                </p>
+
+                <p align="justify">
+                    Further analysis shows that <span class="hl">SFT primarily contributes structural correctness</span>
+                    (e.g., +0.61 format gain),
+                    while <span class="hl">GRPO drives faithfulness improvements</span> (+0.60). Scaling experiments
+                    reveal that
+                    faithfulness improves with model size, with smaller models (e.g., Qwen 1.5B) already achieving
+                    strong grounding
+                    (0.847), and larger models approaching saturation (>0.97). In contrast,
+                    <span class="hl">post-hoc attribution methods collapse</span>, averaging only <span class="hl">12.7%
+                        format success</span>,
+                    highlighting the importance of generating citations during reasoning rather than retrofitting them
+                    afterward.
+                </p>
+            </section>
+
+            <section class="pub-detail">
+                <h2>Project & Paper Links</h2>
+                <a href="../projects/rsat.html" class="mac-btn mac-btn-sm">Project Page</a>
+                <a href="To be updated" target="_blank" class="mac-btn mac-btn-sm">View Paper</a>
+            </section>
+
+            <div style="text-align:center;margin-top:16px;">
+                <a href="../publications.html" class="mac-btn">&larr; Back to Publications</a>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>RSAT.app | Super Mario Edition | Built by Jugal Gajjar</span>
+            <span>Ready</span>
+        </div>
+    </div>
+
+    <div class="y2k-footer" style="max-width:1000px;">
+        <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+        <p style="font-size:10px;">GAME ON</p>
+    </div>
+
+    <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+    <div id="chat-window" class="chat-window">
+        <div class="chat-titlebar">
+            <span>MARIO</span>
+            <span class="chat-close" onclick="toggleChat()">X</span>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects,
+                publications, experience, skills, or education!</div>
+        </div>
+        <div class="chat-input-row">
+            <input type="text" id="chat-input" placeholder="Ask Mario..."
+                onkeydown="if(event.key==='Enter')sendChat()" />
+            <button onclick="sendChat()">GO</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

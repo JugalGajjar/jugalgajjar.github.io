@@ -1,0 +1,58 @@
+BIO: Jugal Gajjar is a graduate student at The George Washington University, specializing in reasoning-centric AI systems, LLMs, multimodal AI, and explainable AI. His work focuses on building trustworthy, interpretable, and efficient AI systems through structured reasoning, attribution grounding, and adaptive learning frameworks to improve human-AI collaboration. He is an AI researcher, karate black belt, and NVIDIA Jetson AI Specialist.
+
+EDUCATION:
+M.S. in Computer Science (Machine Intelligence & Cognition), The GWU, USA. GPA: 3.88/4.0. Expected 2026.
+MS Thesis: AI That Detects, Validates, and Repairs -> Autonomous vulnerability lifecycle framework using hybrid LLM + symbolic reasoning pipelines
+B.Tech in Computer Science & Engineering, Navrachana University, Vadodara, India. CGPA: 9.39/10. Graduated 2024.
+
+EXPERIENCE:
+Graduate Assistant - GWU (Sep-Dec 2025): Big Data & Analytics course, used Spark, Hadoop, S3, Python, ML.
+Teaching Assistant - Navrachana University (Jan-May 2024): Mentored 80+ students, evaluated 750+ lab submissions in software testing using Java.
+Freelance Developer - Shubhlaxmi Mfg. (Summer 2023): Built intelligent Python-based billing & inventory system, improving operational efficiency by ~50%.
+NVIDIA Jetson AI Coordinator - Navrachana University (Mar-Jun 2022): Led workshops on deep learning & edge AI, mentored projects with multiple NVIDIA DLI recognitions.
+
+ALL PROJECTS:
+RSAT — Trains small LLMs for step-by-step table reasoning with cell-level citations using SFT + GRPO (3.7× faithfulness gain)
+ResearchVault — Full-stack institutional research repository with search, versioning, and DOI-style record management
+FASS — Benchmark for evaluating feature attribution stability under prediction-invariant perturbations
+Adaptive RAG — RL-based dynamic retrieval framework optimizing accuracy with 14–37% fewer retrievals
+Cross-Language Vulnerability Framework — Unified detection, validation, and repair across languages using uAST + GNN + LLMs + Agents
+HyperComplEx — Hybrid KG embeddings (hyperbolic + complex + Euclidean) with scalable multi-space learning (1K-10M+ entities)
+MLCPD — Large-scale code dataset (7M+ files, 10 languages) with universal AST for cross-language reasoning
+VulnGraph — GNN + LLM framework for Java vulnerability detection (93.57% accuracy)
+Multi-Agent Financial Assistant — Real-time financial QA system using LLM agents with live data and tool integration
+SecureFixAgent — Iterative LLM-based vulnerability detection and repair (+13.51% accuracy, −10.8% false positives)
+OrderBook++ — Low-latency C++ trading engine with Python bindings for realistic order matching simulation
+MalCodeAI — Multi-language AI pipeline for vulnerability detection, exploitation, and remediation across 14 languages
+Multimodal Sentiment Analysis — Transformer-based fusion model on CMU-MOSEI (97.87% accuracy, 0.968 F1)
+SciChat — PDF-aware research assistant using RAG with LangChain, Pinecone, and Mistral for document QA
+EzyCart — Computer vision-based smart shopping cart with automated billing (patented in India)
+CryptChat — Secure Android messaging app combining AES-256 encryption with steganographic communication
+
+PUBLICATIONS:
+Conference Papers
+RSAT (ACL 2026, SURGeLLM Workshop) — SFT + GRPO framework for table reasoning with cell-level citations (3.7× faithfulness gain)
+FASS (CVPR 2026, XAI4CV Workshop) — Benchmark for attribution stability under prediction-invariant perturbations
+Adaptive RAG (ACL 2026, GEM Workshop) — RL-based adaptive retrieval improving accuracy with fewer retrievals (14–37%)
+HyperComplEx (IEEE BigData 2025) — Multi-space KG embeddings combining hyperbolic, complex, and Euclidean geometries
+VulnGraph (Complex Networks 2025) — GNN + LLM framework for Java vulnerability detection (93.57% accuracy)
+SecureFixAgent (ICMLA 2025) — Iterative LLM-based vulnerability repair improving accuracy (+13.51%) and reducing false positives
+MalCodeAI (IEEE IRI 2025) — Multi-language LLM pipeline for vulnerability detection and remediation across 14 languages
+Preprints
+MLCPD (arXiv cs.SE, 2025) — Large-scale dataset (7M+ files, 10 languages) for cross-language code reasoning
+Multimodal Sentiment (arXiv cs.CL, 2025) — Transformer-based multimodal sentiment analysis on CMU-MOSEI (97.87% accuracy)
+
+PROFESSIONAL SERVICE:
+Reviewer — ICMLA 2025 (ROSE-LLM)
+Program Committee Member — IEEE ICTAI 2026
+
+CERTIFICATIONS & HONORS:
+Sustainability Award (Complex Networks 2025 Conference)
+NVIDIA-Certified Associate: Generative AI LLMs
+GW SEAS Dean’s Award Scholarship
+Runner-Up, Tinkerthon 2.0 Hackathon 2024
+SSIP Innovation Grant (Project EzyCart)
+NVIDIA Jetson AI Specialist
+
+CONTACT:
+Email: jugal.gajjar@gwu.edu | GitHub: JugalGajjar | LinkedIn: jugalgajjar | Medium: 812jugalgajjar | Google Scholar can be found on Contacts page.
