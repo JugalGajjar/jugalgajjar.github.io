@@ -807,7 +807,8 @@ a:visited { color: #D0A040; }
   .hero .subtitle { font-size: 8px; }
   .hero-photo { width: 80px; height: 80px; }
   .y2k-card-grid, .contact-grid { grid-template-columns: 1fr; }
-  .finder-nav a { font-size: 8px; padding: 8px 10px; }
+  .finder-nav a { display: none; }
+  .finder-nav .nav-right { margin-left: 0; }
   .mac-body { padding: 12px; }
   .section-heading { font-size: 9px; }
   .resume-frame { height: 400px; }
