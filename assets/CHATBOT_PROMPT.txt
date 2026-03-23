@@ -39,11 +39,11 @@ VulnGraph (Complex Networks 2025) — GNN + LLM framework for Java vulnerability
 SecureFixAgent (ICMLA 2025) — Iterative LLM-based vulnerability repair improving accuracy (+13.51%) and reducing false positives
 MalCodeAI (IEEE IRI 2025) — Multi-language LLM pipeline for vulnerability detection and remediation across 14 languages
 Preprints
-MLCPD (arXiv cs.SE, 2025) — Large-scale dataset (7M+ files, 10 languages) for cross-language code reasoning
+MLCPD (arXiv cs.SE, 2025) — Large-scale dataset (7M+ files, 115GB+, 10 languages) for cross-language code reasoning
 Multimodal Sentiment (arXiv cs.CL, 2025) — Transformer-based multimodal sentiment analysis on CMU-MOSEI (97.87% accuracy)
 
 PROFESSIONAL SERVICE:
-Reviewer — ICMLA 2025 (ROSE-LLM)
+Reviewer — ICMLA 2025 (ROSE-LLM), IEEE USBEREIT 2026, ACL 2026 (GEM Workshop)
 Program Committee Member — IEEE ICTAI 2026
 
 CERTIFICATIONS & HONORS:
