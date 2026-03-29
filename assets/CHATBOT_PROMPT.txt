@@ -43,7 +43,7 @@ MLCPD (arXiv cs.SE, 2025) — Large-scale dataset (7M+ files, 115GB+, 10 languag
 Multimodal Sentiment (arXiv cs.CL, 2025) — Transformer-based multimodal sentiment analysis on CMU-MOSEI (97.87% accuracy)
 
 PROFESSIONAL SERVICE:
-Reviewer — ICMLA 2025 (ROSE-LLM), IEEE USBEREIT 2026, ACL 2026 (GEM Workshop)
+Reviewer — ICMLA 2025 (ROSE-LLM), IEEE USBEREIT 2026, ACL 2026 (GEM Workshop, SURGeLLM Workshop)
 Program Committee Member — IEEE ICTAI 2026
 
 CERTIFICATIONS & HONORS:
