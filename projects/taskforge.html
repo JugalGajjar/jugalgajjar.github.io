@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TaskForge | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-y2k.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+    <script src="../chatbot.js"></script>
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="marquee-banner">
+        <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+        <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+        <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+        <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span>
+        </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../experiences.html">Experiences</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../resume.html">Resume/CV</a>
+    </div>
+
+    <div class="mac-window wide">
+        <div class="mac-titlebar">
+            <div class="traffic-lights">
+                <div class="traffic-light close"></div>
+                <div class="traffic-light minimize"></div>
+                <div class="traffic-light maximize"></div>
+            </div>
+            <div class="title">TaskForge.app - Project Details</div>
+        </div>
+
+        <nav class="finder-nav">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../publications.html">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <div class="nav-right">
+                <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+                <span class="nav-clock" id="menu-clock">12:00 AM</span>
+            </div>
+        </nav>
+
+        <div class="mac-body">
+            <div class="project-detail">
+
+                <h2>Overview</h2>
+                <p align="justify">
+                    TaskForge is a <span class="hl">scalable full-stack task management platform</span> built using a
+                    <span class="hl">microservices architecture</span> to efficiently manage tasks, users, and
+                    authentication workflows.
+                    It is designed to simulate real-world distributed systems with strong emphasis on
+                    <span class="hl">backend engineering, service communication, and system design</span>.
+                </p>
+
+                <h2>Architecture</h2>
+                <p>
+                    1. <span class="hl">NestJS-based microservices</span> for modular backend services<br>
+                    2. <span class="hl">gRPC communication</span> for efficient inter-service interaction<br>
+                    3. <span class="hl">JWT-based authentication service</span><br>
+                    4. <span class="hl">Angular frontend</span> for dynamic UI and state handling<br>
+                    5. <span class="hl">Docker Compose</span> for containerized multi-service deployment
+                </p>
+
+                <h2>Core Features</h2>
+                <p>
+                    • Task CRUD operations with structured workflows<br>
+                    • User authentication and authorization (JWT)<br>
+                    • Modular services: Task Service, User Service, Auth Service<br>
+                    • gRPC-based communication between services<br>
+                    • Scalable microservices design with separation of concerns
+                </p>
+
+                <h2>Design Highlights</h2>
+                <p align="justify">
+                    TaskForge follows a <span class="hl">service-oriented architecture</span> where each service is
+                    independently deployable and scalable.
+                    The use of <span class="hl">gRPC with Protocol Buffers</span> enables high-performance communication
+                    between services.
+                    The system emphasizes <span class="hl">clean API contracts, modularity, and extensibility</span>,
+                    making it production-grade and aligned with modern backend engineering practices.
+                </p>
+
+                <h2>System Capabilities</h2>
+                <p>
+                    • Distributed microservices with clear boundaries<br>
+                    • Secure authentication and token-based access control<br>
+                    • Efficient inter-service communication via gRPC<br>
+                    • Containerized deployment for reproducibility<br>
+                    • Frontend-backend integration with real-time updates
+                </p>
+
+                <h2>Tech. Stack</h2>
+                <p>
+                    <span class="hl">TypeScript</span>, <span class="hl">NestJS</span>, <span class="hl">Angular</span>,
+                    <span class="hl">gRPC</span>, <span class="hl">Protocol Buffers</span>,
+                    <span class="hl">JWT</span>, Docker, Microservices Architecture
+                </p>
+
+                <h2>Links</h2>
+                <p>
+                    <a href="https://github.com/JugalGajjar/TaskForge" target="_blank" class="mac-btn mac-btn-sm">GitHub
+                        Repository</a>
+                </p>
+
+            </div>
+
+            <div style="text-align:center;margin-top:16px;">
+                <a href="../projects.html" class="mac-btn">&larr; Back to Projects</a>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>TaskForge.app | Super Mario Edition | Built by Jugal Gajjar</span>
+            <span>Ready</span>
+        </div>
+    </div>
+
+    <div class="y2k-footer" style="max-width:1000px;">
+        <p>&copy; 2025 Jugal Gajjar | 1UP</p>
+        <p style="font-size:10px;">GAME ON</p>
+    </div>
+
+    <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+    <div id="chat-window" class="chat-window">
+        <div class="chat-titlebar">
+            <span>MARIO</span>
+            <span class="chat-close" onclick="toggleChat()">X</span>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects,
+                publications, experience, skills, or education!</div>
+        </div>
+        <div class="chat-input-row">
+            <input type="text" id="chat-input" placeholder="Ask Mario..."
+                onkeydown="if(event.key==='Enter')sendChat()" />
+            <button onclick="sendChat()">GO</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
