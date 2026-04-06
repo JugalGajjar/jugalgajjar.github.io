@@ -12,6 +12,7 @@ Freelance Developer - Shubhlaxmi Mfg. (Summer 2023): Built intelligent Python-ba
 NVIDIA Jetson AI Coordinator - Navrachana University (Mar-Jun 2022): Led workshops on deep learning & edge AI, mentored projects with multiple NVIDIA DLI recognitions.
 
 ALL PROJECTS:
+TaskForge — Distributed microservices-based task management system with JWT authentication and gRPC-driven inter-service communication
 RSAT — Trains small LLMs for step-by-step table reasoning with cell-level citations using SFT + GRPO (3.7× faithfulness gain)
 ResearchVault — Full-stack institutional research repository with search, versioning, and DOI-style record management
 FASS — Benchmark for evaluating feature attribution stability under prediction-invariant perturbations
