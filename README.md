@@ -85,7 +85,7 @@ User visits jugalgajjar.github.io
 ## Contact
 
 - Email: [jugal.gajjar@gwu.edu](mailto:jugal.gajjar@gwu.edu)
-- LinkedIn: [linkedin.com/in/jugalgajjar](https://www.linkedin.com/in/jugalgajjar/)
+- LinkedIn: [linkedin.com/in/jugal-gajjar](https://www.linkedin.com/in/jugal-gajjar/)
 - GitHub: [github.com/JugalGajjar](https://github.com/JugalGajjar)
 
 ---

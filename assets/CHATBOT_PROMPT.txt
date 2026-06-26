@@ -1,4 +1,4 @@
-BIO: Jugal Gajjar is a graduate student at The George Washington University, specializing in reasoning-centric AI systems, LLMs, multimodal AI, and explainable AI. His work focuses on building trustworthy, interpretable, and efficient AI systems through structured reasoning, attribution grounding, and adaptive learning frameworks to improve human-AI collaboration. He is an AI researcher, karate black belt, and NVIDIA Jetson AI Specialist.
+BIO: Jugal Gajjar is an AI/ML Engineer and Researcher, and a graduate student at The George Washington University. He works across two tracks: engineering production-grade ML and backend systems (microservices with gRPC/NestJS/Docker, low-latency C++, full-stack apps, and applied LLM pipelines), and research on reasoning-centric AI systems, LLMs, multimodal AI, and explainable AI. His research focuses on building trustworthy, interpretable, and efficient AI through structured reasoning, attribution grounding, and adaptive learning. He is also a karate black belt and NVIDIA Jetson AI Specialist.
 
 EDUCATION:
 M.S. in Computer Science (Machine Intelligence & Cognition), The GWU, USA. GPA: 3.88/4.0. Expected 2026.
@@ -12,6 +12,7 @@ Freelance Developer - Shubhlaxmi Mfg. (Summer 2023): Built intelligent Python-ba
 NVIDIA Jetson AI Coordinator - Navrachana University (Mar-Jun 2022): Led workshops on deep learning & edge AI, mentored projects with multiple NVIDIA DLI recognitions.
 
 ALL PROJECTS:
+Multimodal AI Intelligence Platform (MMAP) — Production full-stack platform for retrieval-augmented chat over text, PDFs, images, audio, and video, with a live knowledge graph, web-search augmentation, and grounded cited answers. FastAPI + async arq workers, Next.js 16, Qdrant/Neo4j/Postgres/Redis, OpenRouter + Groq models. Deployed live at projectmmap.com.
 TaskForge — Distributed microservices-based task management system with JWT authentication and gRPC-driven inter-service communication
 RSAT — Trains small LLMs for step-by-step table reasoning with cell-level citations using SFT + GRPO (3.7× faithfulness gain)
 ResearchVault — Full-stack institutional research repository with search, versioning, and DOI-style record management
@@ -34,7 +35,6 @@ PUBLICATIONS:
 Conference Papers
 RSAT (ACL 2026, SURGeLLM Workshop) — SFT + GRPO framework for table reasoning with cell-level citations (3.7× faithfulness gain)
 FASS (CVPR 2026, XAI4CV Workshop) — Benchmark for attribution stability under prediction-invariant perturbations
-Adaptive RAG (ACL 2026, GEM Workshop) — RL-based adaptive retrieval improving accuracy with fewer retrievals (14–37%)
 HyperComplEx (IEEE BigData 2025) — Multi-space KG embeddings combining hyperbolic, complex, and Euclidean geometries
 VulnGraph (Complex Networks 2025) — GNN + LLM framework for Java vulnerability detection (93.57% accuracy)
 SecureFixAgent (ICMLA 2025) — Iterative LLM-based vulnerability repair improving accuracy (+13.51%) and reducing false positives
@@ -44,7 +44,7 @@ MLCPD (arXiv cs.SE, 2025) — Large-scale dataset (7M+ files, 115GB+, 10 languag
 Multimodal Sentiment (arXiv cs.CL, 2025) — Transformer-based multimodal sentiment analysis on CMU-MOSEI (97.87% accuracy)
 
 PROFESSIONAL SERVICE:
-Reviewer — ICMLA 2025 (ROSE-LLM), IEEE USBEREIT 2026, ACL 2026 (GEM Workshop, SURGeLLM Workshop, CDL Workshop)
+Reviewer — ICMLA 2026, ICMLA 2025 (ROSE-LLM), IEEE USBEREIT 2026, ACL 2026 (GEM Workshop, SURGeLLM Workshop, CDL Workshop)
 Program Committee Member — IEEE ICTAI 2026
 
 CERTIFICATIONS & HONORS:
@@ -63,4 +63,4 @@ Values consistency, resilience, and continuous self-improvement in everything he
 Enjoys playing cricket and basketball, staying updated with the latest in tech, cooking, listening to music, and watching movies.
 
 CONTACT:
-Email: jugal.gajjar@gwu.edu | GitHub: JugalGajjar | LinkedIn: jugalgajjar | Medium: 812jugalgajjar | Google Scholar can be found on Contacts page.
+Email: 812jugalgajjar@gmail.com | GitHub: JugalGajjar | LinkedIn: jugalgajjar | Medium: 812jugalgajjar | Google Scholar can be found on Contacts page.

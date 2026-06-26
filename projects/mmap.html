@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multimodal AI Intelligence Platform | Jugal Gajjar</title>
+    <link rel="stylesheet" href="../styles-y2k.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+    <script src="../chatbot.js"></script>
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="marquee-banner">
+        <div class="hud-section"><span class="hud-label">JUGAL</span><span class="hud-value">800813</span></div>
+        <div class="hud-coin"><span class="coin-icon">●</span><span id="hud-coins">x22</span></div>
+        <div class="hud-section"><span class="hud-label">WORLD</span><span class="hud-value">1-1</span></div>
+        <div class="hud-section"><span class="hud-label">TIME</span><span class="hud-value" id="hud-time">000</span>
+        </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../experiences.html">Experiences</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../resume.html">Resume/CV</a>
+    </div>
+
+    <div class="mac-window wide">
+        <div class="mac-titlebar">
+            <div class="traffic-lights">
+                <div class="traffic-light close"></div>
+                <div class="traffic-light minimize"></div>
+                <div class="traffic-light maximize"></div>
+            </div>
+            <div class="title">MMAP.app - Project Details</div>
+        </div>
+
+        <nav class="finder-nav">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../publications.html">Publications</a>
+            <a href="../experiences.html">Experiences</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../resume.html">Resume/CV</a>
+            <div class="nav-right">
+                <button class="hamburger-btn" id="hamburger-toggle">&#9776;</button>
+                <span class="nav-clock" id="menu-clock">12:00 AM</span>
+            </div>
+        </nav>
+
+        <div class="mac-body">
+            <div class="project-detail">
+
+                <h2>Overview</h2>
+                <p align="justify">
+                    Multimodal AI Intelligence Platform (<span class="hl">MMAP</span>) is a
+                    <span class="hl">production, full-stack platform</span> for
+                    <span class="hl">retrieval-augmented chat over text, PDFs, images, audio, and video</span>.
+                    You upload anything readable; it extracts the content, embeds and indexes it, builds a
+                    <span class="hl">live knowledge graph</span> from your uploads, and lets you chat over everything
+                    with <span class="hl">grounded, cited answers</span> &mdash; optionally augmented with fresh
+                    web search. It is deployed and live at
+                    <a href="https://projectmmap.com" target="_blank">projectmmap.com</a>, running entirely on
+                    free-tier infrastructure.
+                </p>
+
+                <h2>What It Does</h2>
+                <p>
+                    • <span class="hl">Multimodal ingest</span> &mdash; PDFs, images, audio, video, text, and markdown
+                    in one shared vector space (100&nbsp;MB upload cap)<br>
+                    • <span class="hl">Vision + OCR</span> &mdash; RapidOCR plus a vision-language model give every
+                    image a searchable, summarized representation<br>
+                    • <span class="hl">Audio transcription</span> &mdash; Groq Whisper turns recordings into citable,
+                    retrievable text<br>
+                    • <span class="hl">Video understanding</span> &mdash; adaptive frame sampling (cv2) plus audio
+                    extraction (ffmpeg) feed a single fused Nemotron VL call that cross-references what is said against
+                    what is shown<br>
+                    • <span class="hl">Knowledge graph</span> &mdash; entities and relationships extracted per document,
+                    visualized client-side, and used to ground answers<br>
+                    • <span class="hl">Cited chat</span> &mdash; streaming answers with chunk-level citations and a
+                    per-answer subgraph of the entities the model used<br>
+                    • <span class="hl">Per-question RAG &amp; Web toggles</span> &mdash; answer from your documents,
+                    the model's own knowledge, fresh Tavily web results with clickable <code>[W#]</code> citations, or
+                    any combination<br>
+                    • <span class="hl">Strict and regular modes</span> &mdash; strict mode fact-checks every answer
+                    against documents and cited sources, withholding anything below the grounding threshold<br>
+                    • <span class="hl">Persistent chat history</span> &mdash; auto-titled, summarized, searchable
+                    threads with citations intact and multi-turn follow-up context<br>
+                    • <span class="hl">Answer verification</span> &mdash; each response is checked against retrieved
+                    context and flags unsupported claims
+                </p>
+
+                <h2>Architecture</h2>
+                <p align="justify">
+                    A <span class="hl">Next.js</span> browser app talks to a <span class="hl">FastAPI</span> service
+                    that handles auth, uploads, chat, graph, and RAG endpoints. The API stays light: all heavy
+                    lifting &mdash; <span class="hl">OCR, ASR, embedding, vision, video frame sampling, summarization,
+                    and graph extraction</span> &mdash; is offloaded to an <span class="hl">arq worker</span> so request
+                    latency stays bounded. State is split across purpose-built stores:
+                    <span class="hl">Postgres</span> for users and document metadata,
+                    <span class="hl">Qdrant</span> for vector search, <span class="hl">Neo4j</span> for the entity
+                    graph, <span class="hl">Redis</span> for the job queue and rate limiting, and
+                    <span class="hl">S3-compatible object storage</span> (Cloudflare R2 in prod, MinIO in dev) for raw
+                    uploads. Models are served via <span class="hl">OpenRouter</span> (Nemotron Nano 2 VL, DeepSeek),
+                    <span class="hl">Groq</span> (Whisper, Llama 3.3 70B), and <span class="hl">Tavily</span> for web
+                    search.
+                </p>
+
+                <h2>Tech. Stack</h2>
+                <p>
+                    <strong>Backend:</strong> <span class="hl">Python 3.12</span>, <span class="hl">FastAPI</span>,
+                    SQLAlchemy 2 (async), Alembic, Pydantic 2, asyncpg, <span class="hl">arq</span>,
+                    sentence-transformers, qdrant-client, neo4j, <span class="hl">LangGraph</span>, OpenTelemetry,
+                    prometheus-client<br>
+                    <strong>Frontend:</strong> <span class="hl">Next.js 16</span> (App Router),
+                    <span class="hl">React 19</span>, TypeScript, Tailwind CSS v4, shadcn/ui, Zustand, TanStack Query,
+                    react-force-graph-2d<br>
+                    <strong>Data plane:</strong> Postgres, <span class="hl">Qdrant</span>,
+                    <span class="hl">Neo4j</span>, Redis, S3-compatible storage (R2 / MinIO)<br>
+                    <strong>Models:</strong> OpenRouter (Nemotron Nano 2 VL, DeepSeek), Groq (Whisper Large v3 Turbo,
+                    Llama 3.3 70B), Tavily<br>
+                    <strong>Testing:</strong> pytest, vitest + Testing Library, <span class="hl">Playwright</span>,
+                    with a nightly workflow that spins up the full docker compose stack
+                </p>
+
+                <h2>Engineering Highlights</h2>
+                <p align="justify">
+                    MMAP is built as a <span class="hl">deployable, observable, multi-service system</span>. CI runs
+                    unit, type, and lint suites on every push; a nightly workflow brings up the full
+                    <span class="hl">docker compose stack</span> and runs the backend integration and Playwright e2e
+                    suites against it. Production runs across <span class="hl">Vercel, Hugging Face Spaces, Neon,
+                    Qdrant Cloud, Neo4j AuraDB, Upstash Redis, and Cloudflare R2</span>. Security spans
+                    <span class="hl">bcrypt-hashed credentials, email verification, JWT access tokens, per-IP rate
+                    limiting</span>, strict frontend response headers, and <span class="hl">per-user isolation
+                    enforced at every storage layer</span> (Postgres row scope, Qdrant payload filters, Neo4j
+                    scoping, namespaced object keys).
+                </p>
+
+                <h2>Links</h2>
+                <p>
+                    <a href="https://projectmmap.com" target="_blank" class="mac-btn mac-btn-sm">Live Site</a>
+                    <a href="https://github.com/JugalGajjar/Multimodal-AI-Intelligence-Platform" target="_blank"
+                        class="mac-btn mac-btn-sm">GitHub Repository</a>
+                </p>
+
+            </div>
+
+            <div style="text-align:center;margin-top:16px;">
+                <a href="../projects.html" class="mac-btn">&larr; Back to Projects</a>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>MMAP.app | Super Mario Edition | Built by Jugal Gajjar</span>
+            <span>Ready</span>
+        </div>
+    </div>
+
+    <div class="y2k-footer" style="max-width:1000px;">
+        <p>&copy; 2026 Jugal Gajjar | 1UP</p>
+        <p style="font-size:10px;">GAME ON</p>
+    </div>
+
+    <div id="chat-toggle" class="chat-toggle" onclick="toggleChat()">?</div>
+    <div id="chat-window" class="chat-window">
+        <div class="chat-titlebar">
+            <span>MARIO</span>
+            <span class="chat-close" onclick="toggleChat()">X</span>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-msg bot">Hey! I'm Mario, Jugal's portfolio assistant. Ask me anything about his projects,
+                publications, experience, skills, or education!</div>
+        </div>
+        <div class="chat-input-row">
+            <input type="text" id="chat-input" placeholder="Ask Mario..."
+                onkeydown="if(event.key==='Enter')sendChat()" />
+            <button onclick="sendChat()">GO</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
