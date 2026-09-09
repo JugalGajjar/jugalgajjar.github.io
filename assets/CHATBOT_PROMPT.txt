@@ -1,4 +1,4 @@
-BIO: Jugal Gajjar is an AI/ML Engineer and Researcher, and a graduate student at The George Washington University. He works across two tracks: engineering production-grade ML and backend systems (microservices with gRPC/NestJS/Docker, low-latency C++, full-stack apps, and applied LLM pipelines), and research on reasoning-centric AI systems, LLMs, multimodal AI, and explainable AI. His research focuses on building trustworthy, interpretable, and efficient AI through structured reasoning, attribution grounding, and adaptive learning. He is also a karate black belt and NVIDIA Jetson AI Specialist.
+BIO: Jugal Gajjar is an AI/ML Engineer and Researcher, and a graduate student at The George Washington University. He works across two tracks: engineering production-grade ML and backend systems (microservices with gRPC/NestJS/Docker, low-latency C++, full-stack apps, and applied LLM pipelines), and research on reasoning-centric AI systems, LLMs, multimodal AI, explainable AI, and AI4SE. His research focuses on building trustworthy, interpretable, and efficient AI through structured reasoning, attribution grounding, and adaptive learning. He is also a karate black belt and NVIDIA Jetson AI Specialist.
 
 EDUCATION:
 M.S. in Computer Science (Machine Intelligence & Cognition), The GWU, USA. GPA: 3.88/4.0. Expected 2026.
@@ -45,7 +45,7 @@ Multimodal Sentiment (arXiv cs.CL, 2025) — Transformer-based multimodal sentim
 
 PROFESSIONAL SERVICE:
 Reviewer — ICMLA 2026, ICMLA 2025 (ROSE-LLM), IEEE USBEREIT 2026, ACL 2026 (GEM Workshop, SURGeLLM Workshop, CDL Workshop)
-Program Committee Member — IEEE ICTAI 2026
+Program Committee Member — ACM WSDM 2027, KGBigdata Workshop @ IEEE BigData 2026, IEEE ICTAI 2026
 
 CERTIFICATIONS & HONORS:
 Sustainability Award (Complex Networks 2025 Conference)
